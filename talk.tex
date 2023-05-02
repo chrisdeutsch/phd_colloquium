@@ -35,17 +35,17 @@
 
 \author{Christopher Deutsch}
 \institute{University of Bonn}
-\date{May XX, 2023}
+\date{June XX, 2023}
 
-\title{Search for Higgs Boson Pair Production in the $b\bar{b}\tau^+\tau^-$
-  Final State with the ATLAS Experiment at the LHC}
+\title{\vspace{1em}Search for Higgs Boson Pair Production in the \bbtautau Final
+  State with the ATLAS Experiment at the LHC}
 
 \begin{document}
 
 \maketitle
 
 % Aim for 25ish slides?
-\begin{frame}{Notes: Content}
+\begin{frame}[noframenumbering]{Notes: Content}
   30 minutes (talk) + 15 minutes (discussion):
   \begin{itemize}
 
@@ -62,32 +62,110 @@
   Why do particle physics?
 
   What is particle physics?
+
+  What is the origin of elementary particle masses?
 \end{frame}
 
 % ------------------------------------------------------------------------------
 
 \begin{frame}{The Standard Model}
-  The SM and the Higgs mechanism
+  \includegraphics[width=0.74\textwidth, trim=0cm 0cm 0cm 0.8cm, clip]{theory/sm}
+
+  % Built on the principle of local gauge symmetries of the Lagrangian
+
+  % Gravitation not included
+
+  % Problem: Masses of elementary particles
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Electroweak Symmetry Breaking}
+  % Brout, Englert, Higgs -> EWSB
+
+  \begin{columns}
+    \column{0.65\textwidth}
+    \centering
+
+    % Add a (doublet) of complex scalar field with a special potential
+
+    \begin{align*}
+      V(\phi) = \mu^2 \phi^\dag \phi + \lambda (\phi^\dag \phi)^2 \\
+      \mu^2 < 0
+    \end{align*}
+
+    \column{0.35\textwidth}
+    \centering
+
+    \includegraphics[width=\textwidth]{theory/potential}
+
+    $\phi(x) = \phi_1(x) + i \, \phi_2(x)$
+  \end{columns}
+
+  \begin{align*}
+    V(H) = \lambda v^2 H^2 + \lambda v H^3 + \frac{\lambda}{4} H^4
+  \end{align*}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Higgs Boson Discovery}
+
+  \begin{columns}
+    \column{0.5\textwidth}
+    \centering
+
+    % CERN Seminar: 4 July 2012
+    \includegraphics[width=0.9\textwidth]{CERN_seminar}
+
+    \column{0.5\textwidth}
+    \centering
+
+    \includegraphics[width=0.55\textwidth]{higgs_discovery/fig_002}
+
+    \includegraphics[width=0.7\textwidth]{higgs_discovery/figaux_004a}
+  \end{columns}
 \end{frame}
 
 % ------------------------------------------------------------------------------
 
 \begin{frame}{Shortcomings of the Standard Model}
+  Needed?
 \end{frame}
 
 % ------------------------------------------------------------------------------
 
 \begin{frame}{Non-Resonant \HH Production}
+  \begin{columns}
+    \column{0.5\textwidth}
+    \centering
+
+    \includegraphics[width=0.7\textwidth]{feynman_graphs/di_higgs_box}
+
+    \column{0.5\textwidth}
+    \centering
+
+    \includegraphics[width=0.7\textwidth]{feynman_graphs/di_higgs_triangle}
+  \end{columns}
+
+
+  $\sigma_{\HH}^{gg\text{F}} = \SI{31.05}{\femto\barn}$
+
+  $\sigma_{\HH}^{\text{VBF}} = \SI{1.7}{\femto\barn}$
 \end{frame}
 
 % ------------------------------------------------------------------------------
 
 \begin{frame}{Resonant \HH Production}
+  \includegraphics[width=0.35\textwidth]{feynman_graphs/di_higgs_resonant}
 \end{frame}
 
 % ------------------------------------------------------------------------------
 
 \begin{frame}{The ATLAS Experiment at the LHC}
+  \includegraphics[width=0.7\textwidth]{lhc/cern_complex_trim_otherexp_removed}%
+  \includegraphics[width=0.6\textwidth]{atlas/atlas_overview}
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -116,6 +194,8 @@
 
 \begin{frame}{Performance of RNN-Based Tau Identification}
   It's great.
+
+  \includegraphics[width=0.45\textwidth]{tauid/roc_incl_witherrors}
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -158,6 +238,13 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}{Signal Extraction: non-resonant}
+  \begin{columns}
+    \column{0.5\textwidth}
+
+    \column{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{mva/prefit/Region_BMin0_incJet1_distSMBDT_J2_Y2015_DLLOS_T2_SpcTauHH_L0_Prefitlog}
+  \end{columns}
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -185,16 +272,29 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}{Results II}
+  \includegraphics[width=0.5\textwidth]{results_res/resonant_upper_limits}
 \end{frame}
 
 % ------------------------------------------------------------------------------
 
 \begin{frame}{Reinterpretation I}
+  \includegraphics[width=0.4\textwidth]{feynman_graphs/di_higgs_effective}
+
+  \begin{columns}
+    \column{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{self_coupling/hh_xsec}
+
+    \column{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{self_coupling/hh_mhh_vs_klam}
+  \end{columns}
 \end{frame}
 
 % ------------------------------------------------------------------------------
 
 \begin{frame}{Reinterpretation II}
+  \includegraphics[width=0.5\textwidth]{self_coupling/klam_scan_result}
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -204,14 +304,29 @@
 
 % ------------------------------------------------------------------------------
 
+\begin{frame}[standout]
+  Backup
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
 \begin{frame}{Event Display: \hadhad Event}
+  \centering
+  \includegraphics[width=0.75\textwidth]{event_displays/hadhad}
 \end{frame}
 
 % ------------------------------------------------------------------------------
 
 \begin{frame}{Event Display: \lephad Event}
+  \centering
+  \includegraphics[width=0.75\textwidth]{event_displays/lephad}
 \end{frame}
 
 % ------------------------------------------------------------------------------
 
 \end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "talk.tex"
+%%% End:
