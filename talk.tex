@@ -37,8 +37,8 @@
 \institute{University of Bonn}
 \date{June XX, 2023}
 
-\title{\vspace{1em}Search for Higgs Boson Pair Production in the \bbtautau Final
-  State with the ATLAS Experiment at the LHC}
+\title{\vspace{1.5em}Search for Higgs Boson Pair Production in the \bbtautau
+  Final State with the ATLAS Experiment at the LHC}
 
 \begin{document}
 
@@ -69,7 +69,24 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}{The Standard Model}
-  \includegraphics[width=0.74\textwidth, trim=0cm 0cm 0cm 0.8cm, clip]{theory/sm}
+
+  \begin{columns}
+    \column{0.7\textwidth}
+    \centering
+
+    \vspace*{1em}
+
+    \includegraphics[width=\textwidth, trim=0.9cm 0.3cm 0.2cm 1.5cm,
+    clip]{theory/sm}
+
+    \column{0.3\textwidth}
+
+    \begin{itemize}
+      \setlength{\itemsep}{1.5em}
+    \item Built on principle of local gauge invariance of the Lagrangian
+    \item How to incorporate masses of elementary particles?
+    \end{itemize}
+  \end{columns}
 
   % Built on the principle of local gauge symmetries of the Lagrangian
 
@@ -130,8 +147,29 @@
 
 % ------------------------------------------------------------------------------
 
+\begin{frame}{The Higgs Potential}
+
+  \begin{center}
+    \begin{tabular}{ccccccc}
+      $V(H)$ & $=$ & ${\color{Red} \lambda v^2 H^2}$ & $+$ & ${\color{Blue} \lambda v H^3}$ & $+$ & ${\color{Green} \frac{\lambda}{4} H^4}$ \\[1.2em]
+             && \raisebox{1.85em}{\includegraphics[scale=0.8]{feynman_graphs_talk/higgs_massterm}}
+             && \includegraphics[scale=0.8]{feynman_graphs_talk/higgs_hhh}
+             && \includegraphics[scale=0.8]{feynman_graphs_talk/higgs_hhhh}
+    \end{tabular}
+  \end{center}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
 \begin{frame}{Shortcomings of the Standard Model}
   Needed?
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{The ATLAS Experiment at the LHC}
+  \includegraphics[width=0.6\textwidth]{lhc/cern_complex_trim_otherexp_removed}%
+  \includegraphics[width=0.6\textwidth]{atlas/atlas_overview}
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -159,13 +197,6 @@
 
 \begin{frame}{Resonant \HH Production}
   \includegraphics[width=0.35\textwidth]{feynman_graphs/di_higgs_resonant}
-\end{frame}
-
-% ------------------------------------------------------------------------------
-
-\begin{frame}{The ATLAS Experiment at the LHC}
-  \includegraphics[width=0.7\textwidth]{lhc/cern_complex_trim_otherexp_removed}%
-  \includegraphics[width=0.6\textwidth]{atlas/atlas_overview}
 \end{frame}
 
 % ------------------------------------------------------------------------------

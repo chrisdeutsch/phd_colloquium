@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage{feynmp}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+\DeclareGraphicsRule{*}{mps}{*}{}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{fmffile}{higgs_massterm_fmf}
+  \color{Red}
+  \begin{fmfgraph*}(36,30)
+    \fmfstraight
+    \fmfleft{i1}
+    \fmfright{o1}
+
+    \fmf{dashes,foreground=(1,,0,,0)}{i1,v}
+    \fmf{dashes,foreground=(1,,0,,0)}{v,o1}
+    \fmfv{label=$H$, label.angle=90}{v}
+  \end{fmfgraph*}
+\end{fmffile}
+
+\end{document}

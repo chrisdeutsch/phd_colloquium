@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage{feynmp}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+\DeclareGraphicsRule{*}{mps}{*}{}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{fmffile}{higgs_hhh_fmf}
+  \begin{fmfgraph*}(36,30)
+    \fmfstraight
+    \fmfleft{i1,i2}
+    \fmfright{o1}
+
+    \fmflabel{\color{Blue}$H$}{i1}
+    \fmflabel{\color{Blue}$H$}{i2}
+    \fmflabel{\color{Blue}$H$}{o1}
+
+    \fmf{dashes,foreground=(0.176,,0.184,,0.573)}{i1,v}
+    \fmf{dashes,foreground=(0.176,,0.184,,0.573)}{i2,v}
+    \fmf{dashes,tension=1.2,foreground=(0.176,,0.184,,0.573)}{o1,v}
+
+    % \fmfdot[foreground=(0.176,,0.184,,0.573)]{v}
+    \fmfv{decor.shape=circle,decor.filled=full,decor.size=2thick,foreground=(0.176,,0.184,,0.573)}{v}
+
+    %\fmfv{label=$\lambda_{H\mkern-1.5muH\mkern-1.5muH}$, label.angle=60}{v}
+  \end{fmfgraph*}
+\end{fmffile}
+
+\end{document}
