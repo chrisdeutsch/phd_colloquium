@@ -181,7 +181,7 @@
     \noindent\begin{minipage}{\dimexpr 0.25\textwidth - 2\fboxsep}
       \centering
       \textbf{Gluon--gluon fusion}\\[0.5\baselineskip]
-      $\sigma_{\HH}^{gg\text{F}} = \SI{31.05}{\femto\barn}$
+      $\sigma_{\HH}^{gg\text{F}} = \SI{31}{\femto\barn}$
   \end{minipage}%
   \begin{minipage}{\dimexpr 0.75\textwidth - 2\fboxsep}
     \hspace*{0.1\textwidth}
@@ -249,45 +249,47 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Shortcomings of the SM}
+\begin{frame}{Beyond the Standard Model}
   \begin{columns}[onlytextwidth]
-    \column{0.6\textwidth}
+    \column{0.5\textwidth}
 
     \textbf{Shortcomings of the SM:}
     \begin{itemize}
-      % \setlength{\itemsep}{0.5em}
     \item Matter--Antimatter Asymmetry
     \item Gravitation
     \item Dark Matter \& Dark Energy
-    \item \dots etc.
+    \item \dots
     \end{itemize}
 
-    \column{0.4\textwidth}
-    \centering
-
-    \includegraphics[scale=1,trim=0 0.3cm 0 0, clip]{energy_content/content}
+    \column{0.5\textwidth}
+    \hspace{0.1\textwidth}\includegraphics[scale=1,trim=0 0.3cm 0 0, clip]{energy_content/content}
   \end{columns}
+  \pause
+  \vspace*{1em}
+  \hrule
+  \vspace*{1em}
+  \begin{columns}
+    \column{0.4\textwidth} \centering
 
-  \vspace*{2em}
+    \includegraphics[width=0.8\textwidth]{feynman_graphs/di_higgs_resonant}
 
-  \begin{columns}[onlytextwidth]
-    \column{0.35\textwidth}
+    \column{0.6\textwidth}
 
-    \includegraphics[width=0.9\textwidth]{feynman_graphs/di_higgs_resonant}
-
-    \column{0.65\textwidth}
-
-    Search for new scalar particle $X$ decaying into \HH
-
-    $\SI{251}{\GeV} < m_{X} < \SI{1.6}{\TeV}$
+    \textbf{Search for scalars $X$ decaying to $HH$:}
+    \begin{itemize}
+      \setlength{\itemsep}{0.5em}
+    \item E.g.\ in models with extended Higgs sectors
+    \item Mass range:\ $\SI{251}{\GeV} < m_{X} < \SI{1.6}{\TeV}$
+    \end{itemize}
   \end{columns}
 \end{frame}
 
 % ------------------------------------------------------------------------------
 
 \begin{frame}{The ATLAS Experiment at the LHC}
-  \includegraphics[width=0.6\textwidth]{lhc/cern_complex_trim_otherexp_removed}%
-  \includegraphics[width=0.6\textwidth]{atlas/atlas_overview}
+  \centering
+  \includegraphics<1>[scale=0.95]{lhc_atlas/lhc_atlas_1}
+  \includegraphics<2>[scale=0.95]{lhc_atlas/lhc_atlas_2}
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -297,7 +299,7 @@
 
   Hadhad / lephad
 
-  Motivate the importance of hadronic tau lepton decays
+  \alert{Motivate} the importance of hadronic tau lepton decays
 \end{frame}
 
 % ------------------------------------------------------------------------------
