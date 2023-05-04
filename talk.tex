@@ -98,6 +98,15 @@
 
 % ------------------------------------------------------------------------------
 
+\begin{frame}{The Standard Model}
+  \begin{center}
+    \includegraphics[width=0.6\textwidth]{lagrangian/lagrangian_vectorized}
+    % Credit: CERN
+  \end{center}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
 \begin{frame}{Electroweak Symmetry Breaking}
   % Brout, Englert, Higgs -> EWSB
 
@@ -152,17 +161,126 @@
   \begin{center}
     \begin{tabular}{ccccccc}
       $V(H)$ & $=$ & ${\color{Red} \lambda v^2 H^2}$ & $+$ & ${\color{Blue} \lambda v H^3}$ & $+$ & ${\color{Green} \frac{\lambda}{4} H^4}$ \\[1.2em]
-             && \raisebox{1.85em}{\includegraphics[scale=0.8]{feynman_graphs_talk/higgs_massterm}}
-             && \includegraphics[scale=0.8]{feynman_graphs_talk/higgs_hhh}
-             && \includegraphics[scale=0.8]{feynman_graphs_talk/higgs_hhhh}
+             && \raisebox{1.85em}{\includegraphics[scale=1.0]{feynman_graphs_talk/higgs_massterm}}
+             && \includegraphics[scale=1.0]{feynman_graphs_talk/higgs_hhh}
+             && \includegraphics[scale=1.0]{feynman_graphs_talk/higgs_hhhh} \\[1.2em]
+             && {\color{Red}mass term}
+             && {\color{Blue}trilinear self-coupling}
+             && {\color{Green}quartic self-coupling}
     \end{tabular}
   \end{center}
 \end{frame}
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Shortcomings of the Standard Model}
-  Needed?
+% TODO: Make the HHH coupling red?
+\begin{frame}{Higgs Boson Pair Production in the SM}
+  \vspace*{0.5em}
+
+  \fbox{%
+    \noindent\begin{minipage}{\dimexpr 0.25\textwidth - 2\fboxsep}
+      \centering
+      \textbf{Gluon--gluon fusion}\\[0.5\baselineskip]
+      $\sigma_{\HH}^{gg\text{F}} = \SI{31.05}{\femto\barn}$
+  \end{minipage}%
+  \begin{minipage}{\dimexpr 0.75\textwidth - 2\fboxsep}
+    \hspace*{0.1\textwidth}
+    \includegraphics[scale=0.75]{feynman_graphs/di_higgs_box}%
+    \hfill%
+    \raisebox{0.35em}{\includegraphics[scale=0.75]{feynman_graphs/di_higgs_triangle}}%
+    \hspace*{0.1\textwidth}
+  \end{minipage}
+  }
+
+  \vspace*{2em}
+  \fbox{%
+    \noindent\begin{minipage}{\dimexpr 0.25\textwidth - 2\fboxsep}
+      \centering
+      \textbf{Vector boson fusion}\\[0.5\baselineskip]
+      $\sigma_{\HH}^{\text{VBF}} = \SI{1.7}{\femto\barn}$
+    \end{minipage}%
+    \begin{minipage}{\dimexpr 0.75\textwidth - 2\fboxsep}
+      \hspace*{0.04\textwidth}%
+      \includegraphics[width=0.3\textwidth]{feynman_graphs/di_higgs_vbf_kvklam}%
+      \hfill%
+      \includegraphics[width=0.3\textwidth]{feynman_graphs/di_higgs_vbf_kvkv}%
+      \hfill%
+      \includegraphics[width=0.3\textwidth]{feynman_graphs/di_higgs_vbf_ktwov}%
+      \hspace*{0.04\textwidth}
+    \end{minipage}
+  }
+
+  \vspace*{1.0em}
+  {\scriptsize In $pp$ collisions at $\sqrt{s} = \SI{13}{\TeV}$}
+\end{frame}
+
+\begin{frame}{Higgs Boson Pair Production: A Rare Process}
+
+  \begin{columns}
+    \column{0.4\textwidth}
+    \centering
+
+    % \begin{itemize}
+    % \item Total proton--proton collision cross section:\ \SI{80}{\milli\barn}
+    % \item W+jets: 20nb
+    % \item ttbar: 831.76 pb
+    % \item H: 48 pb (ggF) + 4 pb (VBF) (50pb)
+    % \item HH: 31.05 + 1.726 = 32.8 fb
+    % \item HHH: 80 ab (80e-18)
+    % \end{itemize}
+    \vspace*{1em} \includegraphics[width=0.92\textwidth]{cross_section_figure}
+
+    \column{0.6\textwidth}
+
+    \textbf{SM Expectation:}
+    \vspace{0.5em}
+    \begin{itemize}
+      \setlength{\itemsep}{1em}
+
+    \item 1 \HH event in 2.5 trillion inelastic collisions
+
+    \item Total of 4000 \HH events produced in ATLAS from 2015--2018
+
+      % Do not expect to find this in Run~2
+
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Shortcomings of the SM}
+  \begin{columns}[onlytextwidth]
+    \column{0.6\textwidth}
+
+    \textbf{Shortcomings of the SM:}
+    \begin{itemize}
+      % \setlength{\itemsep}{0.5em}
+    \item Matter--Antimatter Asymmetry
+    \item Gravitation
+    \item Dark Matter \& Dark Energy
+    \item \dots etc.
+    \end{itemize}
+
+    \column{0.4\textwidth}
+    \centering
+
+    \includegraphics[scale=1,trim=0 0.3cm 0 0, clip]{energy_content/content}
+  \end{columns}
+
+  \vspace*{2em}
+
+  \begin{columns}[onlytextwidth]
+    \column{0.35\textwidth}
+
+    \includegraphics[width=0.9\textwidth]{feynman_graphs/di_higgs_resonant}
+
+    \column{0.65\textwidth}
+
+    Search for new scalar particle $X$ decaying into \HH
+
+    $\SI{251}{\GeV} < m_{X} < \SI{1.6}{\TeV}$
+  \end{columns}
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -170,33 +288,6 @@
 \begin{frame}{The ATLAS Experiment at the LHC}
   \includegraphics[width=0.6\textwidth]{lhc/cern_complex_trim_otherexp_removed}%
   \includegraphics[width=0.6\textwidth]{atlas/atlas_overview}
-\end{frame}
-
-% ------------------------------------------------------------------------------
-
-\begin{frame}{Non-Resonant \HH Production}
-  \begin{columns}
-    \column{0.5\textwidth}
-    \centering
-
-    \includegraphics[width=0.7\textwidth]{feynman_graphs/di_higgs_box}
-
-    \column{0.5\textwidth}
-    \centering
-
-    \includegraphics[width=0.7\textwidth]{feynman_graphs/di_higgs_triangle}
-  \end{columns}
-
-
-  $\sigma_{\HH}^{gg\text{F}} = \SI{31.05}{\femto\barn}$
-
-  $\sigma_{\HH}^{\text{VBF}} = \SI{1.7}{\femto\barn}$
-\end{frame}
-
-% ------------------------------------------------------------------------------
-
-\begin{frame}{Resonant \HH Production}
-  \includegraphics[width=0.35\textwidth]{feynman_graphs/di_higgs_resonant}
 \end{frame}
 
 % ------------------------------------------------------------------------------
