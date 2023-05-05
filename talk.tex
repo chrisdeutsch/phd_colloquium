@@ -327,29 +327,86 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}{The \bbtautau Final State}
+
   \begin{columns}[onlytextwidth]
-    \column{0.65\textwidth}
+    \column{0.4\textwidth}
 
-    \includegraphics<1>[width=\textwidth]{final_state/final_state_lephad}%
-    \includegraphics<2>[width=\textwidth]{final_state/final_state_hadhad}
+    \textbf{Advantages:}
+    \begin{itemize}
+      \setlength{\itemsep}{0.5em}
+    \item Large $H \to b\bar{b}$ branching ratio
+    \item Distinct signature of $H \to \tau^+\tau^-$
+    \end{itemize}
 
-    \column{0.35\textwidth}
+    \vspace{1em}
+    \pause
+
+    \textbf{Channels:}
+    \begin{itemize}
+      \setlength{\itemsep}{0.5em}
+    \item<2-> \lephad channel\\
+      $\mathcal{B}(\tau^+\tau^- \to \lephad) \approx \SI{45.6}{\percent}$
+
+    \item<3-> \hadhad channel\\
+      $\mathcal{B}(\tau^+\tau^- \to \hadhad) \approx \SI{42.0}{\percent}$
+    \end{itemize}
+
+    \column{0.6\textwidth} \centering
+    % \begin{overlayarea}{\textwidth}{0.5cm}
+    %   \centering
+    %   \only<1>{\lephad}%
+    %   \only<2>{\hadhad}
+    % \end{overlayarea}
+
+    \hspace*{0.03\textwidth}%
+    \includegraphics<2>[width=0.97\textwidth]{final_state/final_state_lephad}%
+    \includegraphics<3>[width=0.97\textwidth]{final_state/final_state_hadhad}
   \end{columns}
 \end{frame}
 
 % ------------------------------------------------------------------------------
 
-% \vspace*{1em}
+\begin{frame}[standout]
+  Interlude:\ Tau Identification
+\end{frame}
 
-    % \textbf{My thesis:}
-    % \begin{itemize}
-    % \item $HH \to \bbtautau$
-    % \item Targeting semi-leptonic (\lephad) and fully hadronic (\hadhad) di-tau
-    %   final states
-    % \end{itemize}
+% ------------------------------------------------------------------------------
 
 \begin{frame}{Tau Identification}
-  What is tau identification?
+  \begin{columns}
+    \column{0.45\textwidth}
+    \centering
+    \includegraphics[width=0.8\textwidth]{tauid/cone_tauhad}
+
+    \column{0.10\textwidth}
+    \centering
+
+    vs.
+
+    \column{0.45\textwidth}
+    \includegraphics[width=0.8\textwidth]{tauid/cone_qgjet}
+  \end{columns}
+
+  \vspace{1em}
+
+  \textbf{Characteristic features:}%
+
+  \begin{columns}[onlytextwidth]
+    \column{0.5\textwidth}
+
+    \begin{itemize}
+    \item Particle multiplicity
+    \item $\tau$ lepton mass ($m_\tau \approx \SI{1.78}{\GeV}$)
+    \end{itemize}
+
+
+    \column{0.5\textwidth}
+
+    \begin{itemize}
+    \item Isolation
+    \item $\tau$ lepton lifetime ($c\tau \approx \SI{87}{\micro\meter}$)
+    \end{itemize}
+  \end{columns}
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -361,9 +418,19 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}{Performance of RNN-Based Tau Identification}
-  It's great.
 
-  \includegraphics[width=0.45\textwidth]{tauid/roc_incl_witherrors}
+  \begin{columns}[onlytextwidth]
+    \column{0.5\textwidth}
+    \begin{itemize}
+    \item Bla
+    \end{itemize}
+
+
+
+
+    \column{0.5\textwidth}
+    \includegraphics[width=1.0\textwidth]{tauid/roc_incl_witherrors}
+  \end{columns}
 \end{frame}
 
 % ------------------------------------------------------------------------------
