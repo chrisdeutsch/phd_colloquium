@@ -411,8 +411,108 @@
 
 % ------------------------------------------------------------------------------
 
+% 4. slide: How does it look in the grand scheme?
+
 \begin{frame}{Tau Identification with RNN}
-  How does it work with RNN?
+  \begin{columns}[onlytextwidth]
+    \column{0.25\textwidth} \centering
+
+    \includegraphics[scale=1]{tauid/high_level_icon}
+
+    \column{0.75\textwidth}
+
+    \begin{columns}[onlytextwidth]
+      \column{0.5\textwidth}
+      \centering
+
+      $p_{\text{T}}$-fraction of \emph{isolation} tracks\\[0.2em]
+
+      \includegraphics[width=0.9\textwidth]{tauid/invars/invars_sumpttrkfrac_1P}
+
+      \column{0.5\textwidth}
+      \centering
+
+      \only{Invariant mass of \emph{core} tracks\\[0.2em]}
+
+      \includegraphics[width=0.9\textwidth]{tauid/invars/invars_masstrksys_3P}
+    \end{columns}
+
+    \vspace*{0.5em}
+
+    \begin{itemize}
+    \item In total 11 variables considered
+    \item Previously: combined in BDT for tau identification
+    \end{itemize}
+
+  \end{columns}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Tau Identification with RNN}
+  \begin{columns}[onlytextwidth]
+    \column{0.25\textwidth} \centering
+
+    \includegraphics[scale=1]{tauid/track_icon}
+
+    \column{0.75\textwidth}
+
+    {\centering
+      $p_{\text{T}}$ of leading and sub-leading track\\[0.17em]
+    }
+
+    \begin{columns}[onlytextwidth]
+      \column{0.5\textwidth} \centering
+
+      \includegraphics<1>[width=0.9\textwidth]{tauid/invars/invars_trk0relpt_1P}
+
+      \column{0.5\textwidth}
+      \centering
+
+      \includegraphics<1>[width=0.9\textwidth]{tauid/invars/invars_trk1relpt_1P}
+    \end{columns}
+
+    \vspace*{0.5em}
+
+    \begin{itemize}
+    \item Up to 10 tracks within $\Delta R < 0.4$ of tau axis
+    \item
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Tau Identification with RNN}
+  \begin{columns}[onlytextwidth]
+    \column{0.25\textwidth} \centering
+
+    \includegraphics[scale=1]{tauid/cluster_icon}
+
+    \column{0.75\textwidth}
+
+    {\centering
+      $E_{\text{T}}$ of leading and sub-leading cluster\\[0.17em]
+    }
+
+    \begin{columns}[onlytextwidth]
+      \column{0.5\textwidth} \centering
+
+      \includegraphics<1>[width=0.9\textwidth]{tauid/invars/invars_cls0relet_3P}
+
+      \column{0.5\textwidth}
+      \centering
+
+      \includegraphics<1>[width=0.9\textwidth]{tauid/invars/invars_cls1relet_3P}
+    \end{columns}
+
+    \vspace*{0.5em}
+
+    \begin{itemize}
+    \item Up to 6 clusters associated to the jet seed
+    \item
+    \end{itemize}
+  \end{columns}
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -424,9 +524,6 @@
     \begin{itemize}
     \item Bla
     \end{itemize}
-
-
-
 
     \column{0.5\textwidth}
     \includegraphics[width=1.0\textwidth]{tauid/roc_incl_witherrors}
