@@ -33,6 +33,20 @@
 % My definitions
 \usepackage{defs}
 
+\definecolor{headergray}{HTML}{23373B}
+\definecolor{mygray}{HTML}{FAFAFA}
+\definecolor{hadhadred}{HTML}{E41A1C}
+\definecolor{lephadblue}{HTML}{377EB8}
+\definecolor{bjetblue}{HTML}{377EB8}
+\definecolor{taured}{HTML}{CC3738}
+\definecolor{hhblue}{HTML}{3333FF}
+\definecolor{lhred}{HTML}{CC3333}
+
+\definecolor{toporange}{HTML}{C28B17}
+\definecolor{zjetsgreen}{HTML}{0D8254}
+\definecolor{fakeblue}{HTML}{6997D6}
+\definecolor{topfakered}{HTML}{FE5F5A}
+
 \author{Christopher Deutsch}
 \institute{University of Bonn}
 \date{June XX, 2023}
@@ -374,9 +388,8 @@
 
 \begin{frame}{Tau Identification}
   \begin{columns}
-    \column{0.45\textwidth}
-    \centering
-    \includegraphics[width=0.8\textwidth]{tauid/cone_tauhad}
+    \column{0.45\textwidth} \centering
+    \includegraphics[width=0.75\textwidth]{tauid/cone_tauhad}
 
     \column{0.10\textwidth}
     \centering
@@ -384,10 +397,10 @@
     vs.
 
     \column{0.45\textwidth}
-    \includegraphics[width=0.8\textwidth]{tauid/cone_qgjet}
+    \includegraphics[width=0.75\textwidth]{tauid/cone_qgjet}
   \end{columns}
 
-  \vspace{1em}
+  \vspace{0.5em}
 
   \textbf{Characteristic features:}%
 
@@ -399,7 +412,6 @@
     \item $\tau$ lepton mass ($m_\tau \approx \SI{1.78}{\GeV}$)
     \end{itemize}
 
-
     \column{0.5\textwidth}
 
     \begin{itemize}
@@ -407,6 +419,26 @@
     \item $\tau$ lepton lifetime ($c\tau \approx \SI{87}{\micro\meter}$)
     \end{itemize}
   \end{columns}
+
+  \onslide<2->{%
+    \tikz[overlay, remember picture, shift=(current page.south west), x=(current
+    page.south east), y=(current page.north west), ]{ \node[align=center] at
+      (0.5,0.678) {%
+        \setlength{\fboxrule}{1pt}%
+        \fcolorbox{headergray}{mygray}{%
+          \begin{minipage}{0.75\textwidth}
+            \centering \vspace*{0.6em} \textbf{Machine learning techniques}
+
+            Simulated $\gamma^* \rightarrow \tauhad \tauhad$ for ``signal''
+
+            Simulated di-jet events for ``background'' \vspace*{0.6em}
+          \end{minipage}
+        }
+      };
+    }
+  }
+  %     % Optional help grid lines \draw[step=.1, opacity=0.3, thick, red] (0,0)
+  %     % grid (1,1); }}
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -541,8 +573,28 @@
   \begin{columns}[onlytextwidth]
     \column{0.5\textwidth}
     \begin{itemize}
-    \item Bla
+    \item Four working points:\\
+      \emph{Very Loose}, \emph{Loose}, \emph{Medium}, \emph{Tight}
+
+      % \item Adopted for offline reconstruction and at the high-level trigger
+
     \end{itemize}
+
+
+    \begin{center}
+      \footnotesize
+      \begin{tabular}{lcc}
+        \toprule
+        & \multicolumn{2}{c}{Rejection Improvement}\\
+        WP & 1-prong \tauhadvis & 3-prong \tauhadvis \\
+        \midrule
+        Very Loose & +85\,\% & +40\,\% \\
+        Loose      & +75\,\% & +50\,\% \\
+        Medium     & +80\,\% & +60\,\% \\
+        Tight      & +80\,\% & +80\,\% \\
+        \bottomrule
+      \end{tabular}
+    \end{center}
 
     \column{0.5\textwidth}
     \includegraphics[width=1.0\textwidth]{tauid/roc_incl_witherrors}
@@ -551,22 +603,196 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Object and Event Selection 1}
+\begin{frame}[standout]
+  Back to $HH \rightarrow \bbtautau$
 \end{frame}
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Object and Event Selection 2}
+\begin{frame}{Object Selection}
+  \begin{columns}[onlytextwidth]
+    \column{0.5\textwidth}
+
+    \textbf{Electrons/Muons:}
+    \begin{itemize}
+    \item $\pT > \SI{7}{\GeV}$
+    \item Loose identification \& isolation
+    \end{itemize}
+
+    \vspace*{1em}
+
+    \textbf{\tauhadvis:}
+    \begin{itemize}
+    \item $\pT > \SI{20}{\GeV}$
+    \item Loose RNN Tau-ID
+    \item Electron veto
+    \end{itemize}
+
+    \column{0.5\textwidth}
+
+    \textbf{Jets:}
+    \begin{itemize}
+    \item Anti-$k_{t}$ ($R = 0.4$) particle flow jets
+    \item Jet Vertex Tagger
+    \item $\pT > \num{20} \, (\num{30})\,\si{\GeV}$ (forward jets)
+    \item $b$-tagging with \textsc{DL1r} (\SI{77}{\percent} WP)
+    \end{itemize}
+
+    \vspace*{1em}
+
+    \textbf{\pTmissAbs:}
+    \begin{itemize}
+    \item Object-based with track soft term
+    \end{itemize}
+  \end{columns}
+
+  % Mention OLR?
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Event Selection}
+  % TODO: Tightened ID requirements for leptons in lephad
+  \begin{center}
+    \footnotesize
+
+    \begin{tabular}{c@{\hskip 2em}c@{\hskip 3em}c}
+      \toprule
+      \textcolor{hhblue}{\hadhad} & \textcolor{lhred}{\lephad (SLT)} & \textcolor{lhred}{\lephad (LTT)} \\
+      \midrule
+      \textcolor{hhblue}{single- \& di-\tauhadvis triggers} & \textcolor{lhred}{single-$\ell$ triggers} & \textcolor{lhred}{$\ell+\tauhadvis$ triggers} \\
+      \textcolor{hhblue}{exactly two $\tauhadvis$} & \multicolumn{2}{c}{\textcolor{lhred}{exactly one $\tauhadvis$}} \\
+      \textcolor{hhblue}{no loose $e$ or $\mu$} & \multicolumn{2}{c}{\textcolor{lhred}{exactly one tight $e$ or medium $\mu$}} \\
+                                  & \multicolumn{2}{c}{\textcolor{lhred}{$m_{bb} < \SI{150}{\GeV}$}} \\
+      \midrule
+      \multicolumn{3}{c}{trigger-dependent thresholds on $e$/$\mu$/$\tauhad$ and jets} \\
+      \multicolumn{3}{c}{$m_{\tau\tau}^\text{MMC} > \SI{60}{\GeV}$} \\
+      \multicolumn{3}{c}{2 $b$-tagged jets} \\
+      \multicolumn{3}{c}{OS electric charge of $e / \mu / \tauhad$ and \tauhad} \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+
+  % \begin{minipage}[c]{0.45\textwidth}
+  %   \centering
+  %   \small
+
+  %   Acceptance of non-res.\ $HH$ (SM):
+
+  %   \vspace{1em}
+
+  %   \begin{tabular}{lc}
+  %     \toprule
+  %     Channel & $(\mathcal{A} \times \varepsilon)^\text{ggF+VBF}_{\text{SM } HH}$ \\
+  %     \midrule
+  %     \hadhad & 4.0\,\% \\
+  %     \lephad (SLT) & 4.0\,\% \\
+  %     \lephad (LTT) & 0.97\,\% \\
+  %     \bottomrule
+  %   \end{tabular}
+  % \end{minipage}%
+  % \begin{minipage}[c]{0.55\textwidth}
+  %   \centering
+  %   \small
+
+  %   %Acceptance of narrow scalar resonances:
+
+  %   %\vspace{0.4em}
+
+  %   \begin{overpic}[width=0.9\textwidth]{selection/acceptance_resonant}
+  %     %\put(54.5,68){\scriptsize ATLAS-CONF-2021-030}
+  %   \end{overpic}
+  % \end{minipage}
+
+  % \onslide<2->{
+  %   \tikz[overlay, remember picture,
+  %   shift=(current page.south west),
+  %   x=(current page.south east), y=(current page.north west),
+  %   ]{
+  %     \node[align=center]at (0.5,0.678) {
+  %       \setlength{\fboxrule}{1pt}
+  %       \fcolorbox{headergray}{mygray}{%
+  %         \begin{minipage}{0.75\textwidth}
+  %           \vspace*{0.6em}
+  %           \begin{itemize}
+  %             \setlength{\itemsep}{1em}
+  %           \item Close to \alert{two-fold improvement in signal acceptance} compared to previous publication\\
+  %             {\scriptsize (Phys. Rev. Lett. \textbf{121}, 191801)}
+
+  %           \item Driven by \alert{improved reconstruction and identification
+  %             of $\tauhad$ and $b$-jets}\\
+  %             {\scriptsize (ATL-PHYS-PUB-2017-003, ATL-PHYS-PUB-2017-013, ATL-PHYS-PUB-2019-033)}
+
+  %           \end{itemize}
+  %           \vspace*{0.8em}
+  %         \end{minipage}
+  %       }
+  %     };
+  %     % Optional help grid lines
+  %     % \draw[step=.1, opacity=0.3, thick, red] (0,0) grid (1,1);
+  % } }
 \end{frame}
 
 % ------------------------------------------------------------------------------
 
 \begin{frame}{Background Estimation: Overview}
+    \begin{minipage}{0.5\textwidth}
+    \centering
+
+    \begin{overpic}[width=0.65\textwidth]{mhh_hadhad}
+      \put(56,94){\tiny arXiv:2209.10910}
+    \end{overpic}
+  \end{minipage}%
+  \begin{minipage}{0.5\textwidth}
+    \centering
+
+    \begin{overpic}[width=0.65\textwidth]{mhh_lephad}
+      \put(56,94){\tiny arXiv:2209.10910}
+    \end{overpic}
+  \end{minipage}
+
+  \centering
+
+  \resizebox{0.75\textwidth}{!}{%
+    \begin{tabular}{lcc}
+      \toprule
+      Background & \hadhad channel & \lephad channel \\
+      \midrule
+      \ttbar & \multicolumn{2}{c}{\textcolor{toporange}{Simulation (normalised in fit)}} \\[0.2em]
+      Z+jets & \multicolumn{2}{c}{\textcolor{zjetsgreen}{Simulation (normalised in fit -- dedicated CR)}} \\[0.2em]
+      jet \ra \tauhad fakes (\ttbar) & \textcolor{topfakered}{Simulation (data-driven mis-ID eff.)} & \multirow{2}{*}{\textcolor{fakeblue}{Combined fake-factor method}} \\[0.2em]
+      jet \ra \tauhad fakes (multi-jet) & \textcolor{fakeblue}{Fake-factor method} & \\[0.2em]
+      SM Higgs / Other & \multicolumn{2}{c}{Simulation} \\[0.2em]
+      \bottomrule
+    \end{tabular}
+  }
 \end{frame}
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Background Estimation: Z+HF}
+\begin{frame}{Background Estimation: $Z + \text{jets}$}
+  \begin{itemize}
+  \item Sherpa 2.2.1 known discrepancy when applying $b$-tagging requirements
+  \item Z+HF CR: di-electron/muon final states + 2 $b$-tagged jets
+  \end{itemize}
+
+  \vspace*{0.5em}
+
+  \begin{columns}[onlytextwidth]
+    \column{0.5\textwidth}
+    \centering
+
+    \textbf{Pre-fit}
+
+    \includegraphics[width=0.65\textwidth]{zhfcr/Region_BMin0_incJet1_Y2015_DZllbbCR_T2_L2_distmLL_J2_Prefit_fixed}
+
+    \column{0.5\textwidth}
+    \centering
+
+    \textbf{Post-fit}
+
+    \includegraphics[width=0.65\textwidth]{zhfcr/Region_BMin0_incJet1_Y2015_DZllbbCR_T2_L2_distmLL_J2_GlobalFit_conditionnal_mu0_fixed}
+  \end{columns}
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -578,7 +804,9 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}{Background Estimation: multi-jet}
-  Possibly add second slide
+  \centering
+
+  \includegraphics[width=0.6\textwidth]{fakefactors/regions}
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -628,21 +856,46 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Reinterpretation I}
-  \includegraphics[width=0.4\textwidth]{feynman_graphs/di_higgs_effective}
+\begin{frame}{Constraining the Higgs Boson Self-Coupling}
 
+  \begin{center}
+    \begin{overpic}[width=0.35\textwidth]{feynman_graphs/di_higgs_effective}
+      \put(115,20){$\kappa_{\lambda} = \lambda_{HHH} / \lambda_{HHH}^{\text{SM}}$}
+    \end{overpic}
+  \end{center}
+
+  What if new physics changes the Higgs Boson self-coupling?
+  \begin{itemize}
+  \item Heavy new particles might contribute (reduce to effective coupling)
+  \item Reinterpretation is performed
+  \end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Phenomenology of Anomalous $\kappa_{\lambda}$}
   \begin{columns}
     \column{0.5\textwidth}
     \centering
+
+    $HH$ production cross section
+
     \includegraphics[width=0.9\textwidth]{self_coupling/hh_xsec}
 
     \column{0.5\textwidth}
     \centering
+
+    \mHH-spectra
+
     \includegraphics[width=0.9\textwidth]{self_coupling/hh_mhh_vs_klam}
   \end{columns}
+
+  \begin{itemize}
+  \item
+  \end{itemize}
 \end{frame}
 
-% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------p
 
 \begin{frame}{Reinterpretation II}
   \includegraphics[width=0.5\textwidth]{self_coupling/klam_scan_result}
@@ -652,6 +905,43 @@
 
 \begin{frame}{Conclusion \& Outlook}
 \end{frame}
+
+% ------------------------------------------------------------------------------
+
+{ % all template changes are local to this group.
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamercolor{background canvas}{bg=black}
+  \begin{frame}<article:0>[plain]
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[at=(current page.center)] {
+        \includegraphics[keepaspectratio,
+        width=\paperwidth,
+        height=\paperheight]{event_displays/hadhad}
+      };
+      % \node at (0.73\paperwidth,0.46\paperheight) {
+      %   \textcolor{White}{$HH \ra {\color{bjetblue}b\bar{b}}{\color{taured}\tau_\mu\tauhad}$ candidate event}
+      % };
+    \end{tikzpicture}
+  \end{frame}
+}
+
+% ------------------------------------------------------------------------------
+
+{ % all template changes are local to this group.
+  \setbeamercolor{background canvas}{bg=black}
+  \begin{frame}[plain]
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[at=(current page.center)] {
+        \includegraphics[keepaspectratio,
+        width=\paperwidth,
+        height=\paperheight]{event_displays/lephad}
+      };
+      % \node at (0.73\paperwidth,0.46\paperheight) {
+      %   \textcolor{White}{$HH \ra {\color{bjetblue}b\bar{b}}{\color{taured}\tauhad\tauhad}$ candidate event}
+      % };
+    \end{tikzpicture}
+  \end{frame}
+}
 
 % ------------------------------------------------------------------------------
 
