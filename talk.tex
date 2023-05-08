@@ -445,7 +445,7 @@
 
 % 4. slide: How does it look in the grand scheme?
 
-\begin{frame}{Tau Identification with RNN}
+\begin{frame}{Tau Identification: High-Level Variables}
   \begin{columns}[onlytextwidth]
     \column{0.25\textwidth} \centering
 
@@ -476,6 +476,16 @@
     \item Previously used in \emph{Boosted Decision Trees} (BDTs) for Tau-ID
     \end{itemize}
   \end{columns}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Previous Tau Identification Approach}
+    \begin{center}
+    \includegraphics[scale=0.75]{tauid/bdt_approach}
+  \end{center}
+
+  Using Boosted Decision Trees.
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -549,20 +559,10 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}{Approach}
-  \textbf{Previous method based on Boosted Decision Trees:}\\[0.5em]
-  \begin{center}
-    \includegraphics[scale=0.68]{tauid/bdt_approach}
-  \end{center}
-
-  \vspace*{0.2em}
-
-  \hrule
-
-  \vspace*{0.2em}
 
   \textbf{New method based on Recurrent Neural Networks:}\\[0.5em]
   \begin{center}
-    \includegraphics[scale=0.68]{tauid/rnn_approach}
+    \includegraphics[scale=0.75]{tauid/rnn_approach}
   \end{center}
 \end{frame}
 
@@ -937,7 +937,7 @@
   \begin{columns}
     \column{0.5\textwidth}
 
-    Classification task changes with \mX \ra PNN
+    Classification task changes with $m_{X}$ \ra PNN
 
     \column{0.5\textwidth}
     \centering
@@ -955,14 +955,47 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Statistical Analysis II}
-  Somehow bring in uncertainties
+\begin{frame}{Uncertainties}
+  \begin{columns}[onlytextwidth]
+    \column{0.4\textwidth}
+
+    Table of uncertainties
+
+    Largely limited by the number of observed events
+
+    Largest uncertainties are:
+    - Background statistical precision
+    - Single Higgs boson bkg modelling
+    - Top quark bkg.\ modelling
+
+    \column{0.6\textwidth}
+    \centering
+
+    \includegraphics[width=0.9\textwidth]{uncertainty_table}
+  \end{columns}
+
+
 \end{frame}
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Results I}
-  Possibly have to merge this with the previous part
+\begin{frame}{Results}
+  \begin{columns}[onlytextwidth]
+    \column{0.5\textwidth}
+
+    Highest expected sensitivity of any single channel
+    \begin{itemize}
+    \item CMS H $\mu < 3.3$ (obs.) $\mu < 5.2$ (exp.)
+    \end{itemize}
+
+    Largest expected sensitivity of any channel
+
+    \column{0.5\textwidth}
+    \centering
+
+    \includegraphics[width=0.9\textwidth]{discussion/results_139ifb}
+
+  \end{columns}
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -984,7 +1017,7 @@
   What if new physics changes the Higgs Boson self-coupling?
   \begin{itemize}
   \item Heavy new particles might contribute (reduce to effective coupling)
-  \item Reinterpretation is performed
+  \item Reinterpret the SM~\HH search \ra limits on xsec vs.\ $\kappa_{\lambda}$
   \end{itemize}
 \end{frame}
 
@@ -1014,13 +1047,38 @@
 
 % ------------------------------------------------------------------------------p
 
-\begin{frame}{Reinterpretation II}
-  \includegraphics[width=0.5\textwidth]{self_coupling/klam_scan_result}
+\begin{frame}{Constraining the Higgs Boson Self-Coupling}
+
+  \begin{columns}[onlytextwidth]
+    \column{0.5\textwidth}
+
+
+
+
+    \textbf{Limitations:}
+    \begin{itemize}
+    \item Not accounting for changes in
+    \end{itemize}
+
+    \column{0.5\textwidth} \centering
+
+    \includegraphics[width=0.95\textwidth]{self_coupling/klam_scan_result}
+  \end{columns}
+
+
+
+
+  % Limitations
+  %
+  % - Does not account for xsec / BR changes for single higgs
+  %
+  % - Not a statistically proper confidence interval
 \end{frame}
 
 % ------------------------------------------------------------------------------
 
 \begin{frame}{Conclusion \& Outlook}
+  Evidence expected at the HL-LHC (discovery would be realistic)
 \end{frame}
 
 % ------------------------------------------------------------------------------
