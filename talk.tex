@@ -867,10 +867,52 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}{Multivariate Analysis}
+  \begin{center}
+    \footnotesize
+    \begin{tabular}{lS[table-format=4.2(3)]S[table-format=5.1(3)]S[table-format=4.2(3)]}
+      \toprule
+      & \multicolumn{3}{c}{Channel}\\
+      \cmidrule{2-4}
+      & {\hadhad} & {\lephad SLT} & {\lephad LTT}\\
+      \midrule
+      SM~$HH$ ($gg$F+VBF) & 5.16 +- 0.84 & 5.9 +- 1.0   & 1.42 +- 0.24 \\
+      Total Background    & 8414 +- 90   & 98430 +- 390 & 6357 +- 79 \\
+      \midrule
+      $S / B$ & {$6 \times 10^{-4}$} & {$6 \times 10^{-5}$} & {$2 \times 10^{-4}$} \\
+      $S / \sqrt{B}$ & {$0.06$} & {$0.02$} & {$0.02$} \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
 
-  Yield table?
+  \begin{itemize}
+  \item Terrible significance
+  \item Exploit kinematic properties of events to select signals / reject
+    backgrounds
+  \end{itemize}
+\end{frame}
 
-  Illustrate terrible S/B Ratio
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Discriminants}
+
+  \begin{columns}[onlytextwidth]
+    \column{0.5\textwidth}
+    \centering
+
+    \includegraphics[width=0.8\textwidth]{mva/prefit/Region_BMin0_incJet1_distmMMC_J2_Y2015_DLLOS_T2_SpcTauHH_L0_Prefit}
+
+    \column{0.5\textwidth}
+    \centering
+
+    \includegraphics[width=0.8\textwidth]{mva/prefit/Region_BMin0_incJet1_distmBB_J2_Y2015_DLLOS_T2_SpcTauHH_L0_Prefit}
+  \end{columns}
+
+  % Two most important variables for SM HH
+
+  \begin{itemize}
+  \item \mMMC, \mBB, \mHH, $\Delta R(\tau, \tau)$, $\Delta R(b, b)$
+  \end{itemize}
+  
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -879,15 +921,31 @@
   \begin{columns}
     \column{0.5\textwidth}
 
+    % BDT
+
+    % NN is used in lephad
+
     \column{0.5\textwidth}
     \centering
-    \includegraphics[width=0.9\textwidth]{mva/prefit/Region_BMin0_incJet1_distSMBDT_J2_Y2015_DLLOS_T2_SpcTauHH_L0_Prefitlog}
+    \includegraphics[width=0.8\textwidth]{mva/prefit/Region_BMin0_incJet1_distSMBDT_J2_Y2015_DLLOS_T2_SpcTauHH_L0_Prefitlog}
   \end{columns}
 \end{frame}
 
 % ------------------------------------------------------------------------------
 
 \begin{frame}{Signal Extraction: resonant}
+  \begin{columns}
+    \column{0.5\textwidth}
+
+    Classification task changes with \mX \ra PNN
+
+    \column{0.5\textwidth}
+    \centering
+
+    \includegraphics[width=0.8\textwidth]{mva/prefit/Region_BMin0_incJet1_distmHH_J2_Y2015_DLLOS_T2_SpcTauHH_L0_Prefit_logy}
+  \end{columns}
+
+
 \end{frame}
 
 % ------------------------------------------------------------------------------
