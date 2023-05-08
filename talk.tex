@@ -296,7 +296,7 @@
 
     \column{0.6\textwidth}
 
-    \textbf{Search for scalars $X$ decaying to $HH$:}
+    \allbold{Search for scalars $X$ decaying to $HH$:}
     \begin{itemize}
       \setlength{\itemsep}{0.5em}
     \item E.g.\ in models with extended Higgs sectors
@@ -613,7 +613,7 @@
   \begin{columns}[onlytextwidth]
     \column{0.5\textwidth}
 
-    \textbf{Electrons/Muons:}
+    \allbold{Electrons/Muons:}
     \begin{itemize}
     \item $\pT > \SI{7}{\GeV}$
     \item Loose identification \& isolation
@@ -621,7 +621,7 @@
 
     \vspace*{1em}
 
-    \textbf{\tauhadvis:}
+    \allbold{\tauhadvis:}
     \begin{itemize}
     \item $\pT > \SI{20}{\GeV}$
     \item Loose RNN Tau-ID
@@ -630,7 +630,7 @@
 
     \column{0.5\textwidth}
 
-    \textbf{Jets:}
+    \allbold{Jets:}
     \begin{itemize}
     \item Anti-$k_{t}$ ($R = 0.4$) particle flow jets
     \item Jet Vertex Tagger
@@ -640,7 +640,7 @@
 
     \vspace*{1em}
 
-    \textbf{\pTmissAbs:}
+    \allbold{\pTmissAbs:}
     \begin{itemize}
     \item Object-based with track soft term
     \end{itemize}
@@ -731,6 +731,51 @@
   %     % Optional help grid lines
   %     % \draw[step=.1, opacity=0.3, thick, red] (0,0) grid (1,1);
   % } }
+\end{frame}
+
+% ------------------------------------------------------------------------------
+\begin{frame}{Signal Acceptance}
+
+  \vspace*{-1em}
+
+  \begin{columns}[onlytextwidth, t]
+    \column{0.5\textwidth}
+    \centering
+
+    \allbold{Non-resonant $HH$ production (SM)}
+
+    \vspace{1.5em}
+
+    \resizebox{1.0\textwidth}{!}{\footnotesize
+      \begin{tabular}{lcc}
+        \toprule
+        & \allbold{This Analysis} & Prev.\ Publication \\
+        \cmidrule{2-3}
+        Channel & $(\mathcal{A} \times \varepsilon)^{gg\text{F+VBF}}_{\text{SM } HH}$ & $(\mathcal{A} \times \varepsilon)^{gg\text{F}}_{\text{SM } HH}$ \\
+        \midrule
+        \hadhad & 4.0\,\%\phantom{7} & 1.9\,\% \\
+        \lephad (SLT) & 4.0\,\%\phantom{7} & \multirow{2}{*}{\hspace*{-1.05em}\bigg\} 3.2\,\%}\\
+        \lephad (LTT) & 0.97\,\% & \\
+        \bottomrule
+      \end{tabular}
+    }
+
+    \column{0.5\textwidth}
+    \centering
+
+    \allbold{Resonant $HH$ production}
+
+    \includegraphics[width=0.8\textwidth]{selection/acceptance_resonant}
+  \end{columns}
+
+  \alert{Signal acceptance improvement of \SIrange{50}{100}{\percent}} compared
+  to previous publication {\scriptsize (Phys.~Rev.~Lett.~\textbf{121},~191801)}
+  \begin{itemize}
+
+  \item Due to improved reconstruction and identification techniques for
+    \tauhadvis and $b$-jets
+
+  \end{itemize}
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -947,20 +992,6 @@
 
 \begin{frame}[standout]
   Backup
-\end{frame}
-
-% ------------------------------------------------------------------------------
-
-\begin{frame}{Event Display: \hadhad Event}
-  \centering
-  \includegraphics[width=0.75\textwidth]{event_displays/hadhad}
-\end{frame}
-
-% ------------------------------------------------------------------------------
-
-\begin{frame}{Event Display: \lephad Event}
-  \centering
-  \includegraphics[width=0.75\textwidth]{event_displays/lephad}
 \end{frame}
 
 % ------------------------------------------------------------------------------
