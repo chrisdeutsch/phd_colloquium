@@ -58,15 +58,10 @@
 
 \maketitle
 
-% Aim for 25ish slides?
 \begin{frame}[noframenumbering]{Notes: Content}
   30 minutes (talk) + 15 minutes (discussion):
   \begin{itemize}
-
-  \item Conclusion \& Outlook (1 slide)
-
-  \item Event Displays (2 slides)
-
+  \item Conclusion \& Outlook
   \end{itemize}
 \end{frame}
 
@@ -1025,7 +1020,7 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Status of SM~\HH Searches After Run~2}
+\begin{frame}{Upper Limits on the SM~\boldmath{$HH$} Signal Strength}
   \begin{columns}[onlytextwidth]
     \column{0.5\textwidth}
     \centering
@@ -1044,18 +1039,28 @@
     \column{0.5\textwidth}
     \centering
 
+    \vspace*{0.25em}
+
     \only<3>{%
       \begin{overpic}[width=0.95\textwidth]{discussion/cms_results_run2}
         \put(40,93.5){\tiny Nature \textbf{607} (2022) 52}
       \end{overpic}
     }
-  \end{columns}
-  \end{frame}
+  \end{columns}%
+  \only<3>{\allbold{Most sensitive channel to SM~$HH$ production to date!}}
+\end{frame}
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Results II}
-  \includegraphics[width=0.5\textwidth]{results_res/resonant_upper_limits}
+\begin{frame}{Resonant \HH Production}
+
+  \begin{columns}[onlytextwidth]
+    \column{0.5\textwidth}
+    \includegraphics[width=\textwidth]{results_res/resonant_upper_limits}
+
+    \column{0.5\textwidth}
+    \includegraphics[width=\textwidth]{results_res/resonant_comb_pvalues}
+  \end{columns}
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -1106,9 +1111,6 @@
   \begin{columns}[onlytextwidth]
     \column{0.5\textwidth}
 
-
-
-
     \textbf{Limitations:}
     \begin{itemize}
     \item Not accounting for changes in
@@ -1118,9 +1120,6 @@
 
     \includegraphics[width=0.95\textwidth]{self_coupling/klam_scan_result}
   \end{columns}
-
-
-
 
   % Limitations
   %
