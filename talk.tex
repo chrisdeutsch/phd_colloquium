@@ -1030,16 +1030,25 @@
     \column{0.5\textwidth}
     \centering
 
-    \begin{overpic}[width=0.9\textwidth]{discussion/results_139ifb}
-      \put(73,85){\tiny arXiv:2211.01216}
-    \end{overpic}
+    \only<1>{%
+      \begin{overpic}[width=0.9\textwidth]{discussion/results_139ifb_onlybbtautau}
+        \put(73,85){\tiny arXiv:2211.01216}
+      \end{overpic}
+    }%
+    \only<2->{%
+      \begin{overpic}[width=0.9\textwidth]{discussion/results_139ifb}
+        \put(73,85){\tiny arXiv:2211.01216}
+      \end{overpic}
+    }
 
     \column{0.5\textwidth}
     \centering
 
-    \begin{overpic}[width=0.95\textwidth]{discussion/cms_results_run2}
-      \put(40,93.5){\tiny Nature \textbf{607} (2022) 52}
-    \end{overpic}
+    \only<3>{%
+      \begin{overpic}[width=0.95\textwidth]{discussion/cms_results_run2}
+        \put(40,93.5){\tiny Nature \textbf{607} (2022) 52}
+      \end{overpic}
+    }
   \end{columns}
   \end{frame}
 
