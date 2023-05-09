@@ -15,6 +15,7 @@
 \usepackage{multirow}
 \usepackage[absolute, overlay]{textpos}
 \usetikzlibrary{positioning}
+\usetikzlibrary{arrows}
 
 \graphicspath{{logos/}{figures/}}
 
@@ -46,6 +47,11 @@
 \definecolor{zjetsgreen}{HTML}{0D8254}
 \definecolor{fakeblue}{HTML}{6997D6}
 \definecolor{topfakered}{HTML}{FE5F5A}
+
+\definecolor{red_cb}{HTML}{e41a1c}
+\definecolor{blue_cb}{HTML}{377eb8}
+\definecolor{green_cb}{HTML}{4daf4a}
+\definecolor{purple_cb}{HTML}{984ea3}
 
 \author{Christopher Deutsch}
 \institute{University of Bonn}
@@ -273,17 +279,19 @@
 
     \column{0.5\textwidth}
 
+    \vspace*{0.1em}
+
     \hspace*{0.35\textwidth}%
     \begin{overpic}[scale=1,trim=0 0.3cm 0 0, clip]{energy_content/content}
       \put(-70,37){\parbox{1.0in}{\small Energy density of today's universe:}}
-      \put(80, 0){\footnotesize Planck 2018}
+      \put(80, 0){\tiny Planck 2018 results}
     \end{overpic}
     % Ordinary matter 4.9 % Dark matter 26.8 % Dark energy 68.3 %
   \end{columns}
   \pause
-  \vspace*{1.5em}
+  \vspace*{1.2em}
   \hrule
-  \vspace*{1.5em}
+  \vspace*{1.2em}
   \begin{columns}
     \column{0.4\textwidth} \centering
 
@@ -293,9 +301,10 @@
 
     \allbold{Search for scalars $X$ decaying to $HH$:}
     \begin{itemize}
-      \setlength{\itemsep}{0.5em}
+      \setlength{\itemsep}{0.3em}
     \item E.g.\ in models with extended Higgs sectors
-    \item Mass range:\ $\SI{251}{\GeV} < m_{X} < \SI{1.6}{\TeV}$
+    \item Mass range:\ $\SI{251}{\GeV} \leq m_{X} \leq \SI{1.6}{\TeV}$
+    \item Negligible decay width
     \end{itemize}
   \end{columns}
 \end{frame}
@@ -945,15 +954,36 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Statistical Analysis I}
+\begin{frame}{Statistical Analysis}
 
-  Regions / discriminants
+  \begin{center}
+    \footnotesize
+    \begin{tabular}{l@{\hskip 2em}c@{\hskip 2em}cccc}
+      \toprule
+      &&\multicolumn{4}{c}{\textbf{Discriminant used in channel}} \\
+      \cmidrule{3-6}
+      \textbf{Search} & \textbf{POI(s)} & \hadhad & \lephad SLT & \lephad LTT & Z+HF CR \\
+      \midrule
+      SM~\HH ($gg$F+VBF) & $\sigma(pp \to HH)$, $\mu$ & {\color{red_cb}BDT} & {\color{purple_cb}NN} & {\color{purple_cb}NN} & {\color{green_cb}$m_{\ell\ell}$} \\
+      $pp \to X \to \HH$ & $\sigma(pp \to X \to HH)$ & {\color{blue_cb}$\text{PNN}(m_{X})$} & {\color{blue_cb}$\text{PNN}(m_{X})$} & {\color{blue_cb}$\text{PNN}(m_{X})$} & {\color{green_cb}$m_{\ell\ell}$} \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
 
-  Fit signal strength or cross section (ggF+VBF is considered the signal)
+  \begin{itemize}
 
-  Free backgrounds: ttbar and Z+HF
+  \item Statistical model based on binned distributions of discriminants in all
+    regions
 
-  Uncertainties: Numerous experimental and theory uncertainties are considered.
+  \item Parameter of interest:
+
+  \item Freely floating $\ttbar$ and $Z+\text{HF}$ normalisations
+
+  \end{itemize}
+
+  % Fit signal strength or cross section (ggF+VBF is considered the signal)
+
+  % Uncertainties: Numerous experimental and theory uncertainties are considered.
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -979,7 +1009,7 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Distributions after Background-Only Fit}
+\begin{frame}{Discriminants After the Background-Only Fit}
   \begin{columns}
     \column{0.333\textwidth}
     \centering
@@ -1018,8 +1048,6 @@
 
 % ------------------------------------------------------------------------------
 
-% ------------------------------------------------------------------------------
-
 \begin{frame}{Upper Limits on the SM~\boldmath{$HH$} Signal Strength}
   \begin{columns}[onlytextwidth]
     \column{0.5\textwidth}
@@ -1053,14 +1081,44 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}{Resonant \HH Production}
-
+  \vspace*{0.1em}
   \begin{columns}[onlytextwidth]
     \column{0.5\textwidth}
-    \includegraphics[width=\textwidth]{results_res/resonant_upper_limits}
+    \centering
+
+    \includegraphics[width=0.9\textwidth]{results_res/resonant_upper_limits}
 
     \column{0.5\textwidth}
-    \includegraphics[width=\textwidth]{results_res/resonant_comb_pvalues}
+    \centering
+
+    \includegraphics[width=0.9\textwidth]{results_res/resonant_comb_pvalues}
   \end{columns}
+
+  Excess observed for $m_{X} = \SI{1000}{\GeV}$:
+  \begin{itemize}
+  \item Localised in \hadhad channel
+  \item Expect 6.3 background events but observed 14 events
+  \item Local (global) significance of $3.1\sigma$ ($2.0\sigma$)
+  \end{itemize}
+
+  Best fit xsec:
+  $\hat{\sigma}(pp \to X \to HH) = \left( 17.4^{+7.5}_{-6.5}
+  \right)\si{\femto\barn}$
+
+  \only<2>{%
+    \tikz[overlay, remember picture, shift=(current page.south west), x=(current
+    page.south east), y=(current page.north west), ]{ \node[align=center] at
+      (0.35,0.6) {%
+        \setlength{\fboxrule}{1pt}%
+        \fcolorbox{headergray}{mygray}{%
+          \begin{minipage}{0.333\textwidth}
+            \includegraphics[width=\textwidth]{results_res/postfit/Region_BMin0_incJet1_distPNN1000_J2_Y2015_DLLOS_T2_SpcTauHH_L0_GlobalFit_conditionnal_mu0log}
+          \end{minipage}
+        }
+      };
+      \draw[-stealth, line width=1pt, color=Red] (0.44,0.554) -- (0.76,0.59);
+    }
+  }
 \end{frame}
 
 % ------------------------------------------------------------------------------
