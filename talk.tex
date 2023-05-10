@@ -755,7 +755,7 @@
 
     \vspace{1.5em}
 
-    \resizebox{1.0\textwidth}{!}{\footnotesize
+    \resizebox{1.0\textwidth}{!}{\footnotesize%
       \begin{tabular}{lcc}
         \toprule
         & \allbold{This Analysis} & Prev.\ Publication \\
@@ -880,12 +880,13 @@
     \footnotesize
     \begin{tabular}{lS[table-format=4.2(3)]S[table-format=5.1(3)]S[table-format=4.2(3)]}
       \toprule
-      & \multicolumn{3}{c}{Channel}\\
+      & \multicolumn{3}{c}{Expected Number of Events}\\
       \cmidrule{2-4}
       & {\hadhad} & {\lephad SLT} & {\lephad LTT}\\
       \midrule
       SM~$HH$ ($gg$F+VBF) & 5.16 +- 0.84 & 5.9 +- 1.0   & 1.42 +- 0.24 \\
-      Total Background    & 8414 +- 90   & 98430 +- 390 & 6357 +- 79 \\
+      Total Background & 8414 +- 90   & 98430 +- 390 & 6357 +- 79 \\
+      \midrule\\[-1.6em]
       \midrule
       $S / B$ & {$6 \times 10^{-4}$} & {$6 \times 10^{-5}$} & {$2 \times 10^{-4}$} \\
       $S / \sqrt{B}$ & {$0.06$} & {$0.02$} & {$0.02$} \\
@@ -902,7 +903,7 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Discriminants}
+\begin{frame}{Discriminating Variables}
 
   \begin{columns}[onlytextwidth]
     \column{0.5\textwidth}
@@ -927,7 +928,7 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}{Signal Extraction: SM \allbold{\HH} Production}
-  \begin{columns}
+  \begin{columns}[onlytextwidth]
     \column{0.5\textwidth}
     % BDT
 
