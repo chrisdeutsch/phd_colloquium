@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70218" creator="Ipe 7.2.26">
-<info created="D:20230510084657" modified="D:20230510102609"/>
-<preamble>\usepackage{newtxmath}
-\usepackage{newtxtext}
+<info created="D:20230510104605" modified="D:20230510110650"/>
+<preamble>\usepackage{newtxtext}
+\usepackage{newtxmath}
 \usepackage{amsmath}</preamble>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
@@ -316,103 +316,83 @@ h
 <page>
 <layer name="alpha"/>
 <view layers="alpha" active="alpha"/>
-<path layer="alpha" fill="0.302 0.686 0.29" opacity="30%" stroke-opacity="opaque">
-364.118 604.053 m
-370.33 600.155
-377.029 615.99
-383.424 592.055
-388.966 588.888 c
+<text layer="alpha" matrix="1 0 0 1 4 0" transformations="translations" pos="96 624" stroke="black" type="label" width="25.961" height="8.538" depth="2.51" halign="right" valign="center" style="math">m_{\tau\tau}^{\text{MMC}}</text>
+<text matrix="1 0 0 1 4 56" transformations="translations" pos="96 624" stroke="0.894 0.102 0.11" type="label" width="14.225" height="4.318" depth="1.49" halign="right" valign="center" style="math">m_{X}</text>
+<text matrix="1 0 0 1 36 -4.8" transformations="translations" pos="76 652" stroke="black" type="label" width="4.511" height="15.567" depth="0.15" halign="center" valign="bottom" size="16" style="math">\vdots</text>
+<path stroke="0" fill="white" pen="heavier">
+112 680 m
+144 668 l
 </path>
-<path fill="0.216 0.494 0.722" opacity="30%" stroke-opacity="opaque">
-337.15 622.956 m
-342.411 618.898
-346.781 639.743
-349.911 613.509
-355.72 609.574 c
+<path stroke="0" fill="white" pen="heavier">
+112 680 m
+144 640 l
 </path>
-<path fill="0.894 0.102 0.11" opacity="30%" stroke-opacity="opaque">
-316.516 638.857 m
-322.645 634.284
-324.864 655.646
-325.887 631.689
-332.561 626.358 c
+<path stroke="0" fill="white" pen="heavier">
+112 680 m
+144 612 l
 </path>
-<path stroke="0.894 0.102 0.11" pen="heavier">
-316.516 638.857 m
-322.645 634.284
-324.864 655.646
-325.887 631.689
-332.561 626.358 c
+<path stroke="0" fill="white" pen="heavier">
+112 624 m
+144 668 l
 </path>
-<path fill="0.137 0.216 0.231" opacity="30%" stroke-opacity="opaque">
-292 576 m
-300 652
-316 640
-360 604
-412 576 c
+<path stroke="0" fill="white" pen="heavier">
+112 624 m
+144 640 l
 </path>
-<path stroke="0.302 0.686 0.29" pen="heavier">
-364.118 604.053 m
-370.33 600.155
-377.029 615.99
-383.424 592.055
-388.966 588.888 c
+<path stroke="0" fill="white" pen="heavier">
+112 624 m
+144 612 l
 </path>
-<path stroke="0.216 0.494 0.722" pen="heavier">
-337.15 622.956 m
-342.411 618.898
-346.781 639.743
-349.911 613.509
-355.72 609.574 c
+<path stroke="0" fill="white" pen="heavier">
+112 596 m
+144 668 l
 </path>
-<path stroke="0.137 0.216 0.231" pen="heavier">
-292 576 m
-300 652
-316 640
-360 604
-412 576 c
+<path stroke="0" fill="white" pen="heavier">
+112 596 m
+144 640 l
 </path>
-<text transformations="translations" pos="424 568" stroke="0" type="label" width="22.312" height="4.318" depth="1.49" halign="right" valign="baseline" style="math">m_{HH}</text>
-<path stroke="0" pen="heavier" arrow="normal/normal" rarrow="normal/normal">
-288 664 m
-288 576 l
-424 576 l
+<path stroke="0" fill="white" pen="heavier">
+112 596 m
+144 612 l
 </path>
-<text matrix="1 0 0 1 0 8" transformations="translations" pos="304 584" stroke="0.137 0.216 0.231" type="label" width="48.498" height="6.742" depth="2.15" valign="baseline">Background</text>
-<text matrix="1 0 0 1 32 0" transformations="translations" pos="348 652" stroke="0.137 0.216 0.231" type="label" width="25.465" height="6.742" depth="2.15" valign="center">Signal</text>
-<path stroke="0.137 0.216 0.231" arrow="normal/normal">
-376 652 m
-352 652
-328 644 c
+<path stroke="0" fill="white" pen="heavier">
+144 668 m
+176 640 l
 </path>
-<path stroke="0.137 0.216 0.231" arrow="normal/normal">
-376 648 m
-364 640
-348 628 c
+<path stroke="0" fill="white" pen="heavier">
+144 640 m
+176 640 l
 </path>
-<path stroke="0.137 0.216 0.231" arrow="normal/normal">
-380 644 m
-376 628
-376 608 c
+<path stroke="0" fill="white" pen="heavier">
+144 612 m
+176 640 l
 </path>
-<text matrix="1 0 0 1 0 92" transformations="translations" pos="324 556" stroke="0.894 0.102 0.11" type="label" width="9.834" height="5.214" depth="1.19" halign="center" valign="baseline" size="8" style="math">X_1</text>
-<text matrix="1 0 0 1 22 14" transformations="translations" pos="324 556" stroke="0.216 0.494 0.722" type="label" width="16.069" height="3.457" depth="2.25" halign="center" valign="baseline" size="8" style="math">m_{X_2}</text>
-<text matrix="1 0 0 1 52 14" transformations="translations" pos="324 556" stroke="0.302 0.686 0.29" type="label" width="16.069" height="3.457" depth="2.25" halign="center" valign="baseline" size="8" style="math">m_{X_3}</text>
-<text matrix="1 0 0 1 20 76" transformations="translations" pos="324 556" stroke="0.216 0.494 0.722" type="label" width="9.834" height="5.214" depth="1.19" halign="center" valign="baseline" size="8" style="math">X_2</text>
-<text matrix="1 0 0 1 56 52" transformations="translations" pos="324 556" stroke="0.302 0.686 0.29" type="label" width="9.834" height="5.214" depth="1.19" valign="baseline" size="8" style="math">X_3</text>
-<text matrix="1 0 0 1 0 14" transformations="translations" pos="324 556" stroke="0.894 0.102 0.11" type="label" width="16.069" height="3.457" depth="2.25" halign="center" valign="baseline" size="8" style="math">m_{X_1}</text>
-<text matrix="0 1 -1 0 936 388" pos="248 652" stroke="0" type="label" width="26.77" height="6.739" depth="0.12" valign="baseline">Events</text>
-<path stroke="0">
-324 576 m
-324 580 l
+<path matrix="1 0 0 1 0 -8" stroke="0.894 0.102 0.11" fill="white" pen="heavier">
+8 0 0 8 112 688 e
 </path>
-<path matrix="1 0 0 1 22 0" stroke="0">
-324 576 m
-324 580 l
+<path matrix="1 0 0 1 0 -64" stroke="black" fill="1" pen="heavier">
+8 0 0 8 112 688 e
 </path>
-<path matrix="1 0 0 1 52 0" stroke="0">
-324 576 m
-324 580 l
+<path matrix="1 0 0 1 0 -92" stroke="black" fill="1" pen="heavier">
+8 0 0 8 112 688 e
+</path>
+<path matrix="1 0 0 1 32 -76" stroke="black" fill="1" pen="heavier">
+8 0 0 8 112 688 e
+</path>
+<path matrix="1 0 0 1 32 -48" stroke="black" fill="1" pen="heavier">
+8 0 0 8 112 688 e
+</path>
+<path matrix="1 0 0 1 32 -20" stroke="black" fill="1" pen="heavier">
+8 0 0 8 112 688 e
+</path>
+<path matrix="1 0 0 1 64 -48" stroke="0" fill="1" pen="heavier">
+8 0 0 8 112 688 e
+</path>
+<text matrix="1 0 0 1 4 -28" transformations="translations" pos="96 624" stroke="black" type="label" width="22.312" height="4.318" depth="1.49" halign="right" valign="center" style="math">m_{HH}</text>
+<text matrix="1 0 0 1 12 -16" transformations="translations" pos="144 696" stroke="0" type="label" width="40.189" height="6.744" depth="0.07" valign="center">Parameter</text>
+<path stroke="0" fill="white" pen="heavier" arrow="normal/normal">
+154.015 680 m
+122.551 680 l
 </path>
 </page>
 </ipe>

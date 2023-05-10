@@ -921,10 +921,9 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Signal Extraction: non-resonant}
+\begin{frame}{Signal Extraction: SM \allbold{\HH} Production}
   \begin{columns}
     \column{0.5\textwidth}
-
     % BDT
 
     % NN is used in lephad
@@ -937,19 +936,44 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Signal Extraction: resonant}
-  \begin{columns}
-    \column{0.5\textwidth}
+\begin{frame}{Signal Extraction: Resonant \allbold{\HH} Production}
+  \begin{columns}[onlytextwidth]
+    \column{0.6\textwidth}
 
-    Classification task changes with $m_{X}$ \ra PNN
+    Multiple signal hypotheses considered:
+    \begin{itemize}
+    \item 20 mass points ($\SI{251}{\GeV} \leq m_{X} \leq \SI{1.6}{\TeV}$)
+    \item Kinematic properties of signal changes with $m_{X}$
+    \end{itemize}
 
-    \column{0.5\textwidth}
+    \vspace*{0.75em}
+
+    \onslide<2->{\textbf{Previously:} 1 BDT per mass point}
+
+    \vspace*{0.75em}
+
+    \onslide<3->{\textbf{Now:} Parameterised Neural Network (PNN)}
+
+
+    \vspace*{0.5em}
+
+    \onslide<3->{%
+      \begin{overpic}[width=0.45\textwidth]{pnn_sketch}
+        \put(85,25){\footnotesize \parbox[t]{0.50\textwidth}{Single NN to solve
+            parameter-dependent classification problem}}
+        \put(85,4){\tiny EPJC \textbf{77} (2016) 235}
+      \end{overpic}
+    }
+
+    \column{0.4\textwidth}
     \centering
 
-    \includegraphics[width=0.8\textwidth]{resonant_signal_extraction_illustration}
+    \hspace*{3em}\includegraphics[width=0.75\textwidth]{feynman_graphs/di_higgs_resonant}
+
+    \vspace{1em}
+
+    \includegraphics[width=0.95\textwidth]{resonant_signal_extraction_illustration}
   \end{columns}
-
-
 \end{frame}
 
 % ------------------------------------------------------------------------------
