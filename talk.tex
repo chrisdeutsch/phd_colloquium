@@ -73,15 +73,17 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Introduction}
-  Why do particle physics?
+% SKIP?
 
-  What is particle physics?
+% \begin{frame}{Introduction}
+%   Why do particle physics?
 
-  What is the origin of elementary particle masses?
+%   What is particle physics?
 
-  % Mention previous analyses by ATLAS and CMS? using partial Run 2 datasets
-\end{frame}
+%   What is the origin of elementary particle masses?
+
+%   % Mention previous analyses by ATLAS and CMS? using partial Run 2 datasets
+% \end{frame}
 
 % ------------------------------------------------------------------------------
 
@@ -153,23 +155,107 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Higgs Boson Discovery}
+{ % all template changes are local to this group.
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamercolor{background canvas}{bg=black}
+  \begin{frame}<article:0>[plain]
+    \setlength{\fboxrule}{1pt}
+    \begin{tikzpicture}[remember picture,overlay,shift=(current page.south
+      west),x=(current page.south east),y=(current page.north west)]
 
-  \begin{columns}
-    \column{0.5\textwidth}
-    \centering
+      \node[at=(current page.center)] { \includegraphics[keepaspectratio,
+        width=\paperwidth, height=\paperheight, trim=0 8.2cm 0 0,
+        clip]{CERN_seminar} };
 
-    % CERN Seminar: 4 July 2012
-    \includegraphics[width=0.9\textwidth]{CERN_seminar}
+      \node[align=center] at (0.2,0.27){%
+        \fcolorbox{headergray}{white}{\includegraphics[width=0.36\textwidth]{higgs_discovery/figaux_004a}}
+      };
 
-    \column{0.5\textwidth}
-    \centering
+      \node[align=center] at (0.85, 0.27){%
+        \fcolorbox{headergray}{white}{\includegraphics[width=0.27\textwidth]{higgs_discovery/fig_002}}
+      };
 
-    \includegraphics[width=0.55\textwidth]{higgs_discovery/fig_002}
+      \node[anchor=east] at (1.0, 0.93){%
+        \fcolorbox{headergray}{white}{
+          \begin{minipage}{0.35\textwidth}
+            CERN Seminar (July 4, 2012)\\[-0.5em]
+            {\tiny Credit: CERN (photo), HIGG-2012-27 (plots)}
+          \end{minipage}
+        }
+      };
 
-    \includegraphics[width=0.7\textwidth]{higgs_discovery/figaux_004a}
-  \end{columns}
-\end{frame}
+      \node[align=center] at (0.55,0.15){%
+        \fcolorbox{headergray}{white}{$m_{H} \approx \SI{125}{\GeV}$};
+      };
+    \end{tikzpicture}
+  \end{frame}
+}
+
+% ------------------------------------------------------------------------------
+
+% \begin{frame}{Higgs Boson Discovery}
+%   \setlength{\fboxrule}{1pt}
+
+%   July 4, 2012
+
+%   \tikz[overlay, remember picture, shift=(current page.south west), x=(current
+%   page.south east), y=(current page.north west)]{
+%     % \node[align=center] at (0.25,0.6){%
+%     %   % CERN Seminar: 4 July 2012
+%     %   \includegraphics[width=0.45\textwidth]{CERN_seminar}
+%     % };
+
+%     \node[align=center] at (0.5,0.5){%
+%       % CERN Seminar: 4 July 2012
+%       \includegraphics[width=\textwidth]{CERN_seminar}
+%     };
+
+
+
+%     \node[align=center] at (0.5, 0.3){%
+%       \fcolorbox{headergray}{white}{\includegraphics[width=0.3\textwidth]{higgs_discovery/fig_002}}
+%     };
+
+%   }
+
+%     %   \fbox{\includegraphics[width=0.55\textwidth]{higgs_discovery/fig_002}}
+
+%     %   \fbox{\includegraphics[width=0.7\textwidth]{higgs_discovery/figaux_004a}}
+
+
+
+
+%   % \node[align=center] at
+%   % (0.5,0.678) {%
+
+%   % }
+
+%     % \setlength{\fboxrule}{1pt}%
+%     %   \fcolorbox{headergray}{mygray}{%
+%     %     \begin{minipage}{0.75\textwidth}
+%     %       \centering \vspace*{0.6em} \textbf{Machine learning techniques}
+%     %         Simulated $\gamma^* \rightarrow \tauhad \tauhad$ for ``signal''
+
+%     %         Simulated di-jet events for ``background'' \vspace*{0.6em}
+%     %       \end{minipage}
+%     %     }
+%     %   };
+
+%   % \begin{columns}
+%   %   \column{0.5\textwidth}
+%   %   \centering
+
+%   %   % CERN Seminar: 4 July 2012
+%   %   \includegraphics[width=0.9\textwidth]{CERN_seminar}
+
+%   %   \column{0.5\textwidth}
+%   %   \centering
+
+%   %   \fbox{\includegraphics[width=0.55\textwidth]{higgs_discovery/fig_002}}
+
+%   %   \fbox{\includegraphics[width=0.7\textwidth]{higgs_discovery/figaux_004a}}
+%   % \end{columns}
+% \end{frame}
 
 % ------------------------------------------------------------------------------
 
@@ -489,13 +575,13 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Previous Tau Identification Approach}
-    \begin{center}
-    \includegraphics[scale=0.75]{tauid/bdt_approach}
-  \end{center}
+% \begin{frame}{Previous Tau Identification Approach}
+%     \begin{center}
+%     \includegraphics[scale=0.75]{tauid/bdt_approach}
+%   \end{center}
 
-  Using Boosted Decision Trees.
-\end{frame}
+%   Using Boosted Decision Trees.
+% \end{frame}
 
 % ------------------------------------------------------------------------------
 
@@ -835,7 +921,7 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Background Estimation: $Z + \text{jets}$}
+\begin{frame}{Background Estimation: \allbold{$Z + \text{jets}$}}
   \begin{itemize}
   \item Sherpa 2.2.1 known discrepancy when applying $b$-tagging requirements
   \item Z+HF CR: di-electron/muon final states + 2 $b$-tagged jets
@@ -1056,23 +1142,27 @@
 
 % ------------------------------------------------------------------------------
 
+\begin{frame}[standout]
+  SM \allbold{\HH} Production
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
 \begin{frame}{Uncertainties}
-  \begin{columns}[onlytextwidth]
-    \column{0.4\textwidth}
-
-    Dominated by statistical uncertainties
-
-    \column{0.6\textwidth}
+  \begin{columns}
+    \column{0.56\textwidth}
     \centering
 
-    {\allbold{Uncertainty breakdown for SM~\HH search}}
+    Breakdown by impact on $\hat{\mu}$ (SM~\HH)
 
     \vspace*{1.0em}
 
     \includegraphics[width=0.9\textwidth]{uncertainty_table}
+
+    \column{0.44\textwidth}
+
+    \textbf{Dominated by statistical uncertainties}
   \end{columns}
-
-
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -1148,6 +1238,12 @@
 
 % ------------------------------------------------------------------------------
 
+\begin{frame}[standout]
+  Resonant \allbold{\HH} Production
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
 % \begin{frame}{Resonant \allbold{\HH} Production}
 %   \vspace*{0.1em}
 %   \begin{columns}[onlytextwidth]
@@ -1197,37 +1293,29 @@
     \column{0.5\textwidth}
     \centering
 
-    \includegraphics[width=0.75\textwidth]{results_res/postfit/Region_BMin0_incJet1_distPNN1000_J2_Y2015_DLLOS_T2_SpcTauHH_L0_GlobalFit_conditionnal_mu0log}
+    \includegraphics[width=0.75\textwidth, trim=0 0.3em 0 1em,
+    clip]{results_res/postfit/Region_BMin0_incJet1_distPNN1000_J2_Y2015_DLLOS_T2_SpcTauHH_L0_GlobalFit_conditionnal_mu0log}\hspace*{0.14\textwidth}
 
     \column{0.5\textwidth}
     \centering
 
-    \includegraphics[width=0.9\textwidth]{results_res/resonant_comb_pvalues}
+    \includegraphics[width=0.9\textwidth, trim=0 0.3em 0 1em]{results_res/resonant_comb_pvalues}
   \end{columns}
 
-  Excess observed for $m_{X} = \SI{1000}{\GeV}$:
+  Excess observed for $m_{X} \approx \SI{1000}{\GeV}$:\\[0.4em]
   \begin{itemize}
-  \item Localised in \hadhad channel
-  \item Expect 6.3 background events but observed 14 events
+    \setlength{\itemsep}{0.4em}
+  \item Best-fit cross section:~$\hat{\sigma}(pp \to X \to HH) = \left( 17.4^{+7.5}_{-6.5}
+    \right)\si{\femto\barn}$
   \item Local (global) significance of $3.1\sigma$ ($2.0\sigma$)
   \end{itemize}
 
-  Best fit xsec:
-  $\hat{\sigma}(pp \to X \to HH) = \left( 17.4^{+7.5}_{-6.5}
-  \right)\si{\femto\barn}$
-
-  \only<2>{%
+  \only<1->{%
     \tikz[overlay, remember picture, shift=(current page.south west), x=(current
-    page.south east), y=(current page.north west), ]{ \node[align=center] at
-      (0.35,0.6) {%
-        \setlength{\fboxrule}{1pt}%
-        \fcolorbox{headergray}{mygray}{%
-          \begin{minipage}{0.333\textwidth}
-            \includegraphics[width=\textwidth]{results_res/postfit/Region_BMin0_incJet1_distPNN1000_J2_Y2015_DLLOS_T2_SpcTauHH_L0_GlobalFit_conditionnal_mu0log}
-          \end{minipage}
-        }
-      };
-      \draw[-stealth, line width=1pt, color=Red] (0.44,0.554) -- (0.76,0.59);
+    page.south east), y=(current page.north west), ]{
+      \draw[-stealth, line width=1pt, color=Red] (0.35,0.545) -- (0.765,0.56);
+      \node[anchor=west] at (0.381,0.49){\scriptsize\color{Red}Expectation:~6.3 events};
+      \node[anchor=west] at (0.381,0.455){\scriptsize\color{Red}Observed:~14 events};
     }
   }
 \end{frame}
@@ -1238,9 +1326,13 @@
 
   \begin{columns}
     \column{0.5\textwidth}
+    \centering
+
     \includegraphics[width=0.95\textwidth]{results_res/resonant_upper_limits}
 
     \column{0.5\textwidth}
+    \centering
+
     \includegraphics[width=0.95\textwidth]{discussion/atlas_comparison_resonant_marked}
   \end{columns}
 \end{frame}
