@@ -751,7 +751,7 @@
     \column{0.5\textwidth}
     \centering
 
-    \allbold{Non-resonant $HH$ production (SM)}
+    \allbold{SM $HH$ production}
 
     \vspace{1.5em}
 
@@ -774,7 +774,8 @@
 
     \allbold{Resonant $HH$ production}
 
-    \includegraphics[width=0.8\textwidth]{selection/acceptance_resonant}
+    \includegraphics[width=0.88\textwidth, trim=0 0.5em 0 1em,
+    clip]{selection/acceptance_resonant}
   \end{columns}
 
   \alert{Signal acceptance improvement of \SIrange{50}{100}{\percent}} compared
@@ -1029,7 +1030,7 @@
       \toprule
       &&\multicolumn{4}{c}{\textbf{Discriminant used in channel}} \\
       \cmidrule{3-6}
-      \textbf{Search} & \textbf{POI(s)} & \hadhad & \lephad SLT & \lephad LTT & Z+HF CR \\
+      \textbf{Search} & \textbf{POI(s)} & \hadhad & \lephad SLT & \lephad LTT & $Z+\text{HF}$ CR \\
       \midrule
       SM~\HH Production & $\sigma(pp \to HH)$, $\mu$ & {\color{red_cb}BDT} & {\color{purple_cb}NN} & {\color{purple_cb}NN} & {\color{green_cb}$m_{\ell\ell}$} \\
       Resonant \HH Production & $\sigma(pp \to X \to HH)$ & {\color{blue_cb}$\text{PNN}(m_{X})$} & {\color{blue_cb}$\text{PNN}(m_{X})$} & {\color{blue_cb}$\text{PNN}(m_{X})$} & {\color{green_cb}$m_{\ell\ell}$} \\
@@ -1037,25 +1038,20 @@
     \end{tabular}
   \end{center}
 
-  \begin{center}
-    \includegraphics[width=0.4\textwidth, trim=0.5em 0.5em 2em 1.5em,
-    clip]{mva/prefit/Region_BMin0_incJet1_distSMBDT_J2_Y2015_DLLOS_T2_SpcTauHH_L0_Prefitlog_removedratio}
-  \end{center}
+  \vspace*{1em}
 
-  % \begin{itemize}
+  \textbf{Statistical Model:}
+  \begin{itemize}
+    \setlength{\itemsep}{0.5em}
 
-  % \item Statistical model based on binned distributions of discriminants in
-  %   all regions
+  \item Models the binned distributions of discriminants in all channels
 
-  % \item Parameter of interest:
+  \item Processes with free normalisation: signal, \ttbar, $Z+\text{HF}$
 
-  % \item Freely floating $\ttbar$ and $Z+\text{HF}$ normalisations
+  \item Additional degrees of freedom to account for experimental \& theory
+    uncertainties
 
-  % \end{itemize}
-
-  % Fit signal strength or cross section (ggF+VBF is considered the signal)
-
-  % Uncertainties: Numerous experimental and theory uncertainties are considered.
+  \end{itemize}
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -1197,10 +1193,10 @@
 
   \begin{columns}
     \column{0.5\textwidth}
-    \includegraphics[width=\textwidth]{results_res/resonant_upper_limits}
+    \includegraphics[width=0.95\textwidth]{results_res/resonant_upper_limits}
 
     \column{0.5\textwidth}
-    \includegraphics[width=\textwidth]{discussion/atlas_comparison_resonant_marked}
+    \includegraphics[width=0.95\textwidth]{discussion/atlas_comparison_resonant_marked}
   \end{columns}
 \end{frame}
 
@@ -1272,7 +1268,20 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}{Conclusion \& Outlook}
-  Evidence expected at the HL-LHC (discovery would be realistic)
+  \textbf{Main results:}
+  \begin{itemize}
+  \item Tau-ID
+  \item SM HH limit
+  \item Resonant Limit
+  \item klambda limit
+  \end{itemize}
+
+  \textbf{Outlook:}
+  \begin{itemize}
+  \item Legacy analyses in progress?
+  \item First evidence for SM HH production at the HL-LHC (even discovery would
+    be realistic)
+  \end{itemize}
 \end{frame}
 
 % ------------------------------------------------------------------------------
