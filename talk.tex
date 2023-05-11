@@ -944,15 +944,20 @@
   \begin{columns}[onlytextwidth]
     \column{0.5\textwidth}
 
-    \textbf{Multivariate classification:}
+    \textbf{Signal/background classification using machine learning:}
+    \begin{itemize}
+    \item Boosted decision trees (\hadhad)
+    \item Neural networks (\lephad)
+    \end{itemize}
 
-    % Neural Network in \lephad
+    \vspace*{2em}
 
-    \vspace*{1em}
+    \textbf{Discretised classification scores are used for statistical
+      interpretation.}
 
-    Most relevant backgrounds at high score:\\
-    Z+jets (36\,\%), Fake-\tauhadvis (21\,\%), Single Higgs boson (19\,\%),
-    Top-quark (17\,\%)
+    % Most relevant backgrounds at high score:\\
+    % Z+jets (36\,\%), Fake-\tauhadvis (21\,\%), Single Higgs boson (19\,\%),
+    % Top-quark (17\,\%)
 
     \column{0.5\textwidth}
     \centering
@@ -974,7 +979,7 @@
   \begin{columns}[onlytextwidth]
     \column{0.6\textwidth}
 
-    Multiple signal hypotheses considered:
+    \textbf{Multiple signal hypotheses considered:}
     \begin{itemize}
     \item 20 mass points ($\SI{251}{\GeV} \leq m_{X} \leq \SI{1.6}{\TeV}$)
     \item Kinematic properties of signal changes with $m_{X}$
@@ -1009,6 +1014,12 @@
     \includegraphics[width=0.95\textwidth]{resonant_signal_extraction_illustration}
   \end{columns}
 \end{frame}
+
+% Verbally mention some features:
+% - Only one NN needed for a continuously varying classification task
+% - Ability to interpolate
+% - Up to 20% improvement in signal sensitivity compared to previous approach
+
 
 % ------------------------------------------------------------------------------
 
