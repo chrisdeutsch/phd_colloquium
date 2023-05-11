@@ -994,7 +994,7 @@
     \onslide<3->{\textbf{Now:} Parameterised Neural Network (PNN)}
 
 
-    \vspace*{0.5em}
+    \vspace*{0.75em}
 
     \onslide<3->{%
       \begin{overpic}[width=0.45\textwidth]{pnn_sketch}
@@ -1020,35 +1020,38 @@
 % - Ability to interpolate
 % - Up to 20% improvement in signal sensitivity compared to previous approach
 
-
 % ------------------------------------------------------------------------------
 
 \begin{frame}{Statistical Analysis}
-
   \begin{center}
     \footnotesize
-    \begin{tabular}{l@{\hskip 2em}c@{\hskip 2em}cccc}
+    \begin{tabular}{l@{\hskip 1em}c@{\hskip 1em}cccc}
       \toprule
       &&\multicolumn{4}{c}{\textbf{Discriminant used in channel}} \\
       \cmidrule{3-6}
       \textbf{Search} & \textbf{POI(s)} & \hadhad & \lephad SLT & \lephad LTT & Z+HF CR \\
       \midrule
-      SM~\HH ($gg$F+VBF) & $\sigma(pp \to HH)$, $\mu$ & {\color{red_cb}BDT} & {\color{purple_cb}NN} & {\color{purple_cb}NN} & {\color{green_cb}$m_{\ell\ell}$} \\
-      $pp \to X \to \HH$ & $\sigma(pp \to X \to HH)$ & {\color{blue_cb}$\text{PNN}(m_{X})$} & {\color{blue_cb}$\text{PNN}(m_{X})$} & {\color{blue_cb}$\text{PNN}(m_{X})$} & {\color{green_cb}$m_{\ell\ell}$} \\
+      SM~\HH Production & $\sigma(pp \to HH)$, $\mu$ & {\color{red_cb}BDT} & {\color{purple_cb}NN} & {\color{purple_cb}NN} & {\color{green_cb}$m_{\ell\ell}$} \\
+      Resonant \HH Production & $\sigma(pp \to X \to HH)$ & {\color{blue_cb}$\text{PNN}(m_{X})$} & {\color{blue_cb}$\text{PNN}(m_{X})$} & {\color{blue_cb}$\text{PNN}(m_{X})$} & {\color{green_cb}$m_{\ell\ell}$} \\
       \bottomrule
     \end{tabular}
   \end{center}
 
-  \begin{itemize}
+  \begin{center}
+    \includegraphics[width=0.4\textwidth, trim=0.5em 0.5em 2em 1.5em,
+    clip]{mva/prefit/Region_BMin0_incJet1_distSMBDT_J2_Y2015_DLLOS_T2_SpcTauHH_L0_Prefitlog_removedratio}
+  \end{center}
 
-  \item Statistical model based on binned distributions of discriminants in all
-    regions
+  % \begin{itemize}
 
-  \item Parameter of interest:
+  % \item Statistical model based on binned distributions of discriminants in
+  %   all regions
 
-  \item Freely floating $\ttbar$ and $Z+\text{HF}$ normalisations
+  % \item Parameter of interest:
 
-  \end{itemize}
+  % \item Freely floating $\ttbar$ and $Z+\text{HF}$ normalisations
+
+  % \end{itemize}
 
   % Fit signal strength or cross section (ggF+VBF is considered the signal)
 
