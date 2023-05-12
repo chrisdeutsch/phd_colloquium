@@ -857,8 +857,11 @@
 
 \begin{frame}{Background Estimation: \allbold{$Z + \text{jets}$}}
   \begin{itemize}
+
   \item Sherpa 2.2.1 known discrepancy when applying $b$-tagging requirements
+
   \item Z+HF CR: di-electron/muon final states + 2 $b$-tagged jets
+
   \end{itemize}
 
   \vspace*{0.5em}
@@ -867,23 +870,36 @@
     \column{0.5\textwidth}
     \centering
 
-    \textbf{Pre-fit}
-
-    \includegraphics[width=0.65\textwidth]{zhfcr/Region_BMin0_incJet1_Y2015_DZllbbCR_T2_L2_distmLL_J2_Prefit_fixed}
+    \includegraphics[width=0.8\textwidth]{zhfcr/Region_BMin0_incJet1_Y2015_DZllbbCR_T2_L2_distmLL_J2_Prefit_fixed}
 
     \column{0.5\textwidth}
     \centering
 
-    \textbf{Post-fit}
-
-    \includegraphics[width=0.65\textwidth]{zhfcr/Region_BMin0_incJet1_Y2015_DZllbbCR_T2_L2_distmLL_J2_GlobalFit_conditionnal_mu0_fixed}
+    \begin{overpic}[width=0.8\textwidth]{zhfcr/Region_BMin0_incJet1_Y2015_DZllbbCR_T2_L2_distmLL_J2_GlobalFit_conditionnal_mu0_fixed}
+      \put(16.5,71.5){\footnotesize Z+HF SF $\approx 1.4$}
+    \end{overpic}
   \end{columns}
 \end{frame}
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Background Estimation: ttbarfakes}
-  Possibly add second slide
+\begin{frame}{Background Estimation: \allbold{\ttbar} with Fake \allbold{\tauhadvis}}
+  \begin{columns}[onlytextwidth]
+    \column{0.55\textwidth}
+
+    CR targeting $\ell + \tauhadvis$
+
+    \column{0.45\textwidth}
+    \centering
+
+    \vspace*{0.1em}
+
+    \includegraphics[width=\textwidth]{ttbarSF/postfit_sfcr/MTWVR_postFit}
+
+    {\footnotesize
+      $\mtw = \sqrt{ 2 \, \pT^\ell \, \pTmissAbs \, (1 - \cos\Delta\phi)}$
+    }
+  \end{columns}
 \end{frame}
 
 % ------------------------------------------------------------------------------
