@@ -258,7 +258,7 @@
 \begin{frame}{Higgs Boson Pair Production: A Rare Process}
 
   \begin{columns}
-    \column{0.4\textwidth}
+    \column{0.35\textwidth}
     \centering
 
     % \begin{itemize}
@@ -269,9 +269,9 @@
     % \item HH: 31.05 + 1.726 = 32.8 fb
     % \item HHH: 80 ab (80e-18)
     % \end{itemize}
-    \vspace*{1em} \includegraphics[width=0.92\textwidth]{cross_section_figure}
+    \vspace*{1em} \includegraphics[width=0.95\textwidth]{cross_section_figure}
 
-    \column{0.6\textwidth}
+    \column{0.65\textwidth}
 
     \textbf{SM Expectation:}
     \vspace{0.5em}
@@ -1149,31 +1149,33 @@
 \begin{frame}{Upper Limits on the SM~\boldmath{$HH$} Signal Strength}
   \begin{columns}[onlytextwidth]
     \column{0.5\textwidth}
-    \centering
 
-    \only<1>{%
-      \begin{overpic}[width=0.9\textwidth]{discussion/results_139ifb_onlybbtautau}
-        \put(73,85){\tiny arXiv:2211.01216}
-      \end{overpic}
-    }%
-    \only<2->{%
-      \begin{overpic}[width=0.9\textwidth]{discussion/results_139ifb}
-        \put(73,85){\tiny arXiv:2211.01216}
-      \end{overpic}
-    }
+    \begin{center}
+      \only<1>{%
+        \begin{overpic}[width=0.9\textwidth]{discussion/results_139ifb_onlybbtautau}
+          \put(73,85){\tiny arXiv:2211.01216}
+        \end{overpic}
+      }%
+      \only<2->{%
+        \begin{overpic}[width=0.9\textwidth]{discussion/results_139ifb}
+          \put(73,85){\tiny arXiv:2211.01216}
+        \end{overpic}
+      }
+    \end{center}
+
+    \visible<3>{\allbold{Most sensitive channel to SM~$HH$ production to date!}}
 
     \column{0.5\textwidth}
     \centering
 
     \vspace*{0.25em}
 
-    \only<3>{%
-      \begin{overpic}[width=0.95\textwidth]{discussion/cms_results_run2}
+    \visible<3>{%
+      \begin{overpic}[width=1.0\textwidth]{discussion/cms_results_run2}
         \put(40,93.5){\tiny Nature \textbf{607} (2022) 52}
       \end{overpic}
     }
   \end{columns}%
-  \only<3>{\allbold{Most sensitive channel to SM~$HH$ production to date!}}
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -1272,12 +1274,12 @@
     \column{0.5\textwidth}
     \centering
 
-    \includegraphics[width=0.95\textwidth]{results_res/resonant_upper_limits}
+    \includegraphics[width=\textwidth]{results_res/resonant_upper_limits}
 
     \column{0.5\textwidth}
     \centering
 
-    \includegraphics[width=0.95\textwidth]{discussion/atlas_comparison_resonant_marked}
+    \includegraphics[width=\textwidth]{discussion/atlas_comparison_resonant_marked}
   \end{columns}
 
   \vspace*{0.2em}
