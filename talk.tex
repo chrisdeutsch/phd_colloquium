@@ -1303,7 +1303,7 @@
 
   \hspace*{-7.5em}%
   \begin{overpic}[scale=1.0]{feynman_graphs/di_higgs_effective_inverted}
-    \put(112,20){$\kappa_{\lambda} = \lambda_{HHH} / \lambda_{HHH}^{\text{SM}}$}
+    \put(112,20){$\klambda = \lambda_{HHH} / \lambda_{HHH}^{\normalfont\text{SM}}$}
   \end{overpic}
 \end{frame}
 
@@ -1315,32 +1315,28 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Phenomenology of Anomalous $\kappa_{\lambda}$}
-  \begin{columns}
+\begin{frame}{Phenomenology of Anomalous \allbold{\klambda}}
+  \begin{columns}[t]
     \column{0.5\textwidth}
     \centering
 
-    $HH$ production cross section
+    \includegraphics[width=\textwidth]{self_coupling/hh_xsec}
 
-    \includegraphics[width=0.9\textwidth]{self_coupling/hh_xsec}
+    \allbold{Quadratic dependence of $\sigma(pp \to \HH)$ on \klambda}
 
     \column{0.5\textwidth}
     \centering
 
-    \mHH-spectra
+    \includegraphics[width=\textwidth]{self_coupling/hh_mhh_vs_klam}
 
-    \includegraphics[width=0.9\textwidth]{self_coupling/hh_mhh_vs_klam}
+    \textbf{}
+
   \end{columns}
-
-  \begin{itemize}
-  \item
-  \end{itemize}
 \end{frame}
 
 % ------------------------------------------------------------------------------p
 
 \begin{frame}{Constraining the Higgs Boson Self-Coupling}
-
   \begin{columns}[onlytextwidth]
     \column{0.5\textwidth}
 
@@ -1512,6 +1508,26 @@
   \centering
 
   \includegraphics[scale=0.9]{yieldtable_postfit}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Signal Acceptance vs.\ \allbold{\klambda}}
+  \begin{columns}
+    \column{0.5\textwidth}
+    \includegraphics[width=\textwidth]{self_coupling/hh_median_mhh_vs_klam}\hfill%
+
+    \column{0.5\textwidth}
+    \includegraphics[width=\textwidth]{self_coupling/acc_vs_klam}
+  \end{columns}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Signal Acceptance vs.\ \allbold{\mHH}}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{self_coupling/acc_vs_mhh}
+  \end{center}
 \end{frame}
 
 % ------------------------------------------------------------------------------
