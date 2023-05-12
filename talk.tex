@@ -1339,13 +1339,14 @@
 
 \begin{frame}{Constraining the Higgs Boson Self-Coupling}
   \begin{columns}[onlytextwidth]
-    \column{0.5\textwidth}
+    \column{0.485\textwidth}
 
     \allbold{Reinterpretation of the SM~\HH search:}
     \begin{itemize}
     \item Same background model \& discriminants
-    \item Signal process replaced by non-res.\ \HH production with arbitrary
-      \klambda
+    \item
+      % Signal process replaced by non-res.\ \HH production with arbitrary
+      % \klambda
     \end{itemize}
 
     \vspace*{1em}
@@ -1356,21 +1357,21 @@
     \item Higgs boson branching ratios
     \end{itemize}
 
-    \column{0.5\textwidth} \centering
+    \column{0.01\textwidth}
+
+    \column{0.485\textwidth} \centering
 
     \vspace*{0.1em}
 
-    Upper limits on $\sigma(pp \to HH)$ at 95\,\% CL
+    \allbold{Upper limits on $\sigma(pp \to HH)$ at~95\,\%~CL}
 
     \vspace*{0.6em}
 
     \begin{overpic}[width=0.95\textwidth]{self_coupling/klam_scan_result}
       \put(64,74){\tiny ATLAS-CONF-2021-052}
     \end{overpic}
-
-    Observed:~$\klambda \in [-2.4, 9.2]$
-
-    Expected:~$\klambda \in [-2.0, 9.0]$
+    % Observed:~$\klambda \in [-2.4, 9.2]$
+    % Expected:~$\klambda \in [-2.0, 9.0]$
   \end{columns}
 
   % Limitations
@@ -1556,6 +1557,38 @@
   \begin{center}
     \includegraphics[width=0.5\textwidth]{self_coupling/acc_vs_mhh}
   \end{center}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Constraints on \allbold{\klambda} by ATLAS and CMS}
+  \centering
+
+  \vspace*{0.5em}
+
+  \begin{tabular}{lcc@{\hskip 2em}p{0.3\textwidth}}
+    \toprule
+    \textbf{ATLAS} & \multicolumn{3}{c}{Allowed \klambda interval} \\
+    \cmidrule{2-4}
+    Channel   & Observed & Expected & Reference  \\
+    \midrule
+    $\bbbb^\dagger$ & $[-3.9, 11.1]$      & $[-4.6, 10.8]$           & HDBS-2019-29 \\
+    \bbtautau & $[-2.4, \phantom{0}9.2]$ & $[-2.0, \phantom{0}9.0]$ & ATLAS-CONF-2021-052 \\
+    \bbyy     & $[-1.5, \phantom{0}6.7]$ & $[-2.4, \phantom{0}7.7]$ & HDBS-2018-34 \\
+    \bottomrule
+  \end{tabular}
+
+  \begin{tabular}{lcc@{\hskip 2em}p{0.3\textwidth}}
+    \toprule
+    \textbf{CMS} & \multicolumn{3}{c}{Allowed \klambda interval} \\
+    \cmidrule{2-4}
+    Channel   & Observed & Expected & Reference  \\
+    \midrule
+    \bbbb     & $[-2.3, \phantom{0}9.4]$ & $[-5.0, 12.0]$            & CMS-HIG-20-005 \\
+    \bbtautau & $[-1.7, \phantom{0}8.7]$ & $[-2.9, \phantom{0}9.8]$  & CMS-HIG-20-010 \\
+    $\bbyy^\ddag$     & $[-3.3, \phantom{0}8.5]$ & $[-2.5, \phantom{0}8.2]$  & CMS-HIG-19-018 \\
+    \bottomrule
+  \end{tabular}
 \end{frame}
 
 % ------------------------------------------------------------------------------
