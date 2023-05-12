@@ -1077,7 +1077,13 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}[standout]
-  SM \allbold{\HH} Production
+  Results:~SM~\allbold{\HH} Production
+
+  \vspace*{1.5em}
+
+  \includegraphics[scale=1.0]{feynman_graphs/di_higgs_box_inverted}%
+  \hspace*{2em}%
+  \raisebox{0.32em}{\includegraphics[scale=1.0]{feynman_graphs/di_higgs_triangle_inverted}}
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -1173,7 +1179,11 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}[standout]
-  Resonant \allbold{\HH} Production
+  Results:~Resonant \allbold{\HH} Production
+
+  \vspace*{1.5em}
+
+  \includegraphics[scale=1.0]{feynman_graphs/di_higgs_resonant_inverted}
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -1221,8 +1231,8 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Resonant \allbold{\HH} Production}
-  \vspace*{0.1em}
+\begin{frame}{Search for Resonant \allbold{\HH} Production}
+  \vspace*{0.25em}
   \begin{columns}[onlytextwidth, b]
     \column{0.5\textwidth}
     \centering
@@ -1247,7 +1257,7 @@
   \only<1->{%
     \tikz[overlay, remember picture, shift=(current page.south west), x=(current
     page.south east), y=(current page.north west), ]{
-      \draw[-stealth, line width=1pt, color=Red] (0.35,0.545) -- (0.765,0.56);
+      \draw[-stealth, line width=1pt, color=Red] (0.35,0.54) -- (0.765,0.555);
       \node[anchor=west] at (0.381,0.49){\scriptsize\color{Red}Expectation:~6.3 events};
       \node[anchor=west] at (0.381,0.455){\scriptsize\color{Red}Observed:~14 events};
     }
@@ -1256,8 +1266,8 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Resonant \allbold{\HH} Production}
-
+\begin{frame}{Search for Resonant \allbold{\HH} Production}
+  \vspace*{0.25em}
   \begin{columns}
     \column{0.5\textwidth}
     \centering
@@ -1269,6 +1279,25 @@
 
     \includegraphics[width=0.95\textwidth]{discussion/atlas_comparison_resonant_marked}
   \end{columns}
+
+  \vspace*{0.2em}
+
+  \begin{itemize}
+    \setlength{\itemsep}{1em}
+
+  \item Upper limits on $\sigma(pp \to X \to \HH)$ ranging from
+    \SI{20}{\femto\barn} to \SI{1000}{\femto\barn}
+
+  \item \bbtautau most sensitive channel in
+    $\SI{375}{\GeV} \leq m_{X} \leq \SI{800}{\GeV}$
+
+  \end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}[standout]
+  Constraining the Higgs Boson Self-Coupling
 \end{frame}
 
 % ------------------------------------------------------------------------------
