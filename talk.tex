@@ -1322,14 +1322,15 @@
 
     \includegraphics[width=\textwidth]{self_coupling/hh_xsec}
 
-    \allbold{Quadratic dependence of $\sigma(pp \to \HH)$ on \klambda}
+    \allbold{Dependence of $\sigma(pp \to \HH)$ on \klambda}
 
     \column{0.5\textwidth}
     \centering
 
     \includegraphics[width=\textwidth]{self_coupling/hh_mhh_vs_klam}
 
-    \textbf{}
+    \allbold{Dependence of \mHH on \klambda}\\
+    \ra signal acceptance also depends on \klambda
 
   \end{columns}
 \end{frame}
@@ -1340,14 +1341,36 @@
   \begin{columns}[onlytextwidth]
     \column{0.5\textwidth}
 
+    \allbold{Reinterpretation of the SM~\HH search:}
+    \begin{itemize}
+    \item Same background model \& discriminants
+    \item Signal process replaced by non-res.\ \HH production with arbitrary
+      \klambda
+    \end{itemize}
+
+    \vspace*{1em}
+
     \textbf{Limitations:}
     \begin{itemize}
-    \item Not accounting for changes in
+    \item Changes in single Higgs boson production cross section neglected
+    \item Higgs boson branching ratios
     \end{itemize}
 
     \column{0.5\textwidth} \centering
 
-    \includegraphics[width=0.95\textwidth]{self_coupling/klam_scan_result}
+    \vspace*{0.1em}
+
+    Upper limits on $\sigma(pp \to HH)$ at 95\,\% CL
+
+    \vspace*{0.6em}
+
+    \begin{overpic}[width=0.95\textwidth]{self_coupling/klam_scan_result}
+      \put(64,74){\tiny ATLAS-CONF-2021-052}
+    \end{overpic}
+
+    Observed:~$\klambda \in [-2.4, 9.2]$
+
+    Expected:~$\klambda \in [-2.0, 9.0]$
   \end{columns}
 
   % Limitations
@@ -1356,6 +1379,11 @@
   %
   % - Not a statistically proper confidence interval
 \end{frame}
+
+% TODO: How are the cross section uncertainties treated when giving the limit?
+%
+% Looks like signal uncertainties are ignored, i.e. the limits are read off from
+% the central value of the xsec prediction.
 
 % ------------------------------------------------------------------------------
 
