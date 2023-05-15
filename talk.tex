@@ -834,9 +834,9 @@
       Background & \hadhad channel & \lephad channel \\
       \midrule
       \ttbar & \multicolumn{2}{c}{\textcolor{toporange}{Simulation (normalised in fit)}} \\[0.1em]
-      Z+jets & \multicolumn{2}{c}{\textcolor{zjetsgreen}{Simulation (normalised in fit -- dedicated CR)}} \\[0.1em]
-      Jet \ra \tauhadvis fakes (\ttbar) & \textcolor{topfakered}{Simulation + data-driven scale factors} & \multirow{2}{*}{\textcolor{fakeblue}{Combined fake-factor method}} \\[0.1em]
-      Jet \ra \tauhadvis fakes (multi-jet) & \textcolor{fakeblue}{Fake-factor method} & \\[0.1em]
+      Z+jets & \multicolumn{2}{c}{\allbold{\textcolor{zjetsgreen}{Simulation (normalised in fit -- dedicated CR)}}} \\[0.1em]
+      Jet \ra fake-\tauhadvis (\ttbar) & \allbold{\textcolor{topfakered}{Simulation + data-driven scale factors}} & \multirow{2}{*}{\textcolor{fakeblue}{Combined fake-factor method}} \\[0.1em]
+      Jet \ra fake-\tauhadvis (multi-jet) & \allbold{\textcolor{fakeblue}{Fake-factor method}} & \\[0.1em]
       Single Higgs boson / Other & \multicolumn{2}{c}{Simulation} \\[0.1em]
       \bottomrule
     \end{tabular}
@@ -856,12 +856,11 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}{Background Estimation: \allbold{$Z + \text{jets}$}}
+
+  Known mismodelling of $Z$ + heavy-flavour jets in Sherpa 2.2.1
   \begin{itemize}
-
-  \item Sherpa 2.2.1 known discrepancy when applying $b$-tagging requirements
-
-  \item Z+HF CR: di-electron/muon final states + 2 $b$-tagged jets
-
+  \item Normalised in fit using a CR targeting $\ell^+\ell^-$ + 2 $b$-tagged
+    jets
   \end{itemize}
 
   \vspace*{0.5em}
@@ -887,11 +886,17 @@
   \begin{columns}[onlytextwidth]
     \column{0.55\textwidth}
 
-    CR targeting $\ell + \tauhadvis$
+    \textbf{Idea:}~Apply data-driven corrections to simulated \ttbar +
+    fake-\tauhadvis events.
 
+    \vspace*{1.5em}
 
+    \allbold{Measured in $\ell + \tauhadvis$~CR} in bins of:\ \tauhadvis~\pT,
+    \tauhadvis~\Ntracks, trigger.
 
-    In bins of: \tauhadvis \pT, \tauhadvis \Ntracks, trigger
+    \vspace*{1.5em}
+
+    \mtw to distinguish fake-\tauhadvis from true-\tauhadvis contributions.
 
     \column{0.45\textwidth}
     \centering
@@ -904,7 +909,7 @@
         \includegraphics[width=\textwidth]{ttbarSF/postfit_sfcr/MTWVR_postFit}
       };
 
-      \draw[stealth-, line width=1pt] (2.6,3.5) -- (2.6,4.7)
+      \draw[stealth-, line width=1pt] (2.6,3.5) -- (2.6,4.65)
       node[above,black,]{\footnotesize \ttbar + true-\tauhadvis};
 
       \draw[stealth-, line width=1pt] (2.6,2.3) -- (3.9,3.4) node[above
