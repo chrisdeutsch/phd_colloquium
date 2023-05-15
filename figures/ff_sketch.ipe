@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70218" creator="Ipe 7.2.26">
-<info created="D:20230515105649" modified="D:20230515131733"/>
+<info created="D:20230515105649" modified="D:20230515143723"/>
 <preamble>\usepackage{newtxtext}
 \usepackage{newtxmath}
 \usepackage{amsmath}</preamble>
@@ -346,14 +346,14 @@ h
 </path>
 <text matrix="1 0 0 1 48 0" transformations="translations" pos="184 776" stroke="black" type="label" width="15.51" height="9.433" depth="0.17" halign="center" valign="baseline" size="14">SS</text>
 <text transformations="translations" pos="184 776" stroke="black" type="label" width="17.825" height="9.433" depth="0.17" halign="center" valign="baseline" size="14">OS</text>
-<text matrix="1 0 0 1 -4 4" transformations="translations" pos="124 740" stroke="black" type="label" width="14.715" height="9.429" depth="0" halign="center" valign="center" size="14">ID</text>
-<text matrix="1 0 0 1 -4 0" transformations="translations" pos="124 696" stroke="black" type="label" width="44.158" height="9.43" depth="0.11" halign="center" valign="center" size="14">Anti-ID</text>
+<text matrix="1 0 0 1 -8 4" transformations="translations" pos="124 740" stroke="black" type="label" width="14.715" height="9.429" depth="0" halign="center" valign="center" size="14">ID</text>
+<text matrix="1 0 0 1 -8 0" transformations="translations" pos="124 696" stroke="black" type="label" width="44.158" height="9.43" depth="0.11" halign="center" valign="center" size="14">Anti-ID</text>
 <text transformations="translations" pos="184 744" stroke="0.894 0.102 0.11" type="label" width="11.509" height="10.776" depth="0" halign="center" valign="center" size="16">A</text>
 <text matrix="1 0 0 1 0 -48" transformations="translations" pos="184 744" stroke="black" type="label" width="10.632" height="10.776" depth="0" halign="center" valign="center" size="16">B</text>
 <text matrix="1 0 0 1 48 0" transformations="translations" pos="184 744" stroke="black" type="label" width="10.632" height="10.785" depth="0.19" halign="center" valign="center" size="16">C</text>
 <text matrix="1 0 0 1 48 -48" transformations="translations" pos="184 744" stroke="black" type="label" width="11.509" height="10.776" depth="0" halign="center" valign="center" size="16">D</text>
 <text matrix="1 0 0 1 56 -8" transformations="translations" pos="152 648" stroke="black" type="label" width="87.62" height="18.518" depth="34.86" halign="center" valign="center" size="14" style="math">N_\text{A} = \underbrace{\frac{N_\text{C}}{N_\text{D}}}_{\eqcolon \text{FF}} \, N_\text{B}</text>
 <text matrix="1 0 0 1 0 4" transformations="translations" pos="208 792" stroke="black" type="label" width="99.266" height="9.605" depth="2.85" halign="center" valign="baseline" size="14">\textbf{Charge criterion}</text>
-<text matrix="1 0 0 1 -104 -24" transformations="translations" pos="224 788" stroke="black" type="label" width="70.882" height="9.611" depth="0.18" halign="center" valign="baseline" size="14">\textbf{ID criterion}</text>
+<text matrix="1 0 0 1 -108 -24" transformations="translations" pos="224 788" stroke="black" type="label" width="70.882" height="9.611" depth="0.18" halign="center" valign="baseline" size="14">\textbf{ID criterion}</text>
 </page>
 </ipe>

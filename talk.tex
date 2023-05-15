@@ -653,9 +653,17 @@
     \allbold{\tauhadvis:}
     \begin{itemize}
     \item $\pT > \SI{20}{\GeV}$
-    \item Loose RNN Tau-ID
+    \item Loose identification (RNN)
     \item Electron veto
     \end{itemize}
+
+    % \vspace*{1em}
+
+    % \allbold{Anti-\tauhadvis:}
+    % \begin{itemize}
+    % \item Fail loose identification
+    % \item $\text{RNN score} > 0.01$
+    % \end{itemize}
 
     \column{0.5\textwidth}
 
@@ -810,37 +818,87 @@
 
 % ------------------------------------------------------------------------------
 
+% \begin{frame}{Background Estimation: Overview}
+%     \begin{minipage}{0.5\textwidth}
+%     \centering
+
+%     \begin{overpic}[width=0.65\textwidth]{mhh_hadhad}
+%       \put(56,94){\tiny arXiv:2209.10910}
+%     \end{overpic}
+%   \end{minipage}%
+%   \begin{minipage}{0.5\textwidth}
+%     \centering
+
+%     \begin{overpic}[width=0.65\textwidth]{mhh_lephad}
+%       \put(56,94){\tiny arXiv:2209.10910}
+%     \end{overpic}
+%   \end{minipage}
+
+%   \centering
+
+%   \resizebox{0.8\textwidth}{!}{%
+%     \begin{tabular}{lcc}
+%       \toprule
+%       Background & \hadhad channel & \lephad channel \\
+%       \midrule
+%       \ttbar & \multicolumn{2}{c}{\textcolor{toporange}{Simulation (normalised in fit)}} \\[0.1em]
+%       Z+jets & \multicolumn{2}{c}{\allbold{\textcolor{zjetsgreen}{Simulation (normalised in fit -- dedicated CR)}}} \\[0.1em]
+%       Jet \ra fake-\tauhadvis (\ttbar) & \allbold{\textcolor{topfakered}{Simulation + scale factors}} & \multirow{2}{*}{\textcolor{fakeblue}{Combined fake factor method}} \\[0.1em]
+%       Jet \ra fake-\tauhadvis (multi-jet) & \allbold{\textcolor{fakeblue}{Fake factor method}} & \\[0.1em]
+%       Single Higgs boson / Other & \multicolumn{2}{c}{Simulation} \\[0.1em]
+%       \bottomrule
+%     \end{tabular}
+%   }
+
+%   % Dominant backgrounds:
+%   % Z+jets: 18\,\%
+%   % Top quark: 39\,\%
+%   % fakes (ttbar + multijet): 40\,\%
+
+%   % Dominant backgrounds:
+%   % ttbar: 62\,\%
+%   % Fakes: 34\,\%
+%   % Z+jets: 2\,\%
+% \end{frame}
+
 \begin{frame}{Background Estimation: Overview}
-    \begin{minipage}{0.5\textwidth}
-    \centering
+  \begin{columns}
+    \column{0.6\textwidth}
 
-    \begin{overpic}[width=0.65\textwidth]{mhh_hadhad}
+    \vspace*{1em}
+
+    \resizebox{\textwidth}{!}{%
+      \begin{tabular}{lcc}
+        \toprule
+        \allbold{Background} & \allbold{\hadhad channel} & \allbold{\lephad channel} \\
+        \midrule
+        \ttbar (true \tauhadvis) & \multicolumn{2}{c}{\textcolor{toporange}{Simulation (normalised in fit)}} \\[0.1em]
+        $Z + \text{jets}$ & \multicolumn{2}{c}{\allbold{\textcolor{zjetsgreen}{Simulation (normalised in fit -- dedicated CR)}}} \\[0.1em]
+        \ttbar (fake \tauhadvis) & \allbold{\textcolor{topfakered}{Simulation + scale factors}} & \multirow{2}{*}{\textcolor{fakeblue}{Fake factor method}} \\[0.1em]
+        Multi-jet & \allbold{\textcolor{fakeblue}{Fake factor method}} & \\[0.1em]
+        Other & \multicolumn{2}{c}{Simulation} \\[0.1em]
+        \bottomrule
+      \end{tabular}
+    }
+
+    \vspace*{1.5em}
+
+    {\footnotesize \textbf{Largest backgrounds in \hadhad channel:}
+      \begin{itemize}
+        \setlength{\itemindent}{0.75em}
+      \item[1.] {\color{toporange}\ttbar with true-\tauhadvis} (\SI{39}{\percent} of bkg.)
+      \item[2.] {\color{topfakered}\ttbar with fake-\tauhadvis} (\SI{25}{\percent} of bkg.)
+      \item[3.] {\color{zjetsgreen}$Z + \text{jets}$} (\SI{18}{\percent} of bkg.)
+      \item[4.] {\color{fakeblue}Multi-jet} (\SI{15}{\percent} of bkg.)
+      \end{itemize}
+    }
+
+    \column{0.4\textwidth}
+
+    \begin{overpic}[width=\textwidth]{mhh_hadhad}
       \put(56,94){\tiny arXiv:2209.10910}
     \end{overpic}
-  \end{minipage}%
-  \begin{minipage}{0.5\textwidth}
-    \centering
-
-    \begin{overpic}[width=0.65\textwidth]{mhh_lephad}
-      \put(56,94){\tiny arXiv:2209.10910}
-    \end{overpic}
-  \end{minipage}
-
-  \centering
-
-  \resizebox{0.8\textwidth}{!}{%
-    \begin{tabular}{lcc}
-      \toprule
-      Background & \hadhad channel & \lephad channel \\
-      \midrule
-      \ttbar & \multicolumn{2}{c}{\textcolor{toporange}{Simulation (normalised in fit)}} \\[0.1em]
-      Z+jets & \multicolumn{2}{c}{\allbold{\textcolor{zjetsgreen}{Simulation (normalised in fit -- dedicated CR)}}} \\[0.1em]
-      Jet \ra fake-\tauhadvis (\ttbar) & \allbold{\textcolor{topfakered}{Simulation + data-driven scale factors}} & \multirow{2}{*}{\textcolor{fakeblue}{Combined fake-factor method}} \\[0.1em]
-      Jet \ra fake-\tauhadvis (multi-jet) & \allbold{\textcolor{fakeblue}{Fake-factor method}} & \\[0.1em]
-      Single Higgs boson / Other & \multicolumn{2}{c}{Simulation} \\[0.1em]
-      \bottomrule
-    \end{tabular}
-  }
+  \end{columns}
 
   % Dominant backgrounds:
   % Z+jets: 18\,\%
@@ -895,7 +953,7 @@
 
     \vspace*{1.5em}
 
-    \allbold{Measured in $\ell + \tauhadvis$~CR} in bins of:\ \tauhadvis~\pT,
+    \allbold{Measured in a $\ell + \tauhadvis$~CR} in bins of:\ \tauhadvis~\pT,
     \tauhadvis~\Ntracks, trigger.
 
     \vspace*{1.5em}
@@ -929,34 +987,54 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Background Estimation: Multi-Jet}
+\begin{frame}{Background Estimation: Multi-Jet (Fake Factor Method)}
   \begin{columns}[onlytextwidth]
-    \column{0.6\textwidth}
+    \column{0.65\textwidth}
 
-    \textbf{Fake Factor Method:}
+    Define multi-jet-enriched CRs using:
+    \begin{itemize}
 
-    Opposite-sign (OS) / same-sign charge (SS)
+    \item \allbold{\tauhadvis charge:}\ opposite sign (OS); same sign (SS)
 
-    ID region: 2 loose \tauhadvis
+    \item \allbold{\tauhadvis identification:}\ 2 loose \tauhadvis (ID); 1 loose
+      \tauhadvis \& 1 anti-\tauhadvis (Anti-ID)
 
-    Anti-ID region: 1 loose \tauhadvis, 1 not-loose \tauhadvis but $RNN > 0.01$
-
+    \end{itemize}
 
     \vspace*{1em}
 
+    \onslide<2->{%
+      \begin{itemize}
+      \item FFs binned in \tauhadvis properties (\pT, \Ntracks, $\eta$), trigger
+        category (STT/DTT), year of data-taking.
 
+      \item FF measured in 1 $b$-tag region and extrapolated to 2 $b$-tag region
 
-    Details:\\
-    - Binning in \tauhadvis \pT, \tauhadvis \Ntracks, \tauhadvis $\eta$, year\\
-    - Actually do two different fake estimations and average\\
-    - Do it in 1 btag region extrapolate to 2 btag region
+      \item B
 
-    \column{0.4\textwidth}
-    \centering
+      \end{itemize}
+    }
 
-    \includegraphics[width=0.8\textwidth]{ff_sketch}
+    % Details:\\
+    % - Actually do two different fake estimations and average\\
+
+    \column{0.35\textwidth}
+
+    \hfill\includegraphics[width=0.92\textwidth]{ff_sketch}
+
   \end{columns}
   % \includegraphics[width=0.6\textwidth]{fakefactors/regions}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Background Estimation: Multi-Jet (Fake Factor Method)}
+  \begin{columns}
+    \column{0.5\textwidth}
+
+    \column{0.5\textwidth}
+
+  \end{columns}
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -985,6 +1063,7 @@
   \allbold{$\rightarrow$ Further exploit kinematic properties of events to
     improve signal sensitivity}
 
+  % TODO: Give fraction of backgrounds?
 \end{frame}
 
 % ------------------------------------------------------------------------------
