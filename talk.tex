@@ -889,12 +889,28 @@
 
     CR targeting $\ell + \tauhadvis$
 
+
+
+    In bins of: \tauhadvis \pT, \tauhadvis \Ntracks, trigger
+
     \column{0.45\textwidth}
     \centering
 
     \vspace*{0.1em}
 
-    \includegraphics[width=\textwidth]{ttbarSF/postfit_sfcr/MTWVR_postFit}
+    \begin{tikzpicture}
+
+      \node[anchor=south west] (image) at (0,0) {
+        \includegraphics[width=\textwidth]{ttbarSF/postfit_sfcr/MTWVR_postFit}
+      };
+
+      \draw[stealth-, line width=1pt] (2.6,3.5) -- (2.6,4.7)
+      node[above,black,]{\footnotesize \ttbar + true-\tauhadvis};
+
+      \draw[stealth-, line width=1pt] (2.6,2.3) -- (3.9,3.4) node[above
+      right,black]{\footnotesize \ttbar + fake-\tauhadvis};
+
+    \end{tikzpicture}
 
     {\footnotesize
       $\mtw = \sqrt{ 2 \, \pT^\ell \, \pTmissAbs \, (1 - \cos\Delta\phi)}$
