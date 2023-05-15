@@ -57,8 +57,8 @@
 \institute{University of Bonn}
 \date{June XX, 2023}
 
-\title{\vspace{1.5em}Search for Higgs Boson Pair Production in the \bbtautau
-  Final State with the ATLAS Experiment at the LHC}
+\title{\vspace{1.5em}Search for Higgs Boson Pair Production in the
+  \allbold{\bbtautau} Final State with the ATLAS Experiment at the LHC}
 
 \begin{document}
 
@@ -930,9 +930,33 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}{Background Estimation: Multi-Jet}
-  \centering
+  \begin{columns}[onlytextwidth]
+    \column{0.6\textwidth}
 
-  \includegraphics[width=0.6\textwidth]{fakefactors/regions}
+    \textbf{Fake Factor Method:}
+
+    Opposite-sign (OS) / same-sign charge (SS)
+
+    ID region: 2 loose \tauhadvis
+
+    Anti-ID region: 1 loose \tauhadvis, 1 not-loose \tauhadvis but $RNN > 0.01$
+
+
+    \vspace*{1em}
+
+
+
+    Details:\\
+    - Binning in \tauhadvis \pT, \tauhadvis \Ntracks, \tauhadvis $\eta$, year\\
+    - Actually do two different fake estimations and average\\
+    - Do it in 1 btag region extrapolate to 2 btag region
+
+    \column{0.4\textwidth}
+    \centering
+
+    \includegraphics[width=0.8\textwidth]{ff_sketch}
+  \end{columns}
+  % \includegraphics[width=0.6\textwidth]{fakefactors/regions}
 \end{frame}
 
 % ------------------------------------------------------------------------------
