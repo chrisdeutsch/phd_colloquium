@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70218" creator="Ipe 7.2.26">
-<info created="D:20230506085602" modified="D:20230506163633"/>
+<info created="D:20230506085602" modified="D:20230516153357"/>
 <preamble>\usepackage{newtxtext}
 \usepackage{newtxmath}
 \usepackage{amsmath}
@@ -321,68 +321,6 @@ h
 <layer name="delta"/>
 <layer name="epsilon"/>
 <view layers="alpha beta gamma delta epsilon" active="epsilon"/>
-<group layer="beta">
-<path matrix="1 0 0 1 8 60" stroke="black" fill="0.894 0.102 0.11" pen="heavier">
-52 656 m
-52 624 l
-108 624 l
-108 656 l
-h
-</path>
-<path matrix="1 0 0 1 4 56" stroke="black" fill="0.894 0.102 0.11" pen="heavier">
-52 656 m
-52 624 l
-108 624 l
-108 656 l
-h
-</path>
-<path matrix="1 0 0 1 0 52" stroke="black" fill="0.894 0.102 0.11" pen="heavier">
-52 656 m
-52 624 l
-108 624 l
-108 656 l
-h
-</path>
-<path matrix="1 0 0 1 -4 48" stroke="black" fill="0.894 0.102 0.11" pen="heavier">
-52 656 m
-52 624 l
-108 624 l
-108 656 l
-h
-</path>
-<text matrix="1 0 0 1 -28 -80" transformations="translations" pos="104 768" stroke="black" type="minipage" width="48" height="5.974" depth="0.84" halign="center" valign="center" style="center">Tracks</text>
-</group>
-<group layer="gamma">
-<path matrix="1 0 0 1 8 -4" stroke="black" fill="0.216 0.494 0.722" pen="heavier">
-52 656 m
-52 624 l
-108 624 l
-108 656 l
-h
-</path>
-<path matrix="1 0 0 1 4 -8" stroke="black" fill="0.216 0.494 0.722" pen="heavier">
-52 656 m
-52 624 l
-108 624 l
-108 656 l
-h
-</path>
-<path matrix="1 0 0 1 0 -12" stroke="black" fill="0.216 0.494 0.722" pen="heavier">
-52 656 m
-52 624 l
-108 624 l
-108 656 l
-h
-</path>
-<path matrix="1 0 0 1 -4 -16" stroke="black" fill="0.216 0.494 0.722" pen="heavier">
-52 656 m
-52 624 l
-108 624 l
-108 656 l
-h
-</path>
-<text matrix="1 0 0 1 -28 -144" transformations="translations" pos="104 768" stroke="black" type="minipage" width="48" height="5.989" depth="0.87" halign="center" valign="center" style="center">Clusters</text>
-</group>
 <group layer="alpha">
 <path fill="1">
 48 736 m
@@ -840,6 +778,54 @@ h
 h
 </path>
 <text matrix="1 0 0 1 -28 -240" transformations="translations" pos="104 768" stroke="black" type="minipage" width="48" height="11.964" depth="6.85" halign="center" valign="center" style="center">High-level variables</text>
+</group>
+<group layer="beta">
+<path matrix="1 0 0 1 4 56" stroke="black" fill="0.894 0.102 0.11" pen="heavier">
+52 656 m
+52 624 l
+108 624 l
+108 656 l
+h
+</path>
+<path matrix="1 0 0 1 0 52" stroke="black" fill="0.894 0.102 0.11" pen="heavier">
+52 656 m
+52 624 l
+108 624 l
+108 656 l
+h
+</path>
+<path matrix="1 0 0 1 -4 48" stroke="black" fill="0.894 0.102 0.11" pen="heavier">
+52 656 m
+52 624 l
+108 624 l
+108 656 l
+h
+</path>
+<text matrix="1 0 0 1 -28 -80" transformations="translations" pos="104 768" stroke="black" type="minipage" width="48" height="5.974" depth="0.84" halign="center" valign="center" style="center">Tracks</text>
+</group>
+<group layer="gamma">
+<path matrix="1 0 0 1 4 -8" stroke="black" fill="0.216 0.494 0.722" pen="heavier">
+52 656 m
+52 624 l
+108 624 l
+108 656 l
+h
+</path>
+<path matrix="1 0 0 1 0 -12" stroke="black" fill="0.216 0.494 0.722" pen="heavier">
+52 656 m
+52 624 l
+108 624 l
+108 656 l
+h
+</path>
+<path matrix="1 0 0 1 -4 -16" stroke="black" fill="0.216 0.494 0.722" pen="heavier">
+52 656 m
+52 624 l
+108 624 l
+108 656 l
+h
+</path>
+<text matrix="1 0 0 1 -28 -144" transformations="translations" pos="104 768" stroke="black" type="minipage" width="48" height="5.989" depth="0.87" halign="center" valign="center" style="center">Clusters</text>
 </group>
 </page>
 </ipe>
