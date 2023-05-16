@@ -136,7 +136,7 @@
       \draw[Green,thick] (-2.7,-3.0) rectangle (-0.1,-1.5);
 
       \node[anchor=east] at (-2.8,-2.25) {%
-        \color{Green}Gauge couplings};
+        \color{Green}Gauge boson couplings};
 
       \draw[Blue,thick] (0.0,-3.0) rectangle (2.9,-1.5);
 
@@ -151,9 +151,6 @@
       };
     \end{tikzpicture}
   \end{center}
-
-
-
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -216,8 +213,8 @@
       west),x=(current page.south east),y=(current page.north west)]
 
       \node[at=(current page.center)] { \includegraphics[keepaspectratio,
-        width=\paperwidth, height=\paperheight, trim=0 8.2cm 0 0,
-        clip]{CERN_seminar} };
+        width=\paperwidth, height=\paperheight, trim=0 2.05cm 0 0,
+        clip]{CERN_seminar_25pct} };
 
       \node[align=center] at (0.2,0.27){%
         \fcolorbox{headergray}{white}{\includegraphics[width=0.36\textwidth]{higgs_discovery/figaux_004a}}
@@ -390,9 +387,20 @@
 
 \begin{frame}{The ATLAS Experiment at the LHC}
   \centering
-  \includegraphics<1>[scale=0.95]{lhc_atlas/lhc_atlas_1}
-  \includegraphics<2>[scale=0.95]{lhc_atlas/lhc_atlas_2}
-  % TODO: Add mention of Run~2 and integrated luminosity
+
+  \only<1>{%
+    \begin{overpic}[scale=0.95]{lhc_atlas/lhc_atlas_1}
+      \put(0,52){Run~2 (2015--2018)}
+      \put(0,48){$\sqrt{s} = \SI{13}{\TeV}$}
+    \end{overpic}
+  }
+  \only<2>{%
+    \begin{overpic}[scale=0.95]{lhc_atlas/lhc_atlas_2}
+      \put(0,52){Run~2 (2015--2018)}
+      \put(0,48){$\sqrt{s} = \SI{13}{\TeV}$}
+      \put(23.5,52){$\int L \, \text{d}t = \SI{139}{\per\femto\barn}$}
+    \end{overpic}
+  }
 \end{frame}
 
 % ------------------------------------------------------------------------------
