@@ -117,7 +117,7 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{The Standard Model}
+\begin{frame}{The Standard Model Lagrangian}
   \begin{center}
     \includegraphics[width=0.6\textwidth]{lagrangian/lagrangian_vectorized}
     % Credit: CERN
@@ -589,9 +589,9 @@
 
 \begin{frame}{Approach}
 
-  \textbf{New method based on Recurrent Neural Networks:}\\[0.5em]
+  %\textbf{New method based on Recurrent Neural Networks:}\\[0.5em]
   \begin{center}
-    \includegraphics[scale=0.75]{tauid/rnn_approach}
+    \includegraphics[width=0.9\textwidth]{tauid/rnn_approach}
   \end{center}
 \end{frame}
 
@@ -1004,17 +1004,14 @@
     \vspace*{1em}
 
     \onslide<2->{%
-      \hline
-
       \vspace*{1em}
 
       \begin{itemize}
+
       \item FFs binned in \tauhadvis properties, trigger category, data-taking
         period
 
       \item FF measured in 1 $b$-tag region and extrapolated to 2 $b$-tag region
-
-      \item B
 
       \end{itemize}
     }
@@ -1027,7 +1024,6 @@
     \hfill\includegraphics[width=0.92\textwidth]{ff_sketch}
 
   \end{columns}
-  % \includegraphics[width=0.6\textwidth]{fakefactors/regions}
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -1167,7 +1163,7 @@
 
     \onslide<3->{%
       \begin{overpic}[width=0.45\textwidth]{pnn_sketch}
-        \put(85,25){\footnotesize \parbox[t]{0.50\textwidth}{Single NN to solve
+        \put(85,25){\footnotesize \parbox[t]{0.54\textwidth}{Single NN to solve
             parameter-dependent classification problem}}
         \put(85,4){\tiny EPJC \textbf{77} (2016) 235}
       \end{overpic}

@@ -6,4 +6,4 @@ clean:
 	latexmk -C talk.tex
 
 talk.pdf: talk.tex
-	latexmk -pdfxe $<
+	latexmk -synctex=1 -halt-on-error -pdfxe $<
