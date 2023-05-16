@@ -117,18 +117,18 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}{The Standard Model Lagrangian}
+  \vspace*{-0.5em}
   \begin{center}
-    % \includegraphics[width=0.6\textwidth]{lagrangian/lagrangian_vectorized}
     \begin{tikzpicture}
       \node (lagrangian) at (0,0) {
         \includegraphics[width=0.6\textwidth]{lagrangian/lagrangian_vectorized}
       };
 
-      \node[anchor=east] (credit) at (3.9,-3.5) {
+      \node[anchor=east] (credit) at (3.8,-3.5) {
         \scriptsize Image credit: CERN
       };
 
-      \draw[Red,thick] (-2.7,-1.4) rectangle (3.9,0);
+      \draw[Red,thick] (-2.7,-1.4) rectangle (3.8,0);
 
       \node[anchor=west] at (4.0,-0.7) {%
         \color{Red} Yukawa couplings};
@@ -144,19 +144,11 @@
         \color{Blue}Higgs potential
       };
 
+      \draw[dotted,thick] (-7.4,0.2) -- (7.4,0.2);
 
-
-      % \node (postfit) at (8,0) {
-      % \includegraphics[width=0.4\textwidth]{zhfcr/Region_BMin0_incJet1_Y2015_DZllbbCR_T2_L2_distmLL_J2_GlobalFit_conditionnal_mu0_fixed}
-      % };
-
-      %   \draw[-stealth, line width=1pt] (2,0) -- node[below,midway]{\footnotesize $Z$+HF SF
-      %   $\approx 1.4$} node[above,midway]{\footnotesize CR only fit} (6.2,0);
-
-      %   \node[anchor=west,fill=white] at (-2.1,1.7){\footnotesize \allbold{Pre-Fit}};
-
-      %   \node[anchor=west,fill=white] at (5.9,1.7){\footnotesize
-      %   \allbold{Post-Fit}};
+      \node[anchor=west] at (-7,-0.2) {%
+        Higgs sector
+      };
     \end{tikzpicture}
   \end{center}
 
