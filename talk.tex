@@ -308,7 +308,7 @@
 
     \hspace*{0.35\textwidth}%
     \begin{overpic}[scale=1,trim=0 0.3cm 0 0, clip]{energy_content/content}
-      \put(-70,37){\parbox{1.0in}{\small Energy density of today's universe:}}
+      \put(-70,37){\parbox{1.05in}{\small Energy density of today's universe:}}
       \put(80, 0){\tiny Planck 2018 results}
     \end{overpic}
     % Ordinary matter 4.9 % Dark matter 26.8 % Dark energy 68.3 %
@@ -345,7 +345,7 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Final States of Searches for \HH Production}
+\begin{frame}{Final States of Searches for \allbold{\HH} Production}
   \begin{columns}[onlytextwidth]
     \column{0.5\textwidth}
 
@@ -786,7 +786,7 @@
     \resizebox{1.0\textwidth}{!}{\footnotesize%
       \begin{tabular}{lcc}
         \toprule
-        & \allbold{This Analysis} & Prev.\ Publication \\
+        & \allbold{This Analysis} & Previously \\
         \cmidrule{2-3}
         Channel & $(\mathcal{A} \times \varepsilon)^{gg\text{F+VBF}}_{\text{SM } HH}$ & $(\mathcal{A} \times \varepsilon)^{gg\text{F}}_{\text{SM } HH}$ \\
         \midrule
@@ -951,14 +951,14 @@
     \textbf{Idea:}~Apply data-driven corrections to simulated \ttbar +
     fake-\tauhadvis events.
 
-    \vspace*{1.5em}
+    \vspace*{2.0em}
 
     \allbold{Measured in a $\ell + \tauhadvis$~CR} in bins of:\ \tauhadvis~\pT,
-    \tauhadvis~\Ntracks, trigger.
+    \tauhadvis~\Ntracks, \tauhadvis-trigger.
 
-    \vspace*{1.5em}
+    \vspace*{2.0em}
 
-    \mtw to distinguish fake-\tauhadvis from true-\tauhadvis contributions.
+    \mtw to distinguish fake- from true-\tauhadvis contributions.
 
     \column{0.45\textwidth}
     \centering
@@ -991,8 +991,9 @@
   \begin{columns}[onlytextwidth]
     \column{0.65\textwidth}
 
-    Multi-jet-enriched CRs defined using:
+    \textbf{Multi-jet-enriched CRs defined using:}
     \begin{itemize}
+      \setlength{\itemsep}{0.5em}
 
     \item \allbold{\tauhadvis charge:}\ opposite sign (OS); same sign (SS)
 
@@ -1001,29 +1002,36 @@
 
     \end{itemize}
 
-    \vspace*{1em}
-
-    \onslide<2->{%
-      \vspace*{1em}
-
-      \begin{itemize}
-
-      \item FFs binned in \tauhadvis properties, trigger category, data-taking
-        period
-
-      \item FF measured in 1 $b$-tag region and extrapolated to 2 $b$-tag region
-
-      \end{itemize}
-    }
-
-    % Details:\\
-    % - Actually do two different fake estimations and average\\
-
     \column{0.35\textwidth}
+
+    \vspace*{1em}
 
     \hfill\includegraphics[width=0.92\textwidth]{ff_sketch}
 
   \end{columns}
+
+  \onslide<2->{%
+    \textbf{Fake factor method:}\\[-1em]
+    \begin{flalign*}
+      \qquad N_\text{A} &= {\color{Red}\frac{N_\text{C}}{N_\text{D}}} \cdot N_\text{B}
+      = {\color{Red}\text{FF}} \cdot N_\text{B} &
+    \end{flalign*}
+
+    \vspace*{-0.25em}
+
+    \begin{itemize}
+      \setlength{\itemsep}{0.5em}
+
+    \item FF binned in \tauhadvis properties, trigger category, data-taking
+      period
+
+    \item FF measured in 1 $b$-tag region and extrapolated to 2 $b$-tag region
+
+    \end{itemize}
+  }
+
+  % Details:\\
+  % - Actually do two different fake estimations and average\\
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -1212,8 +1220,7 @@
 
   \item Processes with free normalisation: signal, \ttbar, $Z+\text{HF}$
 
-  \item Additional degrees of freedom to account for experimental \& theory
-    uncertainties
+  \item Additional d.o.f.\ to account for experimental \& theory uncertainties
 
   \end{itemize}
 \end{frame}
