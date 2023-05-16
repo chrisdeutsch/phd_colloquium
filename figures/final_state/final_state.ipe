@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70218" creator="Ipe 7.2.26">
-<info created="D:20230505084819" modified="D:20230505092301"/>
+<info created="D:20230505084819" modified="D:20230516144746"/>
 <preamble>\usepackage{amsmath}
 \usepackage{newtxmath}
 \usepackage{newtxtext}</preamble>
@@ -317,7 +317,21 @@ h
 <layer name="alpha"/>
 <layer name="beta"/>
 <layer name="gamma"/>
-<view layers="beta" active="gamma"/>
+<view layers="beta gamma" active="gamma"/>
+<path layer="beta" fill="white">
+28 788 m
+28 684 l
+224 684 l
+224 788 l
+h
+</path>
+<path layer="gamma" matrix="1 0 0 1 0 -128" fill="white">
+28 788 m
+28 684 l
+224 684 l
+224 788 l
+h
+</path>
 <group layer="alpha" matrix="1 0 0 1 236 84.1735">
 <path stroke="0.216 0.494 0.722" pen="heavier">
 96 688 m
@@ -447,7 +461,7 @@ h
 <text matrix="1 0 0 1 252.556 -18.9415" transformations="translations" pos="190.708 669.99" stroke="0" type="label" width="3.545" height="2.376" depth="0.04" valign="baseline" size="5" style="math">\nu</text>
 <text matrix="1 0 0 1 274.697 -27.2459" transformations="translations" pos="190.708 669.99" stroke="0" type="label" width="3.545" height="2.376" depth="0.04" valign="baseline" size="5" style="math">\nu</text>
 <text matrix="1 0 0 1 225.936 -153.334" transformations="translations" pos="190.708 669.99" stroke="0" type="label" width="4.836" height="3.581" depth="0" valign="baseline" size="5" style="math">B</text>
-<group layer="beta">
+<group layer="beta" matrix="1 0 0 1 0.346884 0.272489">
 <path matrix="1 0 0 1 -48.3469 -0.273401" stroke="0.596 0.306 0.639" pen="heavier">
 176 736 m
 191.906 728.174 l
@@ -600,7 +614,7 @@ h
 <use matrix="1 0 0 1 8.67422 -8.35187" name="mark/disk(sx)" pos="135.258 752.776" size="tiny"/>
 <use matrix="1 0 0 1 8.30118 -24.8758" name="mark/disk(sx)" pos="135.258 752.776" size="tiny"/>
 </group>
-<group layer="gamma">
+<group layer="gamma" matrix="1 0 0 1 -0.3669 -0.131">
 <path matrix="1 0 0 1 -47.6331 -127.869" stroke="0.596 0.306 0.639" pen="heavier">
 176 736 m
 191.906 728.174 l

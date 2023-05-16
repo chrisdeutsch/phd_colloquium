@@ -243,7 +243,6 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}{The Higgs Potential}
-
   \begin{center}
     \begin{tabular}{ccccccc}
       $V(H)$ & $=$ & ${\color{Red} \lambda v^2 H^2}$ & $+$ & ${\color{Blue} \lambda v H^3}$ & $+$ & ${\color{Green} \frac{\lambda}{4} H^4}$ \\[1.2em]
@@ -262,7 +261,6 @@
 
 % ------------------------------------------------------------------------------
 
-% TODO: Make the HHH coupling red?
 \begin{frame}{Higgs Boson Pair Production in the SM}
   \vspace*{0.5em}
 
@@ -462,8 +460,8 @@
     % \end{overlayarea}
 
     \hspace*{0.03\textwidth}%
-    \includegraphics<2>[width=0.97\textwidth]{final_state/final_state_lephad}%
-    \includegraphics<3>[width=0.97\textwidth]{final_state/final_state_hadhad}
+    \only<2>{\vspace*{-1pt}\includegraphics[width=0.97\textwidth]{final_state/final_state_lephad}}%
+    \only<3>{\includegraphics[width=0.97\textwidth]{final_state/final_state_hadhad}}
   \end{columns}
 \end{frame}
 
@@ -749,7 +747,6 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}{Event Selection}
-  % TODO: Tightened ID requirements for leptons in lephad
   \begin{center}
     \footnotesize
 
@@ -1130,8 +1127,6 @@
 
   \allbold{$\rightarrow$ Further exploit kinematic properties of events to
     improve signal sensitivity}
-
-  % TODO: Give fraction of backgrounds?
 \end{frame}
 
 % ------------------------------------------------------------------------------
