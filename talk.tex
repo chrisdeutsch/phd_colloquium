@@ -560,9 +560,9 @@
     \includegraphics[scale=1]{tauid/track_icon}
   \end{minipage}%
   \begin{minipage}[c][2.2cm][c]{0.75\textwidth}
-    Up to 10 tracks within $\dR < 0.4$ of tau axis\\[0.5\baselineskip]
-    \textbf{Inputs:}\ $\pT$, $\Delta \phi$, $\Delta \eta$, impact parameters,
-    \# hits in Si tracker
+    Up to 10 tracks within $\dR < 0.4$ of \tauhadvis axis\\[0.5\baselineskip]
+    \textbf{Inputs:}\ $\pT$, $\Delta \phi$, $\Delta \eta$, impact parameters, \#
+    hits in Si tracker
   \end{minipage}%
 
   % ---
@@ -573,7 +573,7 @@
     \includegraphics[scale=1]{tauid/cluster_icon}
   \end{minipage}%
   \begin{minipage}[c][2.2cm][c]{0.75\textwidth}
-    Up to 6 clusters associated to the jet seed\\[0.5\baselineskip]
+    Up to 6 clusters associated to jet seeding the \tauhadvis\\[0.5\baselineskip]
     \textbf{Inputs:}\ $\ET$, $\Delta \phi$, $\Delta \eta$, geometrical cluster
     moments
   \end{minipage}
@@ -699,7 +699,7 @@
 \begin{frame}{Tau Identification:\ Network Architecture}
   \begin{center}
     \begin{overpic}[width=\textwidth]{tauid/rnn_approach}
-      \put(55,35){\textbf{Lala}}
+      % \put(55,35){\textbf{Lala}}
 
       \put(36,-1.5){%
         \parbox{3.0in}{\color{orange_cb}Recurrent neural network~(RNN)
@@ -711,37 +711,49 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Performance of RNN-Based Tau Identification}
-
+\begin{frame}{Tau Identification:\ Performance}
+  \vspace*{0.5em}
   \begin{columns}[onlytextwidth]
-    \column{0.5\textwidth}
-    \begin{itemize}
-    \item Four working points:\\
-      \emph{Very Loose}, \emph{Loose}, \emph{Medium}, \emph{Tight}
+    \column{0.5\textwidth} \centering\footnotesize
 
-      % \item Adopted for offline reconstruction and at the high-level trigger
+    \begin{tabular}{lcc}
+      \toprule
+      & \multicolumn{2}{c}{\textbf{Rejection Improvement}}\\
+      \textbf{Working Point} & {\hspace*{0.8em}1-prong\hspace*{0.8em}} & {\hspace*{0.8em}3-prong\hspace*{0.8em}} \\
+      \midrule
+      Very Loose (VL) & +85\,\% & +40\,\% \\
+      Loose (L)       & +75\,\% & +50\,\% \\
+      Medium (M)      & +80\,\% & +60\,\% \\
+      Tight (T)       & +80\,\% & +80\,\% \\
+      \bottomrule
+    \end{tabular}
 
-    \end{itemize}
-
-
-    \begin{center}
-      \footnotesize
-      \begin{tabular}{lcc}
-        \toprule
-        & \multicolumn{2}{c}{Rejection Improvement}\\
-        WP & 1-prong \tauhadvis & 3-prong \tauhadvis \\
-        \midrule
-        Very Loose & +85\,\% & +40\,\% \\
-        Loose      & +75\,\% & +50\,\% \\
-        Medium     & +80\,\% & +60\,\% \\
-        Tight      & +80\,\% & +80\,\% \\
-        \bottomrule
-      \end{tabular}
-    \end{center}
+    \vspace*{1.75em}
 
     \column{0.5\textwidth}
-    \includegraphics[width=1.0\textwidth]{tauid/roc_incl_witherrors}
+
+    \begin{overpic}[width=1.0\textwidth]{tauid/roc_incl_witherrors}
+      \put(51,55){\footnotesize\color{blue_cb}T}
+      \put(62.3,48.5){\footnotesize\color{blue_cb}M}
+      \put(74.5,42.5){\footnotesize\color{blue_cb}L}
+      \put(88.5,33){\footnotesize\color{blue_cb}VL}
+
+      \put(64.5,34.2){\scriptsize\color{red_cb}T}
+      \put(73.5,25){\footnotesize\color{red_cb}M}
+      \put(82,21.8){\footnotesize\color{red_cb}L}
+      \put(88.5,16){\footnotesize\color{red_cb}VL}
+    \end{overpic}
   \end{columns}
+
+  \begin{itemize}
+    \setlength{\itemsep}{0.5em}
+
+  \item Recommended identification algorithm for analyses of the Run~2 dataset
+
+  \item Adopted for tau identification in the high-level trigger (end of Run~2
+    \& beginning of Run~3)
+
+  \end{itemize}
 \end{frame}
 
 % ------------------------------------------------------------------------------
