@@ -134,7 +134,7 @@
 \begin{frame}{Electroweak Symmetry Breaking}
   % Brout, Englert, Higgs -> EWSB
 
-  \begin{columns}
+  \begin{columns}[onlytextwidth]
     \column{0.65\textwidth}
 
     Higgs field (weak isospin doublet):
@@ -156,36 +156,45 @@
 
     Higgs potential:
     \begin{align*}
-      V(\phi) = \mu^2 \phi^\dag \phi + \lambda (\phi^\dag \phi)^2 \qquad (\mu^2 < 0)
+      V(\phi) = \mu^2 \phi^\dag \phi + \lambda (\phi^\dag \phi)^2
     \end{align*}
 
-    Degenerate minima at:
-    \begin{align*}
-      \sum_{i = 1}^{4} \phi_i^2 = -\frac{\mu^2}{\lambda} \eqqcolon v^2
-    \end{align*}
+    % Degenerate minima at:
+    % \begin{align*}
+    %   \sum_{i = 1}^{4} \phi_i^2 = -\frac{\mu^2}{\lambda} \eqqcolon v^2
+    % \end{align*}
 
     \column{0.35\textwidth}
     \centering
 
-    2D toy example:
+    \textbf{2D toy model:}
 
     \begin{tikzpicture}
       \node (potential) at (0,0) {%
-        \includegraphics[width=\textwidth]{theory/potential}%
+        \includegraphics[width=\textwidth, trim=1em 1em 1em 1.5em,
+        clip]{theory/potential}%
       };
 
-      \filldraw[color=Red,fill opacity=0.85,draw opacity=0] (0,0.7) circle (3.5pt);
+      \filldraw[color=Red,fill opacity=0.85,draw opacity=0] (0,0.9) circle (3.5pt);
 
-      \filldraw[color=Red,fill opacity=0.85,draw opacity=0] (-1.55,-0.6) circle (3.5pt);
+      \filldraw[color=Red,fill opacity=0.85,draw opacity=0] (-1.8,-0.7) circle (3.5pt);
 
-      \draw[stealth-, line width=1pt, color=Red] (-1.55,-0.6) -- (0,0.7);
-      %node[above,black,]{\footnotesize \ttbar + true-\tauhadvis};
+      \draw[stealth-, line width=1.2pt, color=Red] (-1.8,-0.55) -- (-1.8,0.7)%
+      node[above]{\footnotesize \textbf{vacuum state}};
 
+      \draw[stealth-stealth, line width=1.2pt, color=Goldenrod] %
+      (-1.65,-0.7) -- node[midway,below]{\footnotesize \allbold{$v$}} (0,-0.7);
     \end{tikzpicture}
   \end{columns}
 
-  Higgs potential after EWSB in unitary gauge ($\phi = \frac{1}{\sqrt{2}} (0, v + H)^{\text{T}}$):
+  Higgs potential after EWSB in unitary gauge ($H \in \mathbb{R}$):
   \begin{align*}
+    \phi = \frac{1}{\sqrt{2}}
+    \begin{pmatrix}
+      0 \\
+      v + H
+    \end{pmatrix}
+    \quad \ra \quad
     V(H) = \underbrace{\lambda v^2}_{m_{H}^2 / 2} H^2 + \lambda v H^3 + \frac{\lambda}{4} H^4
   \end{align*}
 \end{frame}
