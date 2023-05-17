@@ -52,6 +52,7 @@
 \definecolor{blue_cb}{HTML}{377eb8}
 \definecolor{green_cb}{HTML}{4daf4a}
 \definecolor{purple_cb}{HTML}{984ea3}
+\definecolor{orange_cb}{HTML}{ff7f00}
 
 \author{Christopher Deutsch}
 \institute{University of Bonn}
@@ -474,6 +475,8 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}{Tau Identification}
+  \vspace*{1em}
+
   \begin{columns}
     \column{0.45\textwidth} \centering
     \includegraphics[width=0.75\textwidth]{tauid/cone_tauhad}
@@ -487,7 +490,7 @@
     \includegraphics[width=0.75\textwidth]{tauid/cone_qgjet}
   \end{columns}
 
-  \vspace{0.5em}
+  \vspace*{0.5em}
 
   \textbf{Characteristic features:}%
 
@@ -507,23 +510,28 @@
     \end{itemize}
   \end{columns}
 
-  \onslide<2->{%
-    \tikz[overlay, remember picture, shift=(current page.south west), x=(current
-    page.south east), y=(current page.north west), ]{ \node[align=center] at
-      (0.5,0.678) {%
-        \setlength{\fboxrule}{1pt}%
-        \fcolorbox{headergray}{mygray}{%
-          \begin{minipage}{0.75\textwidth}
-            \centering \vspace*{0.6em} \textbf{Machine learning techniques}
+  \vspace*{1.25em}
+  \pause
 
-            Simulated $\gamma^* \rightarrow \tauhad \tauhad$ for ``signal''
+  \textbf{\ra Classification problem:\ solve using machine learning techniques}
 
-            Simulated di-jet events for ``background'' \vspace*{0.6em}
-          \end{minipage}
-        }
-      };
-    }
-  }
+  % \onslide<2->{%
+  %   \tikz[overlay, remember picture, shift=(current page.south west), x=(current
+  %   page.south east), y=(current page.north west), ]{ \node[align=center] at
+  %     (0.5,0.678) {%
+  %       \setlength{\fboxrule}{1pt}%
+  %       \fcolorbox{headergray}{mygray}{%
+  %         \begin{minipage}{0.75\textwidth}
+  %           \centering \vspace*{0.6em} \textbf{Machine learning techniques}
+
+  %           Simulated $\gamma^* \rightarrow \tauhad \tauhad$ for ``signal''
+
+  %           Simulated di-jet events for ``background'' \vspace*{0.6em}
+  %         \end{minipage}
+  %       }
+  %     };
+  %   }
+  % }
   %     % Optional help grid lines \draw[step=.1, opacity=0.3, thick, red] (0,0)
   %     % grid (1,1); }}
 \end{frame}
@@ -532,35 +540,42 @@
 
 \begin{frame}{Tau Identification:\ Inputs}
 
-  \begin{minipage}[c][2cm][c]{0.25\textwidth}
+  \begin{minipage}[c][2.2cm][c]{0.25\textwidth}
     \centering
 
     \includegraphics[scale=1]{tauid/high_level_icon}
   \end{minipage}%
-  \begin{minipage}[c][2cm][c]{0.75\textwidth}
-    ABC
+  \begin{minipage}[c][2.2cm][c]{0.75\textwidth}
+    Purposefully engineered features\\[0.5\baselineskip]
+    \textbf{Inputs:}\ invariant masses, isolation/lifetime variables, etc.
   \end{minipage}%
 
   % ---
+  \pause
+  % ---
 
-  \begin{minipage}[c][2cm][c]{0.25\textwidth}
+  \begin{minipage}[c][2.2cm][c]{0.25\textwidth}
     \centering
 
     \includegraphics[scale=1]{tauid/track_icon}
   \end{minipage}%
-  \begin{minipage}[c][2cm][c]{0.75\textwidth}
-    Up to 10 tracks within $\dR < 0.4$ of tau axis
+  \begin{minipage}[c][2.2cm][c]{0.75\textwidth}
+    Up to 10 tracks within $\dR < 0.4$ of tau axis\\[0.5\baselineskip]
+    \textbf{Inputs:}\ $\pT$, $\Delta \phi$, $\Delta \eta$, impact parameters,
+    \# hits in Si tracker
   \end{minipage}%
 
   % ---
 
-  \begin{minipage}[c][2cm][c]{0.25\textwidth}
+  \begin{minipage}[c][2.2cm][c]{0.25\textwidth}
     \centering
 
     \includegraphics[scale=1]{tauid/cluster_icon}
   \end{minipage}%
-  \begin{minipage}[c][2cm][c]{0.75\textwidth}
-    Up to 6 clusters associated to the jet seed.
+  \begin{minipage}[c][2.2cm][c]{0.75\textwidth}
+    Up to 6 clusters associated to the jet seed\\[0.5\baselineskip]
+    \textbf{Inputs:}\ $\ET$, $\Delta \phi$, $\Delta \eta$, geometrical cluster
+    moments
   \end{minipage}
 \end{frame}
 
@@ -682,10 +697,15 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}{Tau Identification:\ Network Architecture}
-
-  %\textbf{New method based on Recurrent Neural Networks:}\\[0.5em]
   \begin{center}
-    \includegraphics[width=0.9\textwidth]{tauid/rnn_approach}
+    \begin{overpic}[width=\textwidth]{tauid/rnn_approach}
+      \put(55,35){\textbf{Lala}}
+
+      \put(36,-1.5){%
+        \parbox{3.0in}{\color{orange_cb}Recurrent neural network~(RNN)
+          architecture to process sequences of tracks/clusters}%
+      }
+    \end{overpic}
   \end{center}
 \end{frame}
 
