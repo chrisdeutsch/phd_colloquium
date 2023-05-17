@@ -169,7 +169,19 @@
 
     2D toy example:
 
-    \includegraphics[width=\textwidth]{theory/potential}
+    \begin{tikzpicture}
+      \node (potential) at (0,0) {%
+        \includegraphics[width=\textwidth]{theory/potential}%
+      };
+
+      \filldraw[color=Red,fill opacity=0.85,draw opacity=0] (0,0.7) circle (3.5pt);
+
+      \filldraw[color=Red,fill opacity=0.85,draw opacity=0] (-1.55,-0.6) circle (3.5pt);
+
+      \draw[stealth-, line width=1pt, color=Red] (-1.55,-0.6) -- (0,0.7);
+      %node[above,black,]{\footnotesize \ttbar + true-\tauhadvis};
+
+    \end{tikzpicture}
   \end{columns}
 
   Higgs potential after EWSB in unitary gauge ($\phi = \frac{1}{\sqrt{2}} (0, v + H)^{\text{T}}$):
