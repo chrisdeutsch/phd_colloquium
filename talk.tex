@@ -13,6 +13,7 @@
 \usepackage{tikz}
 \usepackage{booktabs}
 \usepackage{multirow}
+\usepackage{bm}
 \usepackage[absolute, overlay]{textpos}
 \usetikzlibrary{positioning}
 \usetikzlibrary{arrows}
@@ -1711,12 +1712,30 @@
   % Gravitation not included
 
   % Problem: Masses of elementary particles
-
 \end{frame}
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Higgs Boson Pair Production: A Rare Process}
+\begin{frame}{Higgs Boson Production Cross Sections \& Branching Ratios}
+  \begin{columns}[c]
+    \column{0.5\textwidth}
+    \centering
+
+    \includegraphics[width=0.85\textwidth]{theory/h_prod_crossec_13tev}
+
+    \column{0.5\textwidth}
+    \centering\footnotesize
+
+    \input{tables/higgs_branching_ratios}
+
+  \end{columns}
+
+  {\footnotesize arXiv:1610.07922}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Higgs Boson Pair Production:\ A Rare Process}
 
   \begin{columns}
     \column{0.35\textwidth}
@@ -1747,6 +1766,152 @@
 
     \end{itemize}
   \end{columns}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Results:\ Early Run~2 Analyses (SM~\allbold{\HH})}
+  \begin{columns}
+    \column{0.5\textwidth}\centering\footnotesize
+
+    \includegraphics[width=\textwidth]{status/atlas_36ifb}
+
+    Phys.\ Lett.\ B \textbf{800} (2020) 135103
+
+    \column{0.5\textwidth}\centering\footnotesize
+
+    \includegraphics[width=\textwidth]{status/cms_36ifb}
+
+    Phys.\ Rev.\ Lett.\ \textbf{122} (2019) 121803
+  \end{columns}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Results:\ Early Run~2 Analyses (Resonant \allbold{\HH}
+    Production)}
+  \begin{columns}
+    \column{0.45\textwidth}\centering\footnotesize
+
+    \includegraphics[width=\textwidth]{status/atlas_36ifb_resonant}
+
+    Phys.\ Lett.\ B \textbf{800} (2020) 135103
+
+    \column{0.55\textwidth}\centering\footnotesize
+
+    \includegraphics[width=\textwidth]{status/cms_36ifb_resonant}
+
+    Phys.\ Rev.\ Lett.\ \textbf{122} (2019) 121803
+  \end{columns}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Results:\ Early Run~2 Analyses (Anomalous \allbold{\klambda})}
+  \begin{columns}
+    \column{0.5\textwidth}\centering\footnotesize
+
+    \includegraphics[width=\textwidth]{status/atlas_36ifb_klambda}
+
+    Phys.\ Lett.\ B \textbf{800} (2020) 135103
+
+    \column{0.5\textwidth}\centering\footnotesize
+
+    \includegraphics[width=\textwidth]{status/cms_36ifb_klambda}
+
+    Phys.\ Rev.\ Lett.\ \textbf{122} (2019) 121803
+  \end{columns}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{ATLAS Inner Detector}
+  \begin{columns}
+    \column{0.5\textwidth}\centering\footnotesize
+
+    \includegraphics[width=\textwidth]{atlas/atlas_indet_1}
+
+    JINST \textbf{3} (2008) S08003
+
+    \column{0.5\textwidth}\centering\footnotesize
+
+    \includegraphics[width=\textwidth]{atlas/atlas_indet_2_with_ibl}
+
+    Eur.\ Phys.\ J.\ C \textbf{80} (2020) 1194
+  \end{columns}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{ATLAS Calorimeter}
+  \centering\footnotesize
+
+  \includegraphics[width=0.5\textwidth]{atlas/atlas_calo}
+
+  JINST \textbf{3} (2008) S08003
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Tau Lepton Decay}
+  \begin{columns}
+    \column{0.5\textwidth}\centering\footnotesize
+
+    \includegraphics[width=0.7\textwidth]{tauid/tau_decay_feynman}
+
+    \column{0.5\textwidth}\centering\footnotesize
+
+    \includegraphics[width=0.9\textwidth]{tauid/tau_branching_pie_chart_new}
+  \end{columns}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Long Short-Term Memory}
+  \centering\footnotesize
+
+  \includegraphics[width=0.6\textwidth]{ml/lstm}
+
+  \begin{columns}
+    \column{0.5\textwidth}\footnotesize
+
+    \begin{alignat*}{4}
+      &\myvec{f}_{t} &&= \myvec{\sigma}\bigl(\myvec{U}^{\text{f}}  \myvec{x}_{t} &&+ \myvec{W}^{\text{f}}  \myvec{y}_{t - 1} &&+ \myvec{b}^{\text{f}}\bigr) \\
+      &\myvec{i}_{t} &&= \myvec{\sigma}\bigl(\myvec{U}^{\text{i}}  \myvec{x}_{t} &&+ \myvec{W}^{\text{i}}  \myvec{y}_{t - 1} &&+ \myvec{b}^{\text{i}}\bigr) \\
+      &\myvec{o}_{t} &&= \myvec{\sigma}\bigl(\myvec{U}^{\text{o}}  \myvec{x}_{t} &&+ \myvec{W}^{\text{o}}  \myvec{y}_{t - 1} &&+ \myvec{b}^{\text{o}}\bigr)
+    \end{alignat*}
+
+    \column{0.5\textwidth}\footnotesize
+
+    \begin{align*}
+      \myvec{s}_{t} = \myvec{f}_{t} \circ \myvec{s}_{t - 1}
+      + \myvec{i}_{t} \circ \myvec{\phi}(\myvec{U} \myvec{x}_{t} + \myvec{W} \myvec{y}_{t-1} + \myvec{b})
+    \end{align*}
+  \end{columns}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Tau Identification:\ Simulated \tauhadvis Candidate Samples}
+  \begin{columns}
+    \column{0.5\textwidth}\centering\footnotesize
+
+    \allbold{$\gamma^* \to \tau^+\tau^-$}
+
+    \includegraphics[width=0.9\textwidth]{tauid/pubnote/taupt_gammastar}
+
+    \column{0.5\textwidth}\centering\footnotesize
+
+    \allbold{Di-jet}
+
+    \includegraphics[width=0.9\textwidth]{tauid/pubnote/taupt_dijet}
+  \end{columns}
+
+  \footnotesize
+
+  \# true \tauhadvis candidates:\ 20 million
+
+  \# fake \tauhadvis candidates:\ 46 million
 \end{frame}
 
 % ------------------------------------------------------------------------------

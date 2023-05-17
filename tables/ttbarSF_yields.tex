@@ -1,0 +1,36 @@
+% Source:
+% https://docs.google.com/spreadsheets/d/1uwVElPaR1HuqEHaL8eAh5pEoGdK2ZBQ8D_Ob8lSSPwE/edit#gid=0
+
+% fSumw[1]=2705.09, x=0.5, error=22.9788
+
+% Only measurement uncertainties
+% ttbarSFTF: 1433.95 +- 87.88
+% ttbarSFFT: 698.52 +- 72.21
+% ttbarSFFF: 358.92 +- 53.50
+% Total: 2491.39 +- 21.59 +- 202.99 = 204.13493
+
+\begin{tabular}{
+  l
+  @{\hskip 16pt}
+  S[table-format=4.0(2)]
+  @{\hskip 16pt}
+  S[table-format=4.0(3)]
+  }
+  \toprule
+  & \multicolumn{2}{c}{Expected number of events (pre-fit)} \\
+  \cmidrule{2-3}
+          & {Simulation} & {Simulation with} \\
+  Process &              & {\faketauhadvisC SF}  \\
+  \midrule
+  \ttbar + \faketauhadvisC (TF) & 1428 +- 16 & 1430 +- 230 \\
+  \ttbar + \faketauhadvisC (FT) & 854 +- 13 & 699 +- 88 \\
+  \ttbar + \faketauhadvisC (FF) & 423 +- 12 & 360 +- 160 \\
+  \midrule
+  \ttbar + \faketauhadvisC (total) & 2705 +- 23 & 2490 +- 320 \\
+  \bottomrule
+\end{tabular}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../phd_thesis"
+%%% End:
