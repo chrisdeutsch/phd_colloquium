@@ -2172,7 +2172,7 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{MVA Input Variables}
+\begin{frame}{MVA Input Variables (1)}
   \centering
 
   \includegraphics[width=0.57\textwidth]{mva_input_table}
@@ -2180,19 +2180,66 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Uncertainties}
+\begin{frame}{MVA Input Variables (2)}
+  \centering
+
+  \includegraphics[width=0.4\textwidth]{mva/prefit/Region_BMin0_incJet1_distmHH_J2_Y2015_DLLOS_T2_SpcTauHH_L0_Prefit_logy}%
+  \includegraphics[width=0.4\textwidth]{mva/prefit/Region_BMin0_incJet1_distdRBB_J2_Y2015_DLLOS_T2_SpcTauHH_L0_Prefit_fontembed}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Mass Reconstruction}
+  \centering
+
+  \includegraphics[width=0.4\textwidth]{mva/mass_resolution}%
+  \includegraphics[width=0.4\textwidth]{mva/mhh_resolution}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Nested Cross Validation}
+  \centering
+
+  \includegraphics[width=0.65\textwidth]{mva/kfold}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Variable Importance:\ SM~\allbold{\HH}}
+  \centering\footnotesize
+
+  \input{tables/permutation_importance/bdt}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Variable Importance:\ Resonant~\allbold{\HH} Production}
+
   \begin{columns}
-    \column{0.56\textwidth} \centering
+    \column{0.33\textwidth}\centering\footnotesize
 
-    Breakdown by impact on $\hat{\mu}$ (SM~\HH)
+    $\mX = \SI{300}{\GeV}$
 
-    \vspace*{1.0em}
+    \vspace*{1em}
 
-    \includegraphics[width=0.9\textwidth]{uncertainty_table}
+    \input{tables/permutation_importance/pnn_300}
 
-    \column{0.44\textwidth}
+    \column{0.33\textwidth}\centering\footnotesize
 
-    \textbf{Dominated by statistical uncertainties}
+    $\mX = \SI{500}{\GeV}$
+
+    \vspace*{1em}
+
+    \input{tables/permutation_importance/pnn_500}
+
+    \column{0.33\textwidth}\centering\footnotesize
+
+    $\mX = \SI{1000}{\GeV}$
+
+    \vspace*{1em}
+
+    \input{tables/permutation_importance/pnn_1000}
   \end{columns}
 \end{frame}
 
@@ -2219,6 +2266,36 @@
   \item Signal significance improvement of up to \SI{20}{\percent} (at low
     $m_{X}$) over the ``1 BDT per mass point''-strategy
   \end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}[standout]
+  Uncertainties
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Uncertainties}
+  \begin{columns}
+    \column{0.56\textwidth} \centering
+
+    Breakdown by impact on $\hat{\mu}$ (SM~\HH)
+
+    \vspace*{1.0em}
+
+    \includegraphics[width=0.9\textwidth]{uncertainty_table}
+
+    \column{0.44\textwidth}
+
+    \textbf{Dominated by statistical uncertainties}
+  \end{columns}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}[standout]
+  Statistical Interpretation
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -2269,6 +2346,37 @@
   \centering
 
   \includegraphics[scale=0.9]{yieldtable_postfit}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Nuisance Parameter Pull/Impact Plots:\ Combined Fit}
+  \centering
+
+  \includegraphics[width=0.4\textwidth]{results_nonres/rankings/ranking_nonres_combined}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Nuisance Parameter Pull/Impact Plots:\ \allbold{\hadhad}/\allbold{\lephad}-Only}
+  \centering
+
+  \includegraphics[width=0.4\textwidth]{results_nonres/rankings/ranking_nonres_hadhad}\hspace*{3em}
+  \includegraphics[width=0.4\textwidth]{results_nonres/rankings/ranking_nonres_lephad}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Results:\ SM~\allbold{\HH}}
+  \centering\footnotesize
+
+  \input{tables/non_res_limits}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}[standout]
+  Constraining the Higgs Boson Self-Coupling
 \end{frame}
 
 % ------------------------------------------------------------------------------
