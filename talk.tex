@@ -1916,6 +1916,172 @@
 
 % ------------------------------------------------------------------------------
 
+\begin{frame}{Tau Identification:\ Input Variables (High-Level Inputs)}
+  \centering
+
+  \includegraphics[width=0.8\textwidth, trim=0 3.7in 0 0,
+  clip]{backup/tauid_variable_table}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Tau Identification:\ Input Variables (High-Level Inputs)}
+  \centering
+
+  \includegraphics[width=0.33\textwidth]{tauid/invars/invars_sumpttrkfrac_1P}%
+  \includegraphics[width=0.33\textwidth]{tauid/invars/invars_ptratioeflowapprox_1P}%
+  \includegraphics[width=0.33\textwidth]{tauid/invars/invars_masstrksys_3P}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Tau Identification:\ Input Variables (Track inputs)}
+  \centering
+
+  \includegraphics[width=0.8\textwidth, trim=0 1.55in 0 3.5in,
+  clip]{backup/tauid_variable_table}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Tau Identification:\ Input Variables (Track inputs)}
+  \centering
+
+  \includegraphics[width=0.33\textwidth]{tauid/invars/invars_trk0relpt_1P}%
+  \includegraphics[width=0.33\textwidth]{tauid/invars/invars_trk1relpt_1P}%
+  \includegraphics[width=0.33\textwidth]{tauid/invars/invars_trk2relpt_1P}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Tau Identification:\ Input Variables (Track inputs)}
+  \centering
+
+  \begin{overpic}[width=0.57\textwidth]{backup/track_2d_1P}
+    \put(-20,22){1-prong}
+  \end{overpic}
+
+  \vspace*{-0.75em}
+
+  \begin{overpic}[width=0.57\textwidth]{backup/track_2d_3P}
+    \put(-20,22){3-prong}
+  \end{overpic}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Tau Identification:\ Input Variables (Cluster Inputs)}
+  \centering
+
+  \includegraphics[width=0.8\textwidth, trim=0 0 0 5.7in,
+  clip]{backup/tauid_variable_table}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Tau Identification:\ Input Variables (Cluster Inputs)}
+  \centering
+
+  \includegraphics[width=0.33\textwidth]{tauid/invars/invars_cls0relet_3P}%
+  \includegraphics[width=0.33\textwidth]{tauid/invars/invars_cls1relet_3P}%
+  \includegraphics[width=0.33\textwidth]{tauid/invars/invars_cls2relet_3P}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Tau Identification:\ Input Variables (Cluster inputs)}
+  \centering
+
+  \begin{overpic}[width=0.57\textwidth]{backup/cluster_2d_1P}
+    \put(-20,22){1-prong}
+  \end{overpic}
+
+  \vspace*{-0.75em}
+
+  \begin{overpic}[width=0.57\textwidth]{backup/cluster_2d_3P}
+    \put(-20,22){3-prong}
+  \end{overpic}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Tau Identification:\ Architecture}
+  \begin{center}
+    \includegraphics[width=0.9\textwidth]{tauid/pubnote/rnn_network_architecture}
+  \end{center}
+
+  \begin{itemize}
+    \setlength{\itemsep}{0.5em}
+
+  \item \num{56000} trainable parameters
+
+  \item High-level variable branch:\ 128, 128, 16 nodes
+
+  \item Track/cluster branches:\ 32, 32 nodes -- 32, 24 nodes for the LSTM
+    internal state
+
+  \item After merge:\ 64, 32, 1 nodes
+
+  \end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Tau Identification:\ RNN Scores}
+  \includegraphics[width=0.5\textwidth]{tauid/rnnscore_1p}%
+  \includegraphics[width=0.5\textwidth]{tauid/rnnscore_3p}
+
+  \begin{itemize}
+  \item Output score is flattened w.r.t.\ $\mu$ and \tauhadvis $\pT$
+  \end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Tau Identification:\ Rejection Table}
+  \centering
+
+  \includegraphics[width=0.8\textwidth]{backup/tauid_rejection}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Tau Identification:\ Efficiency/Rejection vs.\ \allbold{\pT}}
+  \centering
+
+  \includegraphics[width=0.35\textwidth]{tauid/pubnote/eff_vs_pt_1p}%
+  \includegraphics[width=0.35\textwidth]{tauid/pubnote/eff_vs_pt_3p}%
+
+  \includegraphics[width=0.35\textwidth]{tauid/pubnote/rej_vs_pt_1p}%
+  \includegraphics[width=0.35\textwidth]{tauid/pubnote/rej_vs_pt_3p}%
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Tau Identification:\ Efficiency/Rejection vs.\ \allbold{$\eta$}}
+  \centering
+
+  \includegraphics[width=0.35\textwidth]{tauid/pubnote/eff_vs_eta_1p}%
+  \includegraphics[width=0.35\textwidth]{tauid/pubnote/eff_vs_eta_3p}%
+
+  \includegraphics[width=0.35\textwidth]{tauid/pubnote/rej_vs_eta_1p}%
+  \includegraphics[width=0.35\textwidth]{tauid/pubnote/rej_vs_eta_3p}%
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Tau Identification:\ Efficiency/Rejection vs.\ \allbold{$\mu$}}
+  \centering
+
+  \includegraphics[width=0.35\textwidth]{tauid/pubnote/eff_vs_mu_1p}%
+  \includegraphics[width=0.35\textwidth]{tauid/pubnote/eff_vs_mu_3p}%
+
+  \includegraphics[width=0.35\textwidth]{tauid/pubnote/rej_vs_mu_1p}%
+  \includegraphics[width=0.35\textwidth]{tauid/pubnote/rej_vs_mu_3p}%
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
 \begin{frame}{MVA Input Variables}
   \centering
 
