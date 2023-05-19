@@ -21,9 +21,9 @@
 \graphicspath{{logos/}{figures/}}
 
 \titlegraphic{
-  \includegraphics[height=1.1cm]{atlas_logo}
+  \includegraphics[height=1.0cm]{atlas_logo}
   \hfill
-  \includegraphics[height=1.1cm]{uni_bonn_logo}
+  \includegraphics[height=1.0cm]{uni_bonn_logo}
 }
 
 \setbeamercolor{background canvas}{bg=white}
@@ -59,7 +59,7 @@
 \institute{University of Bonn}
 \date{June XX, 2023}
 
-\title{\vspace{1.5em}Search for Higgs Boson Pair Production in the
+\title{Search for Higgs Boson Pair Production in the
   \allbold{\bbtautau} Final State with the ATLAS Experiment at the LHC}
 
 \begin{document}
@@ -68,28 +68,7 @@
 
 \begin{frame}[noframenumbering]{Notes: Content}
   30 minutes (talk) + 15 minutes (discussion):
-  \begin{itemize}
-  \item Conclusion \& Outlook
-  \end{itemize}
 \end{frame}
-
-% ------------------------------------------------------------------------------
-
-% SKIP?
-
-% \begin{frame}{Introduction}
-%   Why do particle physics?
-
-%   What is particle physics?
-
-%   What is the origin of elementary particle masses?
-
-%   % Mention previous analyses by ATLAS and CMS? using partial Run 2 datasets
-% \end{frame}
-
-% ------------------------------------------------------------------------------
-
-
 
 % ------------------------------------------------------------------------------
 
@@ -2159,10 +2138,106 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}[standout]
-  Background Estimation
+  Background Estimation:\ Fake-\allbold{\tauhadvis} Backgrounds from
+  \allbold{\ttbar}
 \end{frame}
 
 % ------------------------------------------------------------------------------
+
+\begin{frame}{Control Region for the SF Measurement (Pre-Fit)}
+  \includegraphics[width=0.33\textwidth]{ttbarSF/prefit_sfcr/PTVR}%
+  \includegraphics[width=0.33\textwidth]{ttbarSF/prefit_sfcr/ETAVR}%
+  \includegraphics[width=0.33\textwidth]{ttbarSF/prefit_sfcr/MTWVR}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Control Region for the SF Measurement (Post-Fit)}
+  \includegraphics[width=0.33\textwidth]{ttbarSF/postfit_sfcr/PTVR_postFit}%
+  \includegraphics[width=0.33\textwidth]{ttbarSF/postfit_sfcr/ETAVR_postFit}%
+  \includegraphics[width=0.33\textwidth]{ttbarSF/postfit_sfcr/MTWVR_postFit}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{\allbold{\mtw} PDFs}
+  \centering
+
+  \includegraphics[width=0.4\textwidth]{ttbarSF/mtw_pdf}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Control Region for the SF Measurement:\ Region Summary}
+  \centering
+
+  \includegraphics[width=0.5\textwidth]{ttbarSF/Summary_offl}%
+  \includegraphics[width=0.5\textwidth]{ttbarSF/Summary_tau25}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Control Region for the SF Measurement:\ Discriminants}
+  \centering
+
+  \includegraphics[width=0.5\textwidth]{ttbarSF/tau25/TauPt3035_1P}%
+  \includegraphics[width=0.5\textwidth]{ttbarSF/tau25/TauPt3040_3P}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Scale Factors (1)}
+  \centering
+
+  \includegraphics[width=0.5\textwidth]{ttbarSF/ttbarSF_offl_tau25_1p}%
+  \includegraphics[width=0.5\textwidth]{ttbarSF/ttbarSF_offl_tau25_3p}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Scale Factors (2)}
+  \centering
+
+  \includegraphics[width=0.5\textwidth]{ttbarSF/ttbarSF_tau25_1p}%
+  \includegraphics[width=0.5\textwidth]{ttbarSF/ttbarSF_tau25_3p}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Scale Factors:\ Correlation Matrix}
+  \centering
+
+  \includegraphics[width=0.58\textwidth]{ttbarSF/correlation_matrix}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Scale Factors:\ ``Eigenvariations''}
+  \centering
+
+  \includegraphics[width=0.5\textwidth]{ttbarSF/ttbarSF_eigvar_1p}%
+  \includegraphics[width=0.5\textwidth]{ttbarSF/ttbarSF_eigvar_3p}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Scale Factors:\ Anti-ID (1)}
+  \centering
+
+  \includegraphics[width=0.5\textwidth]{ttbarSF/scale_factors/ttbarSF_antitau_offl_tau25_1p}%
+  \includegraphics[width=0.5\textwidth]{ttbarSF/scale_factors/ttbarSF_antitau_offl_tau25_3p}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Scale Factors:\ Anti-ID (1)}
+  \centering
+
+  \includegraphics[width=0.5\textwidth]{ttbarSF/scale_factors/ttbarSF_antitau_tau25_1p}%
+  \includegraphics[width=0.5\textwidth]{ttbarSF/scale_factors/ttbarSF_antitau_tau25_3p}
+\end{frame}
 
 % ------------------------------------------------------------------------------
 
@@ -2601,6 +2676,20 @@
 
 % ------------------------------------------------------------------------------
 
+\begin{frame}{\allbold{$Z + \text{Jets}$} Validation Region}
+  \begin{align*}
+    N_{b\text{-tags}} = 1
+  \end{align*}
+  \begin{align*}
+    \SI{70}{\GeV} < \mMMC < \SI{110}{\GeV}
+  \end{align*}
+  \begin{align*}
+    \dRtautau < \SI{0.015}{\per\GeV} \cdot \mMMC + 0.06
+  \end{align*}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
 \begin{frame}{\allbold{$Z + \text{Jets}$} Validation Region (1)}
   \centering
 
@@ -2637,6 +2726,50 @@
   \includegraphics[width=0.45\textwidth]{vrplots/ssvr/Region_BMin0_incJet1_distPNN500_J2_Y2015_DLLSS_T2_SpcTauHH_L0_Prefitlog}%
   \hfill%
   \includegraphics[width=0.45\textwidth]{vrplots/ssvr/Region_BMin0_incJet1_distPNN1000_J2_Y2015_DLLSS_T2_SpcTauHH_L0_Prefitlog}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Multi-Jet Validation Region}
+  \begin{align*}
+    N_{b\text{-tags}} = 1
+  \end{align*}
+  \begin{align*}
+    \mMMC > \SI{110}{\GeV}
+  \end{align*}
+  \begin{align*}
+    \mathcal{S} < 3
+  \end{align*}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Multi-Jet Validation Region (1)}
+  \centering
+
+  \includegraphics[width=0.45\textwidth]{fakefactors/fake_os_vr/Tau0Pt_fakevr}%
+  \hfill%
+  \includegraphics[width=0.45\textwidth]{fakefactors/fake_os_vr/Tau1Pt_fakevr}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Multi-Jet Validation Region (2)}
+  \centering
+
+  \includegraphics[width=0.45\textwidth]{fakefactors/fake_os_vr/Tau0Eta_fakevr}%
+  \hfill%
+  \includegraphics[width=0.45\textwidth]{fakefactors/fake_os_vr/Tau1Eta_fakevr}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Multi-Jet Validation Region (3)}
+  \centering
+
+  \includegraphics[width=0.45\textwidth]{fakefactors/fake_os_vr/Tau0Ntrk_fakevr}%
+  \hfill%
+  \includegraphics[width=0.45\textwidth]{fakefactors/fake_os_vr/Tau1Ntrk_fakevr}
 \end{frame}
 
 % ------------------------------------------------------------------------------
