@@ -143,7 +143,7 @@
     \column{0.35\textwidth}
     \centering
 
-    \textbf{2D toy model:}
+    %\textbf{2D toy model:}
 
     \begin{tikzpicture}
       \node (potential) at (0,0) {%
@@ -151,9 +151,9 @@
         clip]{theory/potential}%
       };
 
-      \filldraw[color=Red,fill opacity=0.85,draw opacity=0] (0,0.9) circle (3.5pt);
+      \filldraw[color=Red,fill opacity=0.9,draw opacity=0] (0,0.9) circle (3.5pt);
 
-      \filldraw[color=Red,fill opacity=0.85,draw opacity=0] (-1.8,-0.7) circle (3.5pt);
+      \filldraw[color=Red,fill opacity=0.9,draw opacity=0] (-1.8,-0.7) circle (3.5pt);
 
       \draw[stealth-, line width=1.2pt, color=Red] (-1.8,-0.55) -- (-1.8,0.7)%
       node[above]{\footnotesize \textbf{vacuum state}};
@@ -173,6 +173,50 @@
     \quad \ra \quad
     V(H) = \underbrace{\lambda v^2}_{m_{H}^2 / 2} H^2 + \lambda v H^3 + \frac{\lambda}{4} H^4
   \end{align*}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Electroweak Symmetry Breaking: 2D Analogue}
+  \begin{center}
+    \begin{tikzpicture}
+      \node (potential) at (0,0) {%
+        \includegraphics[width=0.4\textwidth, trim=1em 1em 1em 1.5em,
+        clip]{theory/potential}%
+      };
+
+      \draw[stealth-, line width=1pt] (2.65, -0.5) -- (3.4, -0.5) %
+      node[right, align=left]{%
+        \footnotesize $V(\phi) = \mu^2 \phi^\dag \phi + \lambda (\phi^\dag \phi)^2$%
+      }
+
+      \onslide<2->{
+        \filldraw[color=Red,fill opacity=1.0,draw opacity=0] (0,1.05) circle (3.5pt);
+
+        \draw[stealth-, line width=1pt] (0.25, 1.05) -- (2, 1.05) %
+        node[right, align=center]{%
+          \footnotesize symmetric state\\[-0.5ex]
+          \footnotesize ($m_{W,Z} = m_\gamma = 0$)%
+        }
+      }
+
+      \onslide<3->{
+        \filldraw[color=Red,fill opacity=1.0,draw opacity=0] (-2.1,-0.8) circle (3.5pt);
+
+        \draw[stealth-, line width=1pt, color=Red] (-2.15,-0.6) -- (-2.8,0.8)%
+        node[above, align=center]{%
+          \footnotesize vacuum state\\[-0.5ex]
+          \footnotesize \color{headergray} broken symmetry\\[-0.5ex]
+          \footnotesize \color{headergray} ($m_{W,Z} \neq 0$, $m_\gamma = 0$)%
+        };
+
+        \draw[stealth-stealth, line width=1pt, color=Blue] %
+        (-1.95,-0.8) -- node[midway,below]{\footnotesize \allbold{$v$}} (0,-0.8);
+      }
+    \end{tikzpicture}
+  \end{center}
+
+  Write in terms of small radial perturbations: $V(H) = \lambda v^2 H^2 + \lambda v H^3 + \frac{\lambda}{4} H^4$
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -232,8 +276,10 @@
   \end{center}
 \end{frame}
 
-\begin{frame}
-  \includegraphics[width=0.4\textwidth]{higgs_potential_variation}
+\begin{frame}{The Higgs Potential}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{higgs_potential_variation}
+  \end{center}
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -367,7 +413,11 @@
 
     \vspace*{0.5em}
 
-    \includegraphics[width=0.9\textwidth]{theory/di_higgs_branching_ratio}
+    \begin{overpic}[width=0.9\textwidth]{theory/di_higgs_branching_ratio}
+      \put(30, 52.2){$\color{white}{\star}$}
+      \put(30, 30.1){$\color{black}{\star}$}
+      \put(30, 7.9){$\color{black}{\star}$}
+    \end{overpic}
   \end{columns}
 \end{frame}
 
