@@ -76,9 +76,33 @@
         \includegraphics[width=0.6\textwidth]{lagrangian/lagrangian_vectorized}
       };
 
-      \node[anchor=east] (credit) at (3.8,-3.5) {
+      \node[anchor=east] (credit) at (3.8,-3.6) {
         \scriptsize Image credit: CERN
       };
+
+      \onslide<1-2>{%
+        \path [fill=white] (-4.0,-3.0) rectangle (4,0.0);%
+      }
+
+      \onslide<2>{%
+        \node[anchor=north west, align=left] at (2.4, 2.1) {%
+          \textbf{Local gauge invariance}\\
+          $\rightarrow$ Particles must be massless };%
+      }
+
+      \pause
+      \pause
+
+      \draw[dotted,thick] (-7.4,0.2) -- (7.4,0.2);
+
+      \node[anchor=north west, align=left] at (-7.4,0.1) {%
+        \textbf{Higgs sector} (1960s)\\[1.5ex]
+        \footnotesize Mass generation through\\[-0.55ex]
+        \footnotesize Spontaneous Symmetry\\[-0.55ex]
+        \footnotesize Breaking
+      };
+
+      \pause
 
       \draw[Red,thick] (-2.7,-1.4) rectangle (3.8,0);
 
@@ -87,19 +111,13 @@
 
       \draw[Green,thick] (-2.7,-3.0) rectangle (-0.1,-1.5);
 
-      \node[anchor=east] at (-2.8,-2.25) {%
+      \node[anchor=east] at (0.0,-3.4) {%
         \color{Green}Gauge boson couplings};
 
       \draw[Blue,thick] (0.0,-3.0) rectangle (2.9,-1.5);
 
       \node[anchor=west] at (3.0, -2.25) {%
         \color{Blue}Higgs potential
-      };
-
-      \draw[dotted,thick] (-7.4,0.2) -- (7.4,0.2);
-
-      \node[anchor=west] at (-7.4,-0.2) {%
-        Higgs sector
       };
     \end{tikzpicture}
   \end{center}
@@ -198,7 +216,7 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Electroweak Symmetry Breaking: 2D Analogue}
+\begin{frame}{Electroweak Symmetry Breaking}
   \begin{center}
     \begin{tikzpicture}
       \node (potential) at (0,0) {%
@@ -216,8 +234,7 @@
 
         \draw[stealth-, line width=1pt] (0.25, 1.05) -- (2, 1.05) %
         node[right, align=center]{%
-          \footnotesize symmetric state\\[-0.5ex]
-          \footnotesize (unstable)%
+          \footnotesize symmetric state%
         };
       }
 
@@ -277,6 +294,28 @@
     \end{tikzpicture}
   \end{frame}
 }
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Higgs Boson Mass \& Couplings in 2023}
+  \vspace{1em}
+
+  \begin{columns}[onlytextwidth]
+    \column{0.55\textwidth}
+
+    \begin{overpic}[width=\textwidth]{higgs_properties/mass}
+      \put(78.5, 62){\tiny arXiv:2308.04775}
+    \end{overpic}
+
+    \column{0.45\textwidth}
+
+    \begin{overpic}[width=\textwidth]{higgs_properties/couplings}
+      \put(53,93){\tiny Nature \textbf{607}, 52--59 (2022)}
+    \end{overpic}
+
+
+  \end{columns}
+\end{frame}
 
 % ------------------------------------------------------------------------------
 
