@@ -35,6 +35,7 @@
 % My definitions
 \usepackage{defs}
 
+\definecolor{myblue}{HTML}{3584E4}
 \definecolor{headergray}{HTML}{23373B}
 \definecolor{mygray}{HTML}{FAFAFA}
 \definecolor{hadhadred}{HTML}{E41A1C}
@@ -146,73 +147,73 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Electroweak Symmetry Breaking}
-  % Brout, Englert, Higgs -> EWSB
+% \begin{frame}{Electroweak Symmetry Breaking}
+%   % Brout, Englert, Higgs -> EWSB
 
-  \begin{columns}[onlytextwidth]
-    \column{0.65\textwidth}
+%   \begin{columns}[onlytextwidth]
+%     \column{0.65\textwidth}
 
-    Higgs field (weak isospin doublet):
-    \begin{align*}
-      \phi =
-      \begin{pmatrix}
-        \phi^+ \\
-        \phi^0
-      \end{pmatrix}
-      =  \frac{1}{\sqrt{2}}
-      \begin{pmatrix}
-        \phi_1 + i \phi_2\\
-        \phi_3 + i \phi_4
-      \end{pmatrix}
-      \qquad \phi_i \in \mathbb{R}
-    \end{align*}
+%     Higgs field (weak isospin doublet):
+%     \begin{align*}
+%       \phi =
+%       \begin{pmatrix}
+%         \phi^+ \\
+%         \phi^0
+%       \end{pmatrix}
+%       =  \frac{1}{\sqrt{2}}
+%       \begin{pmatrix}
+%         \phi_1 + i \phi_2\\
+%         \phi_3 + i \phi_4
+%       \end{pmatrix}
+%       \qquad \phi_i \in \mathbb{R}
+%     \end{align*}
 
-    % Add a (doublet) of complex scalar field with a special potential
+%     % Add a (doublet) of complex scalar field with a special potential
 
-    Higgs potential:
-    \begin{align*}
-      V(\phi) = \mu^2 \phi^\dag \phi + \lambda (\phi^\dag \phi)^2
-    \end{align*}
+%     Higgs potential:
+%     \begin{align*}
+%       V(\phi) = \mu^2 \phi^\dag \phi + \lambda (\phi^\dag \phi)^2
+%     \end{align*}
 
-    % Degenerate minima at:
-    % \begin{align*}
-    %   \sum_{i = 1}^{4} \phi_i^2 = -\frac{\mu^2}{\lambda} \eqqcolon v^2
-    % \end{align*}
+%     % Degenerate minima at:
+%     % \begin{align*}
+%     %   \sum_{i = 1}^{4} \phi_i^2 = -\frac{\mu^2}{\lambda} \eqqcolon v^2
+%     % \end{align*}
 
-    \column{0.35\textwidth}
-    \centering
+%     \column{0.35\textwidth}
+%     \centering
 
-    %\textbf{2D toy model:}
+%     %\textbf{2D toy model:}
 
-    \begin{tikzpicture}
-      \node (potential) at (0,0) {%
-        \includegraphics[width=\textwidth, trim=1em 1em 1em 1.5em,
-        clip]{theory/potential}%
-      };
+%     \begin{tikzpicture}
+%       \node (potential) at (0,0) {%
+%         \includegraphics[width=\textwidth, trim=1em 1em 1em 1.5em,
+%         clip]{theory/potential}%
+%       };
 
-      \filldraw[color=Red,fill opacity=0.9,draw opacity=0] (0,0.9) circle (3.5pt);
+%       \filldraw[color=Red,fill opacity=0.9,draw opacity=0] (0,0.9) circle (3.5pt);
 
-      \filldraw[color=Red,fill opacity=0.9,draw opacity=0] (-1.8,-0.7) circle (3.5pt);
+%       \filldraw[color=Red,fill opacity=0.9,draw opacity=0] (-1.8,-0.7) circle (3.5pt);
 
-      \draw[stealth-, line width=1.2pt, color=Red] (-1.8,-0.55) -- (-1.8,0.7)%
-      node[above]{\footnotesize \textbf{vacuum state}};
+%       \draw[stealth-, line width=1.2pt, color=Red] (-1.8,-0.55) -- (-1.8,0.7)%
+%       node[above]{\footnotesize \textbf{vacuum state}};
 
-      \draw[stealth-stealth, line width=1.2pt, color=Goldenrod] %
-      (-1.65,-0.7) -- node[midway,below]{\footnotesize \allbold{$v$}} (0,-0.7);
-    \end{tikzpicture}
-  \end{columns}
+%       \draw[stealth-stealth, line width=1.2pt, color=Goldenrod] %
+%       (-1.65,-0.7) -- node[midway,below]{\footnotesize \allbold{$v$}} (0,-0.7);
+%     \end{tikzpicture}
+%   \end{columns}
 
-  Higgs potential after EWSB in unitary gauge ($H \in \mathbb{R}$):
-  \begin{align*}
-    \phi = \frac{1}{\sqrt{2}}
-    \begin{pmatrix}
-      0 \\
-      v + H
-    \end{pmatrix}
-    \quad \ra \quad
-    V(H) = \underbrace{\lambda v^2}_{m_{H}^2 / 2} H^2 + \lambda v H^3 + \frac{\lambda}{4} H^4
-  \end{align*}
-\end{frame}
+%   Higgs potential after EWSB in unitary gauge ($H \in \mathbb{R}$):
+%   \begin{align*}
+%     \phi = \frac{1}{\sqrt{2}}
+%     \begin{pmatrix}
+%       0 \\
+%       v + H
+%     \end{pmatrix}
+%     \quad \ra \quad
+%     V(H) = \underbrace{\lambda v^2}_{m_{H}^2 / 2} H^2 + \lambda v H^3 + \frac{\lambda}{4} H^4
+%   \end{align*}
+% \end{frame}
 
 % ------------------------------------------------------------------------------
 
@@ -225,7 +226,8 @@
       };
 
       \draw[stealth-, line width=1pt] (2.65, -0.5) -- (3.4, -0.5) %
-      node[right, align=left]{%
+      node[right, align=center]{%
+        \footnotesize Higgs potential\\[-0.5ex]
         \footnotesize $V(\phi) = \mu^2 \phi^\dag \phi + \lambda (\phi^\dag \phi)^2$%
       };
 
@@ -248,13 +250,20 @@
           \footnotesize \color{headergray} ($m_{W,Z} \neq 0$, $m_\gamma = 0$)%
         };
 
-        \draw[stealth-stealth, line width=1pt, color=Blue] %
-        (-1.95,-0.8) -- node[midway,below]{\footnotesize \allbold{$v$}} (0,-0.8);
+        \draw[stealth-stealth, line width=1pt, color=myblue] %
+        (-1.95,-0.8) -- node[midway,below]{$\mathbf{v}$\,\,} (0,-0.8);%
+
+        \node[anchor=east] at (-3.3,-0.75) {%
+          \footnotesize $\displaystyle v = \frac{\lvert \mu \rvert}{\sqrt{\lambda}}$};%
       }
     \end{tikzpicture}
   \end{center}
 
-  Write in terms of small radial perturbations: $V(H) = \lambda v^2 H^2 + \lambda v H^3 + \frac{\lambda}{4} H^4$
+  \textbf{Perturbation theory:} Have to consider perturbations about the vacuum state
+  \begin{itemize}
+  \item Radial perturbations $v + H(x, t)$ -- physical Higgs boson
+    $m_{H} = \sqrt{2 \lambda} v$
+  \end{itemize}
 \end{frame}
 
 % ------------------------------------------------------------------------------
