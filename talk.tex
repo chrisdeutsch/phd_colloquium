@@ -325,12 +325,17 @@
              && {\color{Green}?}
     \end{tabular}
   \end{center}
-\end{frame}
 
-\begin{frame}{}
-  \begin{center}
-    \includegraphics[width=0.5\textwidth]{higgs_potential_variation}
-  \end{center}
+  \onslide<2->{%
+    \setlength{\fboxrule}{1pt}
+    \begin{tikzpicture}[remember picture,overlay,shift=(current page.south
+      west),x=(current page.south east),y=(current page.north west)]
+
+      \node[align=center] at (0.5,0.5){%
+        \fcolorbox{headergray}{white}{\includegraphics[width=0.5\textwidth]{higgs_potential_variation}}
+      };
+    \end{tikzpicture}
+  }
 \end{frame}
 
 % ------------------------------------------------------------------------------
