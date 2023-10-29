@@ -92,3 +92,17 @@ Overlay:
     its gravitational interaction. And dark energy (65%) which causes the
     accelerating expansion of the universe, which is even more ominous.
 - To explain these, we need to go beyond the SM
+
+- Some theories, such as theories with extended Higgs sectors, predict new
+  scalars X. If these are sufficiently massive, they can decay into two SM-like
+  Higgs bosons. This is something we can also look for when searching for Higgs
+  boson pair production.
+
+
+## The ATLAS Experiment at the LHC (Sl. 8)
+
+- To 
+- We accelerate protons in multiple stages in the LHC (Geneva)
+- Up to a CM energy of 13 TeV
+- In my thesis, I consider pp collision data taken from 2015 to 2018 (call Run
+  2)
