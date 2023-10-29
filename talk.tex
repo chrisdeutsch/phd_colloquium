@@ -70,7 +70,7 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}{The Standard Model}
-  \vspace*{-0.5em}
+  \vspace*{-2.0em}
   \begin{center}
     \begin{tikzpicture}
       \node (lagrangian) at (0,0) {
@@ -123,27 +123,6 @@
     \end{tikzpicture}
   \end{center}
 \end{frame}
-
-\note{
-  \begin{itemize}
-
-  \item Lagrangian describes the dynamics of the fields
-
-  \item Built on symmetry principles (local gauge invariance)
-
-  \item Build up slide (first only radiation \& fermions) [Higgs sector after next bullet]
-
-  \item Problem: if we want local gauge invariance to hold -> particles have to
-    be massless. (Illustrate with image?)
-
-  \item Instead dynamic approach is introduced
-
-  \item Embed a doublet of complex scalar fields (Higgs field) in the SM
-    symmetry
-
-  \end{itemize}
-}
-
 
 % ------------------------------------------------------------------------------
 
@@ -250,7 +229,7 @@
           \footnotesize \color{headergray} ($m_{W,Z} \neq 0$, $m_\gamma = 0$)%
         };
 
-        \draw[stealth-stealth, line width=1pt, color=myblue] %
+        \draw[stealth-stealth, line width=1pt, color=Red] %
         (-1.95,-0.8) -- node[midway,below]{$\mathbf{v}$\,\,} (0,-0.8);%
 
         \node[anchor=east] at (-3.3,-0.75) {%
@@ -259,11 +238,16 @@
     \end{tikzpicture}
   \end{center}
 
-  \textbf{Perturbation theory:} Have to consider perturbations about the vacuum state
-  \begin{itemize}
-  \item Radial perturbations $v + H(x, t)$ -- physical Higgs boson
-    $m_{H} = \sqrt{2 \lambda} v$
-  \end{itemize}
+  \vspace*{-1em}
+
+  \onslide<4->{
+    \textbf{Perturbation theory:} Consider small perturbations about the vacuum state
+    \begin{itemize}
+    \item Radial perturbations \ra Physical Higgs boson
+      $m_{H} = \sqrt{2 \lambda} v$
+    \item Angular perturbations \ra Nambu--Goldstone bosons
+    \end{itemize}
+  }
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -306,7 +290,7 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Higgs Boson Mass \& Couplings in 2023}
+\begin{frame}{11 Years of Higgs Boson Measurements}
   \vspace{1em}
 
   \begin{columns}[onlytextwidth]
@@ -321,14 +305,12 @@
     \begin{overpic}[width=\textwidth]{higgs_properties/couplings}
       \put(53,93){\tiny Nature \textbf{607}, 52--59 (2022)}
     \end{overpic}
-
-
   \end{columns}
 \end{frame}
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{The Higgs Potential}
+\begin{frame}{The Higgs Boson Self-Coupling}
   \begin{center}
     \begin{tabular}{ccccccc}
       $V(H)$ & $=$ & ${\color{Red} \lambda v^2 H^2}$ & $+$ & ${\color{Blue} \lambda v H^3}$ & $+$ & ${\color{Green} \frac{\lambda}{4} H^4}$ \\[1.2em]
@@ -345,9 +327,7 @@
   \end{center}
 \end{frame}
 
-\note{Put here a plot of Higgs boson mass measurements \& couplings}
-
-\begin{frame}{The Higgs Potential}
+\begin{frame}{}
   \begin{center}
     \includegraphics[width=0.5\textwidth]{higgs_potential_variation}
   \end{center}
