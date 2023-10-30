@@ -40,6 +40,7 @@
 
 ## 11 Years of Higgs Boson Measurements (Sl. 4)
 
+- We have come a long way since the discovery
 - Higgs boson mass is known to per mille level
 - Gauge boson and Yukawa couplings are in excellent agreement with the SM
   prediction
@@ -78,7 +79,8 @@ Overlay:
     couplings
   - Even lower cross section: We don't target this explicitly
 
-- The SM cross sections are too small to detect these processes
+- The SM cross sections are too small to detect these processes. A thousand
+  times smaller than single Higgs boson production!
 
 
 ## Beyond the Standard Model (Sl. 7)
@@ -97,12 +99,102 @@ Overlay:
   scalars X. If these are sufficiently massive, they can decay into two SM-like
   Higgs bosons. This is something we can also look for when searching for Higgs
   boson pair production.
+- This we do, considering mX from 251 GeV to 1.6 TeV
 
 
 ## The ATLAS Experiment at the LHC (Sl. 8)
 
-- To 
-- We accelerate protons in multiple stages in the LHC (Geneva)
-- Up to a CM energy of 13 TeV
-- In my thesis, I consider pp collision data taken from 2015 to 2018 (call Run
-  2)
+- Coming to the experimental aspects of my thesis
+- We used the Large Hadron Collider in Geneva to accelate protons to an energy
+  of 6.5 TeV yielding a CM energy of 13 TeV
+- Protons collide at multiple interaction points at which different experiments
+  are located
+
+- At one of them is the ATLAS experiment which I worked at
+- The detector covers the interaction point 
+  - Inner detector for tracking of charged particles
+  - Calorimeters for energy measurement of most charged and neutral hadrons
+  - Muon system to track muons that are able to traverse the detector
+- Combining these detector technologies, we can perform almost a full event
+  interpretation from the measured signals
+
+
+## Final States of Searches for HH Production (Sl. 9)
+
+- When searching for Higgs boson pair production, a diverse set of final states
+  can be considered
+- Table shows the branching ratios of a di-Higgs system
+- Currently, the most promising channels are bbbb, bbtautau, bbyy
+  - These achieve a suitable trade-off between branching ratio & cleanliness of
+    final state. Cleanliness being the ability to select events of interest and
+    reject background processes.
+
+
+## The bbtautau final state (Sl. 10)
+
+- In my thesis, I consider the bbtautau final state
+  - Combines the large branching ratio of H->bb with the distinct signature of
+    H->tautau (to efficiently select events and reject backgrounds)
+- We break down the bbtautau final state into two channels
+  - lephad: 2 b-jets (can be identified by displaced decays of b hadrons), one
+    electron or muon, and a hadronic tau decay
+  - hadhad: Instead of the electron muon -> another hadronic tau decay. I
+    largely focused on this final state.
+  - This covers the largest share of di-tau system decays.
+  
+- An important part of the bbtautau channel is the ability to identify hadronic
+  tau lepton decays. Even moreso in hadhad. -> Interlude
+  
+## Tau Identification (Sl. 11)
+
+- Tau identification is the process of distinguishing actual hadronic tau lepton
+  decays from other signatures in the detector
+- Particularly important are quark- or gluon-initiated jets which are reasonably
+  similar. But there are some differences!
+  - Go over differences
+
+- This is a classification problem: use machine learning to distinguish the two cases
+
+
+## Tau Identification: Input Variables (Sl. 12)
+
+- We need to use numeric variables to distinguish the two cases
+- First, we can consider "high-level variables": That is variables that we
+  construct ourselves to be sensitive to the differences
+  
+- Before I started my work in ATLAS, this is the only information we used to
+  perform Tau-ID. We used these variables in "Gradient Boosted Trees".
+- However, in doing so we might lose some information that could help in the classification
+
+- Idea: include also low-level information. That is, information about particle
+  trajectories reconstructed with the ID and topological clusters of energy in
+  the calorimeters.
+- We consider tracks close to a reconstructed tau candidate. But we cap it at 10
+  - For each track we provide track-specific variables such as track pT, angular
+    distances, impact parameters, etc.
+- Similarly, we consider up to 6 clusters associated with the tauhad seed jet
+  - ET, angular distances, and cluster moments which describe the shape of a
+    cluster
+
+- One difference: the number of tracks and clusters is variable. This does not
+  fit that nicely into a gradient boosted tree approch.
+
+
+## Tau Identification: Network Architecture (Sl. 13)
+
+- A more natural machine learning method for this problem are recurrent neural
+  networks
+- Recurrent neural networks are designed to work with variable-length input
+  sequences, such as the tracks and clusters we want to consider for Tau-ID
+- The chosen architecture has three branches. One for each input type:
+  - High-level variables: Just a regular densely connected neural network
+  - Track & Cluster branches: Recurrent neural network based that summarises the
+    variable sequence to a fixed output
+- Everything is merged and reduced to a single output number
+- This number, after training, corresponds to the conditional probability of a
+  given candidate being a tauhad or a q/g jet given the input features.
+
+
+## Tau Identification: Performance (Sl. 14)
+
+- 

@@ -334,6 +334,10 @@
       \node[align=center] at (0.5,0.5){%
         \fcolorbox{headergray}{white}{\includegraphics[width=0.5\textwidth]{higgs_potential_variation}}
       };
+
+      \node[align=center] at (0.542,0.42){%
+        \huge ?
+      };
     \end{tikzpicture}
   }
 \end{frame}
@@ -465,14 +469,14 @@
     \column{0.5\textwidth}
     \centering
 
-    {\small Branching ratios of a $HH$-system:}
+    {\small $HH$-system branching ratios:}
 
     \vspace*{0.5em}
 
     \begin{overpic}[width=0.9\textwidth]{theory/di_higgs_branching_ratio}
-      \put(30, 52.2){$\color{white}{\star}$}
-      \put(30, 30.1){$\color{black}{\star}$}
-      \put(30, 7.9){$\color{black}{\star}$}
+      \put(29.5, 51.7){\Large $\color{white}{\star}$}
+      \put(29.5, 29.6){\Large $\color{black}{\star}$}
+      \put(29.5, 7.4){\Large $\color{black}{\star}$}
     \end{overpic}
   \end{columns}
 \end{frame}
@@ -589,7 +593,7 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Tau Identification:\ Inputs}
+\begin{frame}{Tau Identification:\ Input Variables}
 
   \begin{minipage}[c][2.2cm][c]{0.25\textwidth}
     \centering
@@ -762,49 +766,88 @@
 
 % ------------------------------------------------------------------------------
 
+% \begin{frame}{Tau Identification:\ Performance}
+%   \vspace*{0.5em}
+%   \begin{columns}[onlytextwidth]
+%     \column{0.5\textwidth} \centering\footnotesize
+
+%     \begin{tabular}{lcc}
+%       \toprule
+%       & \multicolumn{2}{c}{\textbf{Rejection Improvement}}\\
+%       \textbf{Working Point} & {\hspace*{0.8em}1-prong\hspace*{0.8em}} & {\hspace*{0.8em}3-prong\hspace*{0.8em}} \\
+%       \midrule
+%       Very Loose (VL) & +85\,\% & +40\,\% \\
+%       Loose (L)       & +75\,\% & +50\,\% \\
+%       Medium (M)      & +80\,\% & +60\,\% \\
+%       Tight (T)       & +80\,\% & +80\,\% \\
+%       \bottomrule
+%     \end{tabular}
+
+%     \vspace*{1.75em}
+
+%     \column{0.5\textwidth}
+
+%     \begin{overpic}[width=1.0\textwidth]{tauid/roc_incl_witherrors}
+%       \put(51,55){\footnotesize\color{blue_cb}T}
+%       \put(62.3,48.5){\footnotesize\color{blue_cb}M}
+%       \put(74.5,42.5){\footnotesize\color{blue_cb}L}
+%       \put(88.5,33){\footnotesize\color{blue_cb}VL}
+
+%       \put(64.5,34.2){\scriptsize\color{red_cb}T}
+%       \put(73.5,25){\footnotesize\color{red_cb}M}
+%       \put(82,21.8){\footnotesize\color{red_cb}L}
+%       \put(88.5,16){\footnotesize\color{red_cb}VL}
+%     \end{overpic}
+%   \end{columns}
+
+%   \begin{itemize}
+%     \setlength{\itemsep}{0.5em}
+
+%   \item Recommended identification algorithm for analyses of the Run~2 dataset
+
+%   \item Adopted for tau identification in the high-level trigger (end of Run~2
+%     \& Run~3)
+
+%   \end{itemize}
+% \end{frame}
+
 \begin{frame}{Tau Identification:\ Performance}
-  \vspace*{0.5em}
+
   \begin{columns}[onlytextwidth]
-    \column{0.5\textwidth} \centering\footnotesize
+    \column{0.6\textwidth}
 
-    \begin{tabular}{lcc}
-      \toprule
-      & \multicolumn{2}{c}{\textbf{Rejection Improvement}}\\
-      \textbf{Working Point} & {\hspace*{0.8em}1-prong\hspace*{0.8em}} & {\hspace*{0.8em}3-prong\hspace*{0.8em}} \\
-      \midrule
-      Very Loose (VL) & +85\,\% & +40\,\% \\
-      Loose (L)       & +75\,\% & +50\,\% \\
-      Medium (M)      & +80\,\% & +60\,\% \\
-      Tight (T)       & +80\,\% & +80\,\% \\
-      \bottomrule
-    \end{tabular}
+    \vspace*{2em}
 
-    \vspace*{1.75em}
+    \begin{overpic}[width=0.97\textwidth]{tauid/roc_incl_witherrors}
+      \put(51,55){\footnotesize\color{blue_cb}\onslide<1>{T}}
+      \put(62.3,48.5){\footnotesize\color{blue_cb}\onslide<1>{M}}
+      \put(74.5,42.5){\footnotesize\color{blue_cb}\onslide<1>{L}}
+      \put(88.5,33){\footnotesize\color{blue_cb}\onslide<1>{VL}}
 
-    \column{0.5\textwidth}
+      \put(64.5,34.2){\scriptsize\color{red_cb}\onslide<1>{T}}
+      \put(73.5,25){\footnotesize\color{red_cb}\onslide<1>{M}}
+      \put(82,21.8){\footnotesize\color{red_cb}\onslide<1>{L}}
+      \put(88.5,16){\footnotesize\color{red_cb}\onslide<1>{VL}}
 
-    \begin{overpic}[width=1.0\textwidth]{tauid/roc_incl_witherrors}
-      \put(51,55){\footnotesize\color{blue_cb}T}
-      \put(62.3,48.5){\footnotesize\color{blue_cb}M}
-      \put(74.5,42.5){\footnotesize\color{blue_cb}L}
-      \put(88.5,33){\footnotesize\color{blue_cb}VL}
+      \put(19,50.5){\onslide<2->{\rotatebox{-26}{\small\color{red_cb}\textbf{80\,\% rej.\
+            improvement}}}}
 
-      \put(64.5,34.2){\scriptsize\color{red_cb}T}
-      \put(73.5,25){\footnotesize\color{red_cb}M}
-      \put(82,21.8){\footnotesize\color{red_cb}L}
-      \put(88.5,16){\footnotesize\color{red_cb}VL}
+      \put(42,60){\onslide<2->{\rotatebox{-26}{\small\color{blue_cb}\textbf{40--80\,\% rej.\
+          improvement}}}}
+
     \end{overpic}
+
+    \column{0.4\textwidth}
+
+    \begin{itemize}
+      \setlength{\itemsep}{1em}
+
+    \item<3-> Default identification algorithm for analyses of the Run~2 dataset
+
+    \item<3-> Adopted for use in the high-level trigger (end of Run~2 \& Run~3)
+
+    \end{itemize}
   \end{columns}
-
-  \begin{itemize}
-    \setlength{\itemsep}{0.5em}
-
-  \item Recommended identification algorithm for analyses of the Run~2 dataset
-
-  \item Adopted for tau identification in the high-level trigger (end of Run~2
-    \& beginning of Run~3)
-
-  \end{itemize}
 \end{frame}
 
 % ------------------------------------------------------------------------------
