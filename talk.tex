@@ -819,15 +819,15 @@
     \vspace*{2em}
 
     \begin{overpic}[width=0.97\textwidth]{tauid/roc_incl_witherrors}
-      \put(51,55){\footnotesize\color{blue_cb}\onslide<1>{T}}
-      \put(62.3,48.5){\footnotesize\color{blue_cb}\onslide<1>{M}}
-      \put(74.5,42.5){\footnotesize\color{blue_cb}\onslide<1>{L}}
-      \put(88.5,33){\footnotesize\color{blue_cb}\onslide<1>{VL}}
+      % \put(51,55){\footnotesize\color{blue_cb}\onslide<1>{T}}
+      % \put(62.3,48.5){\footnotesize\color{blue_cb}\onslide<1>{M}}
+      % \put(74.5,42.5){\footnotesize\color{blue_cb}\onslide<1>{L}}
+      % \put(88.5,33){\footnotesize\color{blue_cb}\onslide<1>{VL}}
 
-      \put(64.5,34.2){\scriptsize\color{red_cb}\onslide<1>{T}}
-      \put(73.5,25){\footnotesize\color{red_cb}\onslide<1>{M}}
-      \put(82,21.8){\footnotesize\color{red_cb}\onslide<1>{L}}
-      \put(88.5,16){\footnotesize\color{red_cb}\onslide<1>{VL}}
+      % \put(64.5,34.2){\scriptsize\color{red_cb}\onslide<1>{T}}
+      % \put(73.5,25){\footnotesize\color{red_cb}\onslide<1>{M}}
+      % \put(82,21.8){\footnotesize\color{red_cb}\onslide<1>{L}}
+      % \put(88.5,16){\footnotesize\color{red_cb}\onslide<1>{VL}}
 
       \put(19,50.5){\onslide<2->{\rotatebox{-26}{\small\color{red_cb}\textbf{80\,\% rej.\
             improvement}}}}
@@ -866,20 +866,24 @@
   \begin{columns}[onlytextwidth]
     \column{0.5\textwidth}
 
-    \allbold{Electrons/Muons:}
-    \begin{itemize}
-    \item $\pT > \SI{7}{\GeV}$
-    \item Loose identification \& isolation
-    \end{itemize}
+    \onslide<1->{
+      \allbold{Electrons/Muons:}
+      \begin{itemize}
+      \item $\pT > \SI{7}{\GeV}$
+      \item Loose identification \& isolation
+      \end{itemize}
+    }
 
     \vspace*{1em}
 
-    \allbold{\tauhadvis:}
-    \begin{itemize}
-    \item $\pT > \SI{20}{\GeV}$
-    \item Loose identification (RNN)
-    \item Electron veto
-    \end{itemize}
+    \onslide<2->{
+      \allbold{\tauhadvis:}
+      \begin{itemize}
+      \item $\pT > \SI{20}{\GeV}$
+      \item Loose identification (RNN)
+      \item Electron veto
+      \end{itemize}
+    }
 
     % \vspace*{1em}
 
@@ -891,20 +895,24 @@
 
     \column{0.5\textwidth}
 
-    \allbold{Jets:}
-    \begin{itemize}
-    \item Anti-$k_{t}$ ($R = 0.4$) particle flow jets
-    \item Jet Vertex Tagger
-    \item $\pT > \num{20} \, (\num{30})\,\si{\GeV}$ (forward jets)
-    \item $b$-tagging with \textsc{DL1r} (\SI{77}{\percent} WP)
-    \end{itemize}
+    \onslide<3->{
+      \allbold{Jets:}
+      \begin{itemize}
+      \item Anti-$k_{t}$ ($R = 0.4$) particle flow jets
+      \item Jet Vertex Tagger
+      \item $\pT > \num{20} \, (\num{30})\,\si{\GeV}$ (forward jets)
+      \item $b$-tagging with \textsc{DL1r} (\SI{77}{\percent} WP)
+      \end{itemize}
+    }
 
     \vspace*{1em}
 
-    \allbold{\pTmissAbs:}
-    \begin{itemize}
-    \item Object-based with track soft term
-    \end{itemize}
+    \onslide<4->{
+      \allbold{\pTmissAbs:}
+      \begin{itemize}
+      \item Object-based with track soft term
+      \end{itemize}
+    }
   \end{columns}
 
   % Mention OLR?
@@ -914,15 +922,13 @@
 
 \begin{frame}{Event Selection}
   \begin{center}
-    \footnotesize
-
     \begin{tabular}{c@{\hskip 2em}c@{\hskip 3em}c}
       \toprule
       \textcolor{hhblue}{\hadhad} & \textcolor{lhred}{\lephad (SLT)} & \textcolor{lhred}{\lephad (LTT)} \\
       \midrule
       \textcolor{hhblue}{single- \& di-\tauhadvis triggers} & \textcolor{lhred}{single-$\ell$ triggers} & \textcolor{lhred}{$\ell+\tauhadvis$ triggers} \\
       \textcolor{hhblue}{exactly two $\tauhadvis$} & \multicolumn{2}{c}{\textcolor{lhred}{exactly one $\tauhadvis$}} \\
-      \textcolor{hhblue}{no loose $e$ or $\mu$} & \multicolumn{2}{c}{\textcolor{lhred}{exactly one tight $e$ or medium $\mu$}} \\
+      \textcolor{hhblue}{no $e$ or $\mu$} & \multicolumn{2}{c}{\textcolor{lhred}{exactly one tight $e$ or medium $\mu$}} \\
                                   & \multicolumn{2}{c}{\textcolor{lhred}{$m_{bb} < \SI{150}{\GeV}$}} \\
       \midrule
       \multicolumn{3}{c}{trigger-dependent \pT thresholds on $e$/$\mu$/$\tauhadvis$ and jets} \\
@@ -1095,8 +1101,8 @@
         \toprule
         \allbold{Background} & \allbold{\hadhad channel} & \allbold{\lephad channel} \\
         \midrule
-        \ttbar (true \tauhadvis) & \multicolumn{2}{c}{\textcolor{toporange}{Simulation (normalised in fit)}} \\[0.1em]
         $Z + \text{jets}$ & \multicolumn{2}{c}{\allbold{\textcolor{zjetsgreen}{Simulation (normalised in fit + dedicated CR)}}} \\[0.1em]
+        \ttbar (true \tauhadvis) & \multicolumn{2}{c}{\textcolor{toporange}{Simulation (normalised in fit)}} \\[0.1em]
         \ttbar (fake \tauhadvis) & \allbold{\textcolor{topfakered}{Simulation + scale factors}} & \multirow{2}{*}{Fake factor method} \\[0.1em]
         Multi-jet & \allbold{\textcolor{fakeblue}{Fake factor method}} & \\[0.1em]
         Other & \multicolumn{2}{c}{Simulation} \\[0.1em]

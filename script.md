@@ -1,6 +1,5 @@
 # Colloquium Script
 
-
 ## The Standard Model (Sl. 1)
 
 - SM -- Our current best model for particles and their interaction
@@ -137,7 +136,7 @@ Overlay:
     H->tautau (to efficiently select events and reject backgrounds)
 - We break down the bbtautau final state into two channels
   - lephad: 2 b-jets (can be identified by displaced decays of b hadrons), one
-    electron or muon, and a hadronic tau decay
+    electron or muon (from a leptonic tau decay), and a hadronic tau decay
   - hadhad: Instead of the electron muon -> another hadronic tau decay. I
     largely focused on this final state.
   - This covers the largest share of di-tau system decays.
@@ -197,4 +196,51 @@ Overlay:
 
 ## Tau Identification: Performance (Sl. 14)
 
-- 
+- How well this works is shown in this plot. Here I show:
+  - Selection efficiencies for true hadronic tau decays (true positive rate)
+  - Rejection factor for quark/gluon-initiated jets (1 / false positive rate)
+  - Red lines: 1-prong taus
+  - Blue lines: 3-prong taus
+  - Dashed: Previous BDT-based method
+  - Solid: The recurrent neural network approach
+
+- Dramatic improvement: 80% for 1-prong, 40-80% for 3-prong tau candidates
+
+
+## Interlude End
+
+- Now moving back to the experimental aspects of the Higgs pair production
+  search
+- Beginning with what detector signatures we consider to be b-jets, hadronic tau
+  decays, etc.
+
+
+## Object Selection (Sl. 15)
+
+- We used a very basic definition of most physics objects
+- ...
+
+
+## Event Selection (Sl. 16)
+
+- After having defined the physics objects, we can apply a rough selection to
+  reduce the data to the events of interest
+- We split into three channels based on the trigger that selected the event:
+  - hadhad channel, lephad SLT, lephad LTT
+
+
+## Signal Acceptance (Sl. 17)
+
+- How likely are we to select an event of interest produced in a pp collision?
+  - Event of interest is here either bb tauhad tauhad or bb tauhad taulep
+- Table shows the SM HH case and compares it to the previous analysis performed
+  in this channel
+  - We see a very large improvement in acceptance compared to the previous round
+- The figure shows the acceptance for a BSM signal from resonant HH production 
+  - At low mass, we are limited by the trigger thresholds
+  - At high mass, the reconstruction fails because the Higgs decay products
+    start to be too close due to the Lorentz boost
+
+
+## Background Estimation (Sl. 18)
+
