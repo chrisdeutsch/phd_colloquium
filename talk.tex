@@ -331,6 +331,8 @@
     \begin{tikzpicture}[remember picture,overlay,shift=(current page.south
       west),x=(current page.south east),y=(current page.north west)]
 
+      \filldraw[white,opacity=0.7](0.0,0.15) rectangle (1.0,0.85);
+
       \node[align=center] at (0.5,0.5){%
         \fcolorbox{headergray}{white}{\includegraphics[width=0.5\textwidth]{higgs_potential_variation}}
       };
@@ -1110,19 +1112,21 @@
       \end{tabular}
     }
 
-    \vspace*{1.5em}
+    % \vspace*{1.5em}
 
-    {\footnotesize \textbf{Largest backgrounds in \hadhad channel:}
-      \begin{itemize}
-        \setlength{\itemindent}{0.75em}
-      \item[1.] {\color{toporange}\ttbar with true-\tauhadvis} (\SI{39}{\percent} of bkg.)
-      \item[2.] {\color{topfakered}\ttbar with fake-\tauhadvis} (\SI{25}{\percent} of bkg.)
-      \item[3.] {\color{zjetsgreen}$Z + \text{jets}$} (\SI{18}{\percent} of bkg.)
-      \item[4.] {\color{fakeblue}Multi-jet} (\SI{15}{\percent} of bkg.)
-      \end{itemize}
-    }
+    % {\footnotesize \textbf{Largest backgrounds in \hadhad channel:}
+    %   \begin{itemize}
+    %     \setlength{\itemindent}{0.75em}
+    %   \item[1.] {\color{toporange}\ttbar with true-\tauhadvis} (\SI{39}{\percent} of bkg.)
+    %   \item[2.] {\color{topfakered}\ttbar with fake-\tauhadvis} (\SI{25}{\percent} of bkg.)
+    %   \item[3.] {\color{zjetsgreen}$Z + \text{jets}$} (\SI{18}{\percent} of bkg.)
+    %   \item[4.] {\color{fakeblue}Multi-jet} (\SI{15}{\percent} of bkg.)
+    %   \end{itemize}
+    % }
 
     \column{0.4\textwidth}
+
+    \vspace*{1.5em}
 
     \begin{overpic}[width=\textwidth]{results_nonres/postfit_mvainputs/Region_BMin0_incJet1_distmHH_J2_Y2015_DLLOS_T2_SpcTauHH_L0_GlobalFit_conditionnal_mu0log}
       %\put(56,94){\tiny arXiv:2209.10910}
@@ -1259,10 +1263,24 @@
     \end{itemize}
   }
 
-  % TODO: A plot of the Multi-Jet VR would be nice here!
-
   % Details for backup:\\
   % - Actually do two different fake estimations and average\\
+
+  \onslide<3->{%
+    \setlength{\fboxrule}{1pt}
+    \begin{tikzpicture}[remember picture,overlay,shift=(current page.south
+      west),x=(current page.south east),y=(current page.north west)]
+
+      \filldraw[white,opacity=0.7](0.0,0.08) rectangle (1.0,0.87);
+
+      \node[align=center] at (0.5,0.5){%
+        \fcolorbox{headergray}{white}{\includegraphics[width=0.4\textwidth]{fakefactors/fake_os_vr/Tau0Pt_fakevr}}
+      };
+
+      \node[align=center] at (0.52,0.5){%
+        \textbf{Multi-Jet VR}};
+    \end{tikzpicture}
+  }
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -1298,6 +1316,7 @@
   \end{center}
 
   \vspace*{2em}
+  \pause
 
   \allbold{$\rightarrow$ Exploit kinematic properties of events to improve
     signal sensitivity}
@@ -1305,35 +1324,51 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Discriminating Variables in the \allbold{\hadhad} Channel}
+\begin{frame}{Discriminating Variables:\ \allbold{\hadhad} Channel}
   \vspace*{0.5em}
   \begin{columns}
     % Col. 1
     \column{0.333\textwidth}
+    \centering
+
+    \allbold{\mMMC}
+
     \begin{overpic}[width=\textwidth, trim=0.5em 0 2.5em 0, clip]{mva/prefit/Region_BMin0_incJet1_distmMMC_J2_Y2015_DLLOS_T2_SpcTauHH_L0_Prefit}
-      \put(60,40){\allbold{\mMMC}}
+      %\put(60,40){\allbold{\mMMC}}
     \end{overpic}
 
     % Col. 2
     \column{0.333\textwidth}
+    \centering
+
+    \allbold{\mBB}
+
     \begin{overpic}[width=\textwidth, trim=0.5em 0 2.5em 0, clip]{mva/prefit/Region_BMin0_incJet1_distmBB_J2_Y2015_DLLOS_T2_SpcTauHH_L0_Prefit}
-      \put(65,40){\allbold{\mBB}}
+      %\put(65,40){\allbold{\mBB}}
     \end{overpic}
 
     % Col. 3
     \column{0.333\textwidth}
+    \centering
+
+    \allbold{$\dR(\tau, \tau)$}
+
     \begin{overpic}[width=\textwidth, trim=0.5em 0 2.5em 0, clip]{mva/prefit/Region_BMin0_incJet1_distdRTauTau_J2_Y2015_DLLOS_T2_SpcTauHH_L0_Prefit_fontembed}
-      \put(26,56){\allbold{$\dR(\tau, \tau)$}}
+      %\put(26,56){\allbold{$\dR(\tau, \tau)$}}
     \end{overpic}
   \end{columns}
 
-  \begin{itemize}
-    \setlength{\itemsep}{0.6em}
-  \item \allbold{\mMMC, \mBB:} Narrow peak close to $m_{H} = \SI{125}{\GeV}$
-  \item \allbold{\mHH:} Peaks close to $m_{X}$
-  \item \allbold{$\dR(\tau, \tau)$, $\dR(b, b)$:} Low separation of $H$ decay
-    products due to large $\pT(H)$
-  \end{itemize}
+  \vspace*{1em}
+
+  Not shown:\ \mHH \& \dRbb
+
+  % \begin{itemize}
+  %   \setlength{\itemsep}{0.6em}
+  % % \item \allbold{\mMMC, \mBB:} Narrow peak close to $m_{H} = \SI{125}{\GeV}$
+  % % \item \allbold{\mHH:} Peaks close to $m_{X}$
+  % % \item \allbold{$\dR(\tau, \tau)$, $\dR(b, b)$:} Low separation of $H$ decay
+  % %   products due to large $\pT(H)$
+  % \end{itemize}
 \end{frame}
 
 % What to mention:

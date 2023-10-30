@@ -244,3 +244,34 @@ Overlay:
 
 ## Background Estimation (Sl. 18)
 
+- We have various background processes that contribute significantly after our
+  event selection
+- These have to be estimated! We use different techniques to do so.
+  - Go over table
+- In the following I will focus mostly on the hadhad channel.
+  - To get an idea how large the backgrounds are, the fractions are listed here
+  
+I will now go over some of the background estimation techniques we use:
+
+
+## Z+jets (Sl. 19)
+
+- ...
+
+
+## ttbar with fake tauhadvis (Sl. 20)
+
+- We are generally not sure, how well MC simulation models the background
+  contributions that include q/g jets misidentified as hadronic tau decays
+- ...
+
+TODO: Add a SF plot?
+
+
+## Background Estimation: Multi-Jet (Sl. 21)
+
+
+TODO: Maybe add some plot?
+
+
+
