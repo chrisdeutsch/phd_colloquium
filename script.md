@@ -344,10 +344,41 @@ TODO: Add a SF plot?
 
 ## Discriminants After the Background-Only Fit
 
+- Now moving to the results of the search for SM HH production.
+- Here you can see the binned discriminants in the three SRs: the BDT in hadhad,
+  and the two NNs in lephad. This is after fitting the b-only statistical model
+  to data.
+- You can see that the b-only model describes the data fairly well. You can
+  formalize this and perform a statistical test of b-only vs signal+bkg. which
+  yields a p-value of 27%.
+
 
 ## Upper Limits on the SM HH Signal Strength
 
+- Given that we do not see any significant excess, we set an upper limit on the
+  SM HH production cross section at 95% CL
+- We set the upper limit at 4.7 times the SM cross section
+- The expected upper limit under the b-only hypothesis is 3.9
 
-## Search for Resonant HH Production
+- You can compare this to the bbbb and bbyy channels:
+  - The three most promising channels set limits in a similar ballpark
+  - bbyy sets the tightest limit, bbtautau is expected to be the most sensitive
+  - We also combined the three searches... much better than we expected a few years ago
+
+- Compare with our main competitor CMS
+  - Best expected limit: bbbb (4.0)
+
+- ATLAS bbtautau is the most sensitive channel to date!
 
 
+## Search for Resonant HH Production: Discovery Tests
+
+- We can do the same analysis also using resonant HH production as a signal hypothesis.
+  - We only have to exchange the discriminants
+- What we found there is an excess for scalars with mX = 1000 GeV
+  - This excess is particularly located in the hadhad channel. Last bin
+
+
+## Search for Resonant HH Production: Upper Limits
+
+- 
