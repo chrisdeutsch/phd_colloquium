@@ -1238,8 +1238,7 @@
     \begin{itemize}
       \setlength{\itemsep}{0.5em}
 
-    \item FF binned in \tauhadvis properties, trigger category, data-taking
-      period
+    \item FF binned in \tauhadvis properties, trigger, data-taking period
 
     \item FF measured in 1 $b$-tag region and extrapolated to 2 $b$-tag region
 
@@ -1409,22 +1408,24 @@
     \item Kinematic properties of signal changes with $m_{X}$
     \end{itemize}
 
-    \vspace*{0.75em}
+    %\vspace*{0.75em}
 
-    \onslide<2->{\textbf{Previously:} 1 BDT per mass point}
+    %\onslide<2->{\textbf{Previously:} 1 BDT per mass point}
 
-    \vspace*{0.75em}
+    \vspace*{1.5em}
 
-    \onslide<3->{\textbf{Now:} Parameterised Neural Network (PNN)}
+    %\onslide<2->{\textbf{Now:} Parameterised Neural Network (PNN)}
+    \onslide<2->{\textbf{Parameterised Neural Network (PNN)}}
 
 
-    \vspace*{0.75em}
+    \vspace*{1em}
 
-    \onslide<3->{%
+    \onslide<2->{%
       \begin{overpic}[width=0.45\textwidth]{pnn_sketch}
-        \put(85,25){\footnotesize \parbox[t]{0.54\textwidth}{Single NN to solve
+        \put(85,25){\footnotesize \parbox[t]{0.43\textwidth}{Solves
             parameter-dependent classification problem}}
-        \put(85,4){\tiny EPJC \textbf{77} (2016) 235}
+        \put(85,4){\tiny EPJC
+          \textbf{77} (2016) 235}
       \end{overpic}
     }
 
@@ -1794,16 +1795,16 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Conclusion \& Outlook}
-
-
-
-
+\begin{frame}{Summary \& Outlook}
   \textbf{Main results:}
   \begin{itemize}
-  \item Tau-ID
-  \item SM HH limit
+  \item RNN-based tau identification:\\
+    40--80\,\% improvement in rejection of quark/gluon-initiated jets
+
+  \item Upper limit on SM HH
+
   \item Resonant Limit
+
   \item klambda limit
   \end{itemize}
 
