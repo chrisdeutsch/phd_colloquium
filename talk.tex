@@ -307,22 +307,22 @@
     \end{tabular}
   \end{center}
 
-  \onslide<5->{%
-    \setlength{\fboxrule}{1pt}
-    \begin{tikzpicture}[remember picture,overlay,shift=(current page.south
-      west),x=(current page.south east),y=(current page.north west)]
+  % \onslide<5->{%
+  %   \setlength{\fboxrule}{1pt}
+  %   \begin{tikzpicture}[remember picture,overlay,shift=(current page.south
+  %     west),x=(current page.south east),y=(current page.north west)]
 
-      \filldraw[white,opacity=0.7](0.0,0.15) rectangle (1.0,0.85);
+  %     \filldraw[white,opacity=0.7](0.0,0.15) rectangle (1.0,0.85);
 
-      \node[align=center] at (0.5,0.5){%
-        \fcolorbox{headergray}{white}{\includegraphics[width=0.5\textwidth]{higgs_potential_variation}}
-      };
+  %     \node[align=center] at (0.5,0.5){%
+  %       \fcolorbox{headergray}{white}{\includegraphics[width=0.5\textwidth]{higgs_potential_variation}}
+  %     };
 
-      \node[align=center] at (0.542,0.42){%
-        \huge ?
-      };
-    \end{tikzpicture}
-  }
+  %     \node[align=center] at (0.542,0.42){%
+  %       \huge ?
+  %     };
+  %   \end{tikzpicture}
+  % }
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -1032,6 +1032,33 @@
 
 % ------------------------------------------------------------------------------
 
+% \begin{frame}{Signal Acceptance Improvement}
+%   \begin{center}
+%     \begin{tabular}{lcc}
+%       \toprule
+%       & \allbold{This Analysis} & Previously \\
+%       \cmidrule{2-3}
+%       Channel & $(\mathcal{A} \times \varepsilon)^{gg\text{F+VBF}}_{\text{SM } HH}$ & $(\mathcal{A} \times \varepsilon)^{gg\text{F}}_{\text{SM } HH}$ \\
+%       \midrule
+%       \hadhad & 4.0\,\%\phantom{7} & 1.9\,\% \\
+%       \lephad (SLT) & 4.0\,\%\phantom{7} & \multirow{2}{*}{\hspace*{-1.05em}\bigg\} 3.2\,\%}\\
+%       \lephad (LTT) & 0.97\,\% & \\
+%       \bottomrule
+%     \end{tabular}
+%   \end{center}
+
+%   \alert{Signal acceptance improvement of \SIrange{50}{100}{\percent}} compared
+%   to previous publication {\scriptsize (Phys.~Rev.~Lett.~\textbf{121},~191801)}
+%   \begin{itemize}
+
+%   \item Due to improved reconstruction and identification of \tauhadvis and
+%     $b$-jets
+
+%   \end{itemize}
+% \end{frame}
+
+% ------------------------------------------------------------------------------
+
 % \begin{frame}{Background Estimation: Overview}
 %     \begin{minipage}{0.5\textwidth}
 %     \centering
@@ -1448,18 +1475,15 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}{Statistical Analysis}
-  %\vspace*{1em}
-
   \begin{center}
-    \footnotesize
-    \begin{tabular}{l@{\hskip 1em}c@{\hskip 1em}cccc}
+    \begin{tabular}{l@{\hskip 1em}cccc}
       \toprule
-      &&\multicolumn{4}{c}{\textbf{Discriminant used in channel}} \\
-      \cmidrule{3-6}
-      \textbf{Search} & \textbf{POI} & \hadhad & \lephad SLT & \lephad LTT & $Z+\text{HF}$ CR \\
+      &\multicolumn{4}{c}{\textbf{Discriminant used in channel}} \\
+      \cmidrule{2-5}
+      \textbf{Search} & \hadhad & \lephad SLT & \lephad LTT & $Z+\text{HF}$ CR \\
       \midrule
-      SM~\HH Production & $\sigma(pp \to HH)$, $\mu$ & {\color{red_cb}BDT} & {\color{purple_cb}NN} & {\color{purple_cb}NN} & {\color{green_cb}$m_{\ell\ell}$} \\
-      Resonant \HH Production & $\sigma(pp \to X \to HH)$ & {\color{blue_cb}$\text{PNN}(m_{X})$} & {\color{blue_cb}$\text{PNN}(m_{X})$} & {\color{blue_cb}$\text{PNN}(m_{X})$} & {\color{green_cb}$m_{\ell\ell}$} \\
+      SM~\HH Production & {\color{red_cb}BDT} & {\color{purple_cb}NN} & {\color{purple_cb}NN} & {\color{green_cb}$m_{\ell\ell}$} \\
+      Resonant \HH Production & {\color{blue_cb}$\text{PNN}(m_{X})$} & {\color{blue_cb}$\text{PNN}(m_{X})$} & {\color{blue_cb}$\text{PNN}(m_{X})$} & {\color{green_cb}$m_{\ell\ell}$} \\
       \bottomrule
     \end{tabular}
   \end{center}
@@ -1642,7 +1666,9 @@
     }
   \end{columns}
 
-  Excess observed at $m_{X} = \SI{1000}{\GeV}$:\\[0.4em]
+  \vspace*{-0.1em}
+
+  Excess observed at $m_{X} = \SI{1000}{\GeV}$\\[0.4em]
   \begin{itemize}
     \setlength{\itemsep}{0.4em}
   \item Best-fit cross section:~$\hat{\sigma}(pp \to X \to HH) = \left( 17.4^{+7.5}_{-6.5}
@@ -1796,23 +1822,29 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}{Summary \& Outlook}
-  \textbf{Main results:}
   \begin{itemize}
-  \item RNN-based tau identification:\\
-    40--80\,\% improvement in rejection of quark/gluon-initiated jets
+    \setlength{\itemsep}{1em}
 
-  \item Upper limit on SM HH
+  \item This search is the most sensitive to \allbold{SM \HH production} to date:
+    \begin{itemize}
+    \item $\mu_{HH} < 4.7$ (obs.) and $\mu_{HH} < 3.9$ (exp.) at 95\,\% CL
+    \end{itemize}
 
-  \item Resonant Limit
+  \item Provides stringent contraints for \allbold{resonant \HH production} with
+    $\SI{375}{\GeV} \leq \mX \leq \SI{800}{\GeV}$
 
-  \item klambda limit
+  \item \allbold{anomalous \klambda}
+
   \end{itemize}
 
   \textbf{Outlook:}
   \begin{itemize}
-  \item Legacy analyses in progress?
+
+  \item Re-analysis with additional optimisations to be published
+
   \item First evidence for SM HH production at the HL-LHC (even discovery would
     be realistic)
+
   \end{itemize}
 \end{frame}
 
