@@ -273,6 +273,81 @@ TODO: Add a SF plot?
 - ...
 
 
-## Signal Sensitivity
+## Signal Sensitivity After Event Selection
+
+- After the backgrounds are estimated, we can have a look at the expected event
+  yields in the different channels.
+- As you can see, we only expect a handfull of SM HH events in all three channels
+- However, we expect a very large number of background events ranging from 6k to
+  100k.
+- Clearly, when doing a statistical analysis of the counts, there is no relevant
+  sensitivity to the signal.
+- However, we can use event properties to further narrow in on our signal.
+
+
+## Discriminating Variables
+
+- Here are some examples of event properties in the hadhad channel that help us
+  to do that.
+- Can use the reconstructe di-tau system mass: Should peak at 125 GeV for the
+  signal. The background has a broad distribution.
+- Similarly, for the di-b system mass.
+- The final example is the angular distance between the two taus. Generally, for
+  SM HH and resonances with high mass, we expect the Higgs bosons to be produced
+  with high pT. As a result of the Lorentz boost, the decay products tend to be
+  closely aligned.
+  
+- Ideally we want to use all of these properties as well as their
+  interdependencies. Therefore, we use machine learning to exploit this
+  information.
+  
+
+## Signal Extraction
+
+- Specifically, for SM HH production we use simple binary classifiers. Namely,
+  BDTs in the hadhad channel and NNs in the lephad channel.
+- We can then use the predicted scores of the classifiers directly to perform a
+  statistical analysis to look for our signal process.
+- This is shown in the figure on the right, where you can see the binned score
+  and how it nicely separates the signal from the background.
+  
+
+## Signal Extraction: Resonant HH Production
+
+- We do something slightly different when looking for resonant production.
+- The difference here is that we have multiple signal hypotheses. Namely, 20
+  different assumed masses of X ranging from 251 GeV to 1.6 TeV
+- The key point here is that the kinematic properties of signal events change
+  with mX as you can see for example in the sketch on the bottom.
+
+- Previously, we handled this by using many different BDTs trained for specific
+  masses.
+
+- Now our approach is different, however. We use what are called parameterised
+  neural networks. These can be used to learn the continuous classification
+  problem.
+- These don't just make it simpler because only one classifier is needed. But
+  also they tend to perform slightly better since you can solve the more general
+  problem more efficiently. And you can also interpolate to parameter values
+  that you don't have training events for.
+  
+
+## Statistical Analysis
+
+- Using the BDT and Neural Network outputs, the statistical analysis is
+  relatively straightforward.
+
+- For SM HH we model the BDT, NN and mll distribution and fit them to observed data.
+- For resonant HH production, we do the same for every mass point, however,
+  using now the PNN evaluated at the given mass
+
+
+## Discriminants After the Background-Only Fit
+
+
+## Upper Limits on the SM HH Signal Strength
+
+
+## Search for Resonant HH Production
 
 

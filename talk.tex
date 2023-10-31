@@ -907,8 +907,8 @@
       \allbold{Jets:}
       \begin{itemize}
       \item Anti-$k_{t}$ ($R = 0.4$) particle flow jets
+      \item $\pT > \SI{20}{\GeV}$ %($> \SI{30}{\GeV}$ fwd.\ jets)
       \item Jet Vertex Tagger
-      \item $\pT > \num{20} \, (\num{30})\,\si{\GeV}$ (forward jets)
       \item $b$-tagging with \textsc{DL1r} (\SI{77}{\percent} WP)
       \end{itemize}
     }
@@ -1047,8 +1047,8 @@
   to previous publication {\scriptsize (Phys.~Rev.~Lett.~\textbf{121},~191801)}
   \begin{itemize}
 
-  \item Due to improved reconstruction and identification techniques for
-    \tauhadvis and $b$-jets
+  \item Due to improved reconstruction and identification of \tauhadvis and
+    $b$-jets
 
   \end{itemize}
 \end{frame}
@@ -1211,10 +1211,10 @@
       };
 
       \draw[stealth-, line width=1pt] (2.6,3.5) -- (2.6,4.65)
-      node[above,black,]{\footnotesize \ttbar + true-\tauhadvis};
+      node[above,black,]{\footnotesize \ttbar + true \tauhadvis};
 
       \draw[stealth-, line width=1pt] (2.6,2.3) -- (3.9,3.4) node[above
-      right,black]{\footnotesize \ttbar + fake-\tauhadvis};
+      right,black]{\footnotesize \ttbar + fake \tauhadvis};
 
     \end{tikzpicture}
 
@@ -1470,6 +1470,8 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}{Statistical Analysis}
+  %\vspace*{1em}
+
   \begin{center}
     \footnotesize
     \begin{tabular}{l@{\hskip 1em}c@{\hskip 1em}cccc}
@@ -1484,19 +1486,22 @@
     \end{tabular}
   \end{center}
 
-  \vspace*{1em}
+  % \vspace*{1em}
 
-  \textbf{Statistical Model:}
-  \begin{itemize}
-    \setlength{\itemsep}{0.5em}
+  % {\footnotesize
+  %   \textbf{Statistical Model:}\\[0.5em]
+  %   \begin{itemize}
+  %     \setlength{\itemsep}{0.5em}
 
-  \item Models the binned distributions of discriminants in all channels
+  %   \item Models the binned distributions of discriminants in all channels
 
-  \item Processes with free normalisation: signal, \ttbar, $Z+\text{HF}$
+  %   \item Processes with free normalisation: signal, \ttbar, $Z+\text{HF}$
 
-  \item Additional d.o.f.\ to account for experimental \& theory uncertainties
+  %     % \item Additional d.o.f.\ to account for experimental \& theory uncertainties
+  %   \item Additional d.o.f.\ to account for uncertainties
 
-  \end{itemize}
+  %   \end{itemize}
+  % }
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -1641,7 +1646,7 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Search for Resonant \allbold{\HH} Production}
+\begin{frame}{Search for Resonant \allbold{\HH} Production: Discovery Tests}
   \vspace*{0.25em}
   \begin{columns}[onlytextwidth, b]
     \column{0.5\textwidth}
@@ -1656,12 +1661,12 @@
     \includegraphics[width=0.9\textwidth, trim=0 0.3em 0 1em]{results_res/resonant_comb_pvalues}
   \end{columns}
 
-  Excess observed for $m_{X} \approx \SI{1000}{\GeV}$:\\[0.4em]
+  Excess observed at $m_{X} = \SI{1000}{\GeV}$:\\[0.4em]
   \begin{itemize}
     \setlength{\itemsep}{0.4em}
   \item Best-fit cross section:~$\hat{\sigma}(pp \to X \to HH) = \left( 17.4^{+7.5}_{-6.5}
     \right)\si{\femto\barn}$
-  \item Local (global) significance of $3.1\sigma$ ($2.0\sigma$)
+  \item Statistical significance: $3.1\sigma$ (local), $2.0\sigma$ (global)
   \end{itemize}
 
   \only<1->{%
@@ -1676,7 +1681,7 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Search for Resonant \allbold{\HH} Production}
+\begin{frame}{Search for Resonant \allbold{\HH} Production: Upper Limits}
   \vspace*{0.25em}
   \begin{columns}
     \column{0.5\textwidth}
