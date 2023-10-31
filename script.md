@@ -377,8 +377,23 @@ TODO: Add a SF plot?
   - We only have to exchange the discriminants
 - What we found there is an excess for scalars with mX = 1000 GeV
   - This excess is particularly located in the hadhad channel. Last bin
-
+- Evaluated the statistical significance
+  - 3.1 sigma local
+  - 2.0 sigma global (taking into account the fact that we test multiple hypotheses)
+  - NOT SIGNIFICANT BY CONVENTIONAL STANDARDS
+  
 
 ## Search for Resonant HH Production: Upper Limits
+
+- We can set upper limits on the resonant HH production cross section
+- In bbtautau we set upper limits ranging from 1000 fb to about 20 fb depending
+  on mass
+- On the right you can see a similar plot, where the bbtautau channel is
+  compared to bbyy and bbbb
+  - There you can clearly see that the three channels are complimentary: at low
+    mass bbyy, intermediate mass bbtautau, high mass bbbb
+
+
+## Constraining the Higgs Boson Self-Coupling
 
 - 

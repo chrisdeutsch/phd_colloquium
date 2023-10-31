@@ -238,16 +238,16 @@
     \end{tikzpicture}
   \end{center}
 
-  \vspace*{-1em}
+  % \vspace*{-1em}
 
-  \onslide<4->{
-    \textbf{Perturbation theory:} Consider small perturbations about the vacuum state
-    \begin{itemize}
-    \item Radial perturbations \ra Physical Higgs boson
-      $m_{H} = \sqrt{2 \lambda} v$
-    \item Angular perturbations \ra Nambu--Goldstone bosons
-    \end{itemize}
-  }
+  % \onslide<4->{
+  %   \textbf{Perturbation theory:} Consider small perturbations about the vacuum state
+  %   \begin{itemize}
+  %   \item Radial perturbations \ra Physical Higgs boson
+  %     $m_{H} = \sqrt{2 \lambda} v$
+  %   \item Angular perturbations \ra Nambu--Goldstone bosons
+  %   \end{itemize}
+  % }
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -288,31 +288,6 @@
   \end{frame}
 }
 
-% ------------------------------------------------------------------------------
-
-\begin{frame}{11 Years of Higgs Boson Measurements}
-  \vspace*{0.25em}
-
-  \begin{columns}[onlytextwidth]
-    \column{0.55\textwidth}
-    \centering
-
-    \textbf{Higgs Boson Mass}\vspace*{1em}
-
-    \begin{overpic}[width=\textwidth]{higgs_properties/mass}
-      \put(78.5, 62){\tiny arXiv:2308.04775}
-    \end{overpic}
-
-    \column{0.45\textwidth}
-    \centering
-
-    \textbf{Higgs Boson Couplings}\vspace*{0.5em}
-
-    \begin{overpic}[width=\textwidth]{higgs_properties/couplings}
-      \put(53,93){\tiny Nature \textbf{607}, 52--59 (2022)}
-    \end{overpic}
-  \end{columns}
-\end{frame}
 
 % ------------------------------------------------------------------------------
 
@@ -320,19 +295,19 @@
   \begin{center}
     \begin{tabular}{ccccccc}
       $V(H)$ & $=$ & ${\color{Red} \lambda v^2 H^2}$ & $+$ & ${\color{Blue} \lambda v H^3}$ & $+$ & ${\color{Green} \frac{\lambda}{4} H^4}$ \\[1.2em]
-             && \raisebox{1.85em}{\includegraphics[scale=1.0]{feynman_graphs_talk/higgs_massterm}}
-             && \includegraphics[scale=1.0]{feynman_graphs_talk/higgs_hhh}
-             && \includegraphics[scale=1.0]{feynman_graphs_talk/higgs_hhhh} \\[1.2em]
-             && {\color{Red}mass term}
-             && {\color{Blue}trilinear self-coupling}
-             && {\color{Green}quartic self-coupling} \\[1.5em]
-             && {\color{Red}\checkmark}
-             && {\color{Blue}?}
-             && {\color{Green}?}
+             && \onslide<2->{\raisebox{1.85em}{\includegraphics[scale=1.0]{feynman_graphs_talk/higgs_massterm}}}
+             && \onslide<3->{\includegraphics[scale=1.0]{feynman_graphs_talk/higgs_hhh}}
+             && \onslide<4->{\includegraphics[scale=1.0]{feynman_graphs_talk/higgs_hhhh}} \\[1.2em]
+             && \onslide<2->{\color{Red}mass term}
+             && \onslide<3->{\color{Blue}trilinear self-coupling}
+             && \onslide<4->{\color{Green}quartic self-coupling} \\[1.5em]
+             && \onslide<2->{\color{Red}\checkmark}
+             && \onslide<3->{\color{Blue}?}
+             && \onslide<4->{\color{Green}?}
     \end{tabular}
   \end{center}
 
-  \onslide<2->{%
+  \onslide<5->{%
     \setlength{\fboxrule}{1pt}
     \begin{tikzpicture}[remember picture,overlay,shift=(current page.south
       west),x=(current page.south east),y=(current page.north west)]
@@ -1820,6 +1795,10 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}{Conclusion \& Outlook}
+
+
+
+
   \textbf{Main results:}
   \begin{itemize}
   \item Tau-ID
@@ -2984,6 +2963,32 @@
   \includegraphics[width=0.45\textwidth]{fakefactors/fake_os_vr/Tau0Ntrk_fakevr}%
   \hfill%
   \includegraphics[width=0.45\textwidth]{fakefactors/fake_os_vr/Tau1Ntrk_fakevr}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{11 Years of Higgs Boson Measurements}
+  \vspace*{0.25em}
+
+  \begin{columns}[onlytextwidth]
+    \column{0.55\textwidth}
+    \centering
+
+    \textbf{Higgs Boson Mass}\vspace*{1em}
+
+    \begin{overpic}[width=\textwidth]{higgs_properties/mass}
+      \put(78.5, 62){\tiny arXiv:2308.04775}
+    \end{overpic}
+
+    \column{0.45\textwidth}
+    \centering
+
+    \textbf{Higgs Boson Couplings}\vspace*{0.5em}
+
+    \begin{overpic}[width=\textwidth]{higgs_properties/couplings}
+      \put(53,93){\tiny Nature \textbf{607}, 52--59 (2022)}
+    \end{overpic}
+  \end{columns}
 \end{frame}
 
 % ------------------------------------------------------------------------------
