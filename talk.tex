@@ -338,6 +338,10 @@
 \begin{frame}{Higgs Boson Pair Production in the SM}
   \vspace*{0.5em}
 
+  \textbf{Dominant production mode:}
+
+  \vspace*{0.5em}
+
   \fbox{%
     \noindent\begin{minipage}{\dimexpr 0.25\textwidth - 2\fboxsep}
       \centering
@@ -353,26 +357,26 @@
   \end{minipage}
   }
 
-  \vspace*{2em}
+  % \vspace*{2em}
 
-  \onslide<2->{%
-  \fbox{%
-    \noindent\begin{minipage}{\dimexpr 0.25\textwidth - 2\fboxsep}
-      \centering
-      \textbf{Vector boson fusion}\\[0.5\baselineskip]
-      $\sigma_{\HH}^{\text{VBF}} = \SI{1.7}{\femto\barn}$
-    \end{minipage}%
-    \begin{minipage}{\dimexpr 0.75\textwidth - 2\fboxsep}
-      \hspace*{0.04\textwidth}%
-      \includegraphics[width=0.3\textwidth]{feynman_graphs/di_higgs_vbf_kvklam}%
-      \hfill%
-      \includegraphics[width=0.3\textwidth]{feynman_graphs/di_higgs_vbf_kvkv}%
-      \hfill%
-      \includegraphics[width=0.3\textwidth]{feynman_graphs/di_higgs_vbf_ktwov}%
-      \hspace*{0.04\textwidth}
-    \end{minipage}
-  }
-  }
+  % \onslide<2->{%
+  % \fbox{%
+  %   \noindent\begin{minipage}{\dimexpr 0.25\textwidth - 2\fboxsep}
+  %     \centering
+  %     \textbf{Vector boson fusion}\\[0.5\baselineskip]
+  %     $\sigma_{\HH}^{\text{VBF}} = \SI{1.7}{\femto\barn}$
+  %   \end{minipage}%
+  %   \begin{minipage}{\dimexpr 0.75\textwidth - 2\fboxsep}
+  %     \hspace*{0.04\textwidth}%
+  %     \includegraphics[width=0.3\textwidth]{feynman_graphs/di_higgs_vbf_kvklam}%
+  %     \hfill%
+  %     \includegraphics[width=0.3\textwidth]{feynman_graphs/di_higgs_vbf_kvkv}%
+  %     \hfill%
+  %     \includegraphics[width=0.3\textwidth]{feynman_graphs/di_higgs_vbf_ktwov}%
+  %     \hspace*{0.04\textwidth}
+  %   \end{minipage}
+  % }
+  % }
 
   \vspace*{1.0em}
   {\scriptsize In $pp$ collisions at $\sqrt{s} = \SI{13}{\TeV}$}
@@ -388,9 +392,9 @@
 
     \textbf{Shortcomings of the SM:}
     \begin{itemize}
-    \item Matter--Antimatter Asymmetry
-    \item Gravitation
     \item Dark Matter \& Dark Energy
+    %\item Matter--Antimatter Asymmetry
+    \item Gravitation
     \item \dots
     \end{itemize}
 
@@ -400,7 +404,7 @@
 
     \hspace*{0.35\textwidth}%
     \begin{overpic}[scale=1,trim=0 0.3cm 0 0, clip]{energy_content/content}
-      \put(-70,37){\parbox{1.05in}{\small Energy density of today's universe:}}
+      \put(-70,37){\parbox{1.05in}{\small Energy density of the universe:}}
       \put(80, 0){\tiny Planck 2018 results}
     \end{overpic}
     % Ordinary matter 4.9 % Dark matter 26.8 % Dark energy 68.3 %
@@ -419,9 +423,9 @@
     \allbold{Search for scalars $X$ decaying to $HH$:}
     \begin{itemize}
       \setlength{\itemsep}{0.3em}
-    \item E.g.\ in models with extended Higgs sectors
+    \item E.g.\ extended Higgs sector models
     \item Mass range:\ $\SI{251}{\GeV} \leq m_{X} \leq \SI{1.6}{\TeV}$
-    \item Negligible decay width
+    %\item Negligible decay width
     \end{itemize}
   \end{columns}
 \end{frame}
@@ -559,7 +563,6 @@
   \end{columns}
 
   \vspace*{1.25em}
-  \pause
 
   \textbf{\ra Classification problem:\ solve using machine learning techniques}
 
@@ -595,7 +598,7 @@
   \end{minipage}%
   \begin{minipage}[c][2.2cm][c]{0.75\textwidth}
     Purposefully engineered features\\[0.5\baselineskip]
-    \textbf{Inputs:}\ invariant masses, isolation/lifetime variables, etc.
+    \textbf{Inputs:}\ invariant masses, isolation variables, \dots
   \end{minipage}%
 
   % ---
@@ -608,9 +611,10 @@
     \includegraphics[scale=1]{tauid/track_icon}
   \end{minipage}%
   \begin{minipage}[c][2.2cm][c]{0.75\textwidth}
-    Up to 10 tracks within $\dR < 0.4$ of \tauhadvis axis\\[0.5\baselineskip]
-    \textbf{Inputs:}\ $\pT$, $\Delta \phi$, $\Delta \eta$, impact parameters, \#
-    hits in Si tracker
+    Tracks associated to the \tauhadvis\\[0.5\baselineskip]
+    % within $\dR < 0.4$ of \tauhadvis axis\\[0.5\baselineskip]
+    \textbf{Inputs:}\ $\pT$, $\Delta \phi$, $\Delta \eta$, impact parameters,
+    \dots
   \end{minipage}%
 
   % ---
@@ -621,7 +625,8 @@
     \includegraphics[scale=1]{tauid/cluster_icon}
   \end{minipage}%
   \begin{minipage}[c][2.2cm][c]{0.75\textwidth}
-    Up to 6 clusters associated to jet seeding the \tauhadvis\\[0.5\baselineskip]
+    % Clusters associated to jet seeding the \tauhadvis\\[0.5\baselineskip]
+    Clusters associated to the \tauhadvis\\[0.5\baselineskip]
     \textbf{Inputs:}\ $\ET$, $\Delta \phi$, $\Delta \eta$, geometrical cluster
     moments
   \end{minipage}
@@ -804,14 +809,15 @@
 %   \end{itemize}
 % \end{frame}
 
-\begin{frame}{Tau Identification:\ Performance}
+\begin{frame}{Tau Identification:\ Performance Improvement}
 
-  \begin{columns}[onlytextwidth]
-    \column{0.6\textwidth}
+  %\begin{columns}[onlytextwidth]
+  %  \column{0.6\textwidth}
 
-    \vspace*{2em}
+  \vspace*{1em}
 
-    \begin{overpic}[width=0.97\textwidth]{tauid/roc_incl_witherrors}
+  \begin{center}
+    \begin{overpic}[width=0.6\textwidth]{tauid/roc_incl_witherrors}
       % \put(51,55){\footnotesize\color{blue_cb}\onslide<1>{T}}
       % \put(62.3,48.5){\footnotesize\color{blue_cb}\onslide<1>{M}}
       % \put(74.5,42.5){\footnotesize\color{blue_cb}\onslide<1>{L}}
@@ -823,24 +829,24 @@
       % \put(88.5,16){\footnotesize\color{red_cb}\onslide<1>{VL}}
 
       \put(19,50.5){\onslide<2->{\rotatebox{-26}{\small\color{red_cb}\textbf{80\,\% rej.\
-            improvement}}}}
+              improvement}}}}
 
       \put(42,60){\onslide<2->{\rotatebox{-26}{\small\color{blue_cb}\textbf{40--80\,\% rej.\
-          improvement}}}}
+              improvement}}}}
 
     \end{overpic}
+  \end{center}
+    %\column{0.4\textwidth}
 
-    \column{0.4\textwidth}
+    % \begin{itemize}
+    %   \setlength{\itemsep}{1em}
 
-    \begin{itemize}
-      \setlength{\itemsep}{1em}
+    % \item<2-> Default identification algorithm for analyses of the Run~2 dataset
 
-    \item<3-> Default identification algorithm for analyses of the Run~2 dataset
+    % \item<2-> Adopted for use in the high-level trigger (end of Run~2 \& Run~3)
 
-    \item<3-> Adopted for use in the high-level trigger (end of Run~2 \& Run~3)
-
-    \end{itemize}
-  \end{columns}
+    % \end{itemize}
+  % \end{columns}
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -855,61 +861,7 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Object Selection}
-  \begin{columns}[onlytextwidth]
-    \column{0.5\textwidth}
 
-    \onslide<1->{
-      \allbold{Electrons/Muons:}
-      \begin{itemize}
-      \item $\pT > \SI{7}{\GeV}$
-      \item Loose identification \& isolation
-      \end{itemize}
-    }
-
-    \vspace*{1em}
-
-    \onslide<2->{
-      \allbold{\tauhadvis:}
-      \begin{itemize}
-      \item $\pT > \SI{20}{\GeV}$
-      \item Loose identification (RNN)
-      \item Electron veto
-      \end{itemize}
-    }
-
-    % \vspace*{1em}
-
-    % \allbold{Anti-\tauhadvis:}
-    % \begin{itemize}
-    % \item Fail loose identification
-    % \item $\text{RNN score} > 0.01$
-    % \end{itemize}
-
-    \column{0.5\textwidth}
-
-    \onslide<3->{
-      \allbold{Jets:}
-      \begin{itemize}
-      \item Anti-$k_{t}$ ($R = 0.4$) particle flow jets
-      \item $\pT > \SI{20}{\GeV}$ %($> \SI{30}{\GeV}$ fwd.\ jets)
-      \item Jet Vertex Tagger
-      \item $b$-tagging with \textsc{DL1r} (\SI{77}{\percent} WP)
-      \end{itemize}
-    }
-
-    \vspace*{1em}
-
-    \onslide<4->{
-      \allbold{\pTmissAbs:}
-      \begin{itemize}
-      \item Object-based with track soft term
-      \end{itemize}
-    }
-  \end{columns}
-
-  % Mention OLR?
-\end{frame}
 
 % ------------------------------------------------------------------------------
 
@@ -921,11 +873,11 @@
       \midrule
       \textcolor{hhblue}{single- \& di-\tauhadvis triggers} & \textcolor{lhred}{single-$\ell$ triggers} & \textcolor{lhred}{$\ell+\tauhadvis$ triggers} \\
       \textcolor{hhblue}{exactly two $\tauhadvis$} & \multicolumn{2}{c}{\textcolor{lhred}{exactly one $\tauhadvis$}} \\
-      \textcolor{hhblue}{no $e$ or $\mu$} & \multicolumn{2}{c}{\textcolor{lhred}{exactly one tight $e$ or medium $\mu$}} \\
-                                  & \multicolumn{2}{c}{\textcolor{lhred}{$m_{bb} < \SI{150}{\GeV}$}} \\
+      \textcolor{hhblue}{no $e$ or $\mu$} & \multicolumn{2}{c}{\textcolor{lhred}{exactly one $e$ or $\mu$}} \\
+                                  %& \multicolumn{2}{c}{\textcolor{lhred}{$m_{bb} < \SI{150}{\GeV}$}} \\
       \midrule
-      \multicolumn{3}{c}{trigger-dependent \pT thresholds on $e$/$\mu$/$\tauhadvis$ and jets} \\
-      \multicolumn{3}{c}{$m_{\tau\tau}^\text{MMC} > \SI{60}{\GeV}$} \\
+      \multicolumn{3}{c}{trigger-dependent \pT cuts on $e$/$\mu$/$\tauhadvis$ and jets} \\
+      \multicolumn{3}{c}{$m_{\tau\tau} > \SI{60}{\GeV}$} \\
       \multicolumn{3}{c}{2 $b$-tagged jets} \\
       \multicolumn{3}{c}{OS electric charge of $e / \mu / \tauhadvis$ and \tauhadvis} \\
       \bottomrule
@@ -935,7 +887,7 @@
   \onslide<1>{
     \begin{tikzpicture}[remember picture,overlay,shift=(current page.south
       west),x=(current page.south east),y=(current page.north west)]
-      \filldraw[white](0.1,0.1) rectangle (0.9,0.45);
+      \filldraw[white](0.1,0.1) rectangle (0.9,0.48);
     \end{tikzpicture}
   }
   \onslide<2>{}
@@ -1001,79 +953,30 @@
 \end{frame}
 
 % ------------------------------------------------------------------------------
-\begin{frame}{Signal Acceptance}
 
-  \vspace*{-1em}
-
-  \begin{columns}[onlytextwidth, t]
-    \column{0.5\textwidth}
-    \centering
-
-    \allbold{SM $HH$ production}
-
-    \vspace{1.5em}
-
-    \resizebox{1.0\textwidth}{!}{\footnotesize%
-      \begin{tabular}{lcc}
-        \toprule
-        & \allbold{This Analysis} & Previously \\
-        \cmidrule{2-3}
-        Channel & $(\mathcal{A} \times \varepsilon)^{gg\text{F+VBF}}_{\text{SM } HH}$ & $(\mathcal{A} \times \varepsilon)^{gg\text{F}}_{\text{SM } HH}$ \\
-        \midrule
-        \hadhad & 4.0\,\%\phantom{7} & 1.9\,\% \\
-        \lephad (SLT) & 4.0\,\%\phantom{7} & \multirow{2}{*}{\hspace*{-1.05em}\bigg\} 3.2\,\%}\\
-        \lephad (LTT) & 0.97\,\% & \\
-        \bottomrule
-      \end{tabular}
-    }
-
-    \column{0.5\textwidth}
-    \centering
-
-    \allbold{Resonant $HH$ production}
-
-    \includegraphics[width=0.88\textwidth, trim=0 0.5em 0 1em,
-    clip]{selection/acceptance_resonant}
-  \end{columns}
-
-  \vspace*{0.5em}
-
-  \alert{Signal acceptance improvement of \SIrange{50}{100}{\percent}} compared
-  to previous publication {\scriptsize (Phys.~Rev.~Lett.~\textbf{121},~191801)}
-  % \begin{itemize}
-
-  % \item Due to improved reconstruction and identification of \tauhadvis and
-  %   $b$-jets
-
-  % \end{itemize}
-\end{frame}
 
 % ------------------------------------------------------------------------------
 
-% \begin{frame}{Signal Acceptance Improvement}
-%   \begin{center}
-%     \begin{tabular}{lcc}
-%       \toprule
-%       & \allbold{This Analysis} & Previously \\
-%       \cmidrule{2-3}
-%       Channel & $(\mathcal{A} \times \varepsilon)^{gg\text{F+VBF}}_{\text{SM } HH}$ & $(\mathcal{A} \times \varepsilon)^{gg\text{F}}_{\text{SM } HH}$ \\
-%       \midrule
-%       \hadhad & 4.0\,\%\phantom{7} & 1.9\,\% \\
-%       \lephad (SLT) & 4.0\,\%\phantom{7} & \multirow{2}{*}{\hspace*{-1.05em}\bigg\} 3.2\,\%}\\
-%       \lephad (LTT) & 0.97\,\% & \\
-%       \bottomrule
-%     \end{tabular}
-%   \end{center}
+\begin{frame}{Signal Acceptance Improvement}
+  \begin{center}
+    \begin{tabular}{l@{\hskip 2em}c@{\hskip 2em}c}
+      \toprule
+      & \allbold{This Analysis} & Previously \\
+      \cmidrule{2-3}
+      Channel & $(\mathcal{A} \times \varepsilon)^{gg\text{F+VBF}}_{\text{SM } HH}$ & $(\mathcal{A} \times \varepsilon)^{gg\text{F}}_{\text{SM } HH}$ \\
+      \midrule
+      \hadhad & 4.0\,\%\phantom{7} & 1.9\,\% \\
+      \lephad (SLT) & 4.0\,\%\phantom{7} & \multirow{2}{*}{\hspace*{-1.05em}\bigg\} 3.2\,\%}\\
+      \lephad (LTT) & 0.97\,\% & \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
 
-%   \alert{Signal acceptance improvement of \SIrange{50}{100}{\percent}} compared
-%   to previous publication {\scriptsize (Phys.~Rev.~Lett.~\textbf{121},~191801)}
-%   \begin{itemize}
+  \vspace*{1em}
 
-%   \item Due to improved reconstruction and identification of \tauhadvis and
-%     $b$-jets
-
-%   \end{itemize}
-% \end{frame}
+  \alert{Signal acceptance improvement of \SIrange{50}{100}{\percent}} compared
+  to previous publication {\scriptsize (Phys.~Rev.~Lett.~\textbf{121},~191801)}
+\end{frame}
 
 % ------------------------------------------------------------------------------
 
@@ -1175,12 +1078,8 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}{Background Estimation: \allbold{$Z + \text{jets}$}}
-
-  Known mismodelling of $Z$ + heavy-flavour jets in Sherpa 2.2.1
-  \begin{itemize}
-  \item Normalised in fit using a CR targeting $\ell^+\ell^-$ + 2 $b$-tagged
-    jets
-  \end{itemize}
+  $Z$ + heavy-flavour jets normalised in fit using CR targeting $\ell^+\ell^-$ +
+  2 $b$-tagged jets
 
   \begin{center}
     \begin{tikzpicture}
@@ -1188,16 +1087,18 @@
         \includegraphics[width=0.4\textwidth]{zhfcr/Region_BMin0_incJet1_Y2015_DZllbbCR_T2_L2_distmLL_J2_Prefit_fixed}
       };
 
-      \node (postfit) at (8,0) {
-        \includegraphics[width=0.4\textwidth]{zhfcr/Region_BMin0_incJet1_Y2015_DZllbbCR_T2_L2_distmLL_J2_GlobalFit_conditionnal_mu0_fixed}
-      };
-
-      \draw[-stealth, line width=1pt] (2,0) -- node[below,midway]{\footnotesize $Z$+HF SF
-        $\approx 1.4$} node[above,midway]{\footnotesize CR only fit} (6.2,0);
-
       \node[anchor=west,fill=white] at (-2.1,1.7){\footnotesize \allbold{Pre-Fit}};
 
-      \node[anchor=west,fill=white] at (5.9,1.7){\footnotesize \allbold{Post-Fit}};
+      \onslide<2->{%
+        \node (postfit) at (8,0) {
+          \includegraphics[width=0.4\textwidth]{zhfcr/Region_BMin0_incJet1_Y2015_DZllbbCR_T2_L2_distmLL_J2_GlobalFit_conditionnal_mu0_fixed}
+        };
+
+        \draw[-stealth, line width=1.5pt] (2,0) -- node[below,midway]{\footnotesize $Z$+HF SF
+          $\approx 1.4$} node[above,midway]{\footnotesize CR only fit} (6.2,0);
+
+        \node[anchor=west,fill=white] at (5.9,1.7){\footnotesize \allbold{Post-Fit}};
+      }
     \end{tikzpicture}
   \end{center}
 \end{frame}
@@ -1209,15 +1110,15 @@
   \begin{columns}[onlytextwidth]
     \column{0.55\textwidth}
 
-    \textbf{Idea:}~Apply data-driven corrections to simulated \ttbar +
-    fake-\tauhadvis events.
+    \textbf{Data-driven corrections} applied to simulated \ttbar events with fake
+    \tauhadvis.
 
-    \vspace*{2.0em}
+    \vspace*{1.5em}
 
-    \allbold{Measured in a $\ell + \tauhadvis$~CR} in bins of:\ \tauhadvis~\pT,
-    \tauhadvis~\Ntracks, \tauhadvis-trigger.
+    \allbold{Measured in a $\ell + \tauhadvis$~CR} %in bins of:\ \tauhadvis~\pT,
+    %\tauhadvis~\Ntracks, \tauhadvis-trigger.
 
-    \vspace*{2.0em}
+    \vspace*{1.5em}
 
     \mtw to distinguish fake- from true-\tauhadvis contributions.
 
@@ -1232,10 +1133,10 @@
         \includegraphics[width=\textwidth]{ttbarSF/postfit_sfcr/MTWVR_postFit}
       };
 
-      \draw[stealth-, line width=1pt] (2.6,3.5) -- (2.6,4.65)
+      \draw[stealth-, line width=1.5pt] (2.6,3.5) -- (2.6,4.65)
       node[above,black,]{\footnotesize \ttbar + true \tauhadvis};
 
-      \draw[stealth-, line width=1pt] (2.6,2.3) -- (3.9,3.4) node[above
+      \draw[stealth-, line width=1.5pt] (2.6,2.3) -- (3.9,3.4) node[above
       right,black]{\footnotesize \ttbar + fake \tauhadvis};
 
     \end{tikzpicture}
@@ -1256,10 +1157,10 @@
     \begin{itemize}
       \setlength{\itemsep}{0.5em}
 
-    \item \allbold{\tauhadvis charge:}\ opposite sign (OS); same sign (SS)
+    \item \allbold{\tauhadvis charge:}\ opposite sign, same sign
 
-    \item \allbold{\tauhadvis identification:}\ 2 loose \tauhadvis (ID);\\1 loose
-      \tauhadvis \& 1 anti-\tauhadvis (Anti-ID)
+    \item \allbold{\tauhadvis identification:}\ 2 loose \tauhadvis, \\1 loose
+      \tauhadvis \& 1 anti-\tauhadvis
 
     \end{itemize}
 
@@ -1280,14 +1181,14 @@
 
     \vspace*{-0.25em}
 
-    \begin{itemize}
-      \setlength{\itemsep}{0.5em}
+    % \begin{itemize}
+    %   \setlength{\itemsep}{0.5em}
 
-    \item FF binned in \tauhadvis properties, trigger, data-taking period
+    % \item FF binned in \tauhadvis properties, trigger, data-taking period
 
-    \item FF measured in 1 $b$-tag region and extrapolated to 2 $b$-tag region
+    % \item FF measured in 1 $b$-tag region and extrapolated to 2 $b$-tag region
 
-    \end{itemize}
+    % \end{itemize}
   }
 
   % Details for backup:\\
@@ -1324,8 +1225,9 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}{Signal Sensitivity After Event Selection}
+  \vspace*{0.5em}
   \begin{center}
-    \footnotesize
+    %\footnotesize
     \begin{tabular}{lS[table-format=4.2(3)]S[table-format=5.1(3)]S[table-format=4.2(3)]}
       \toprule
       & \multicolumn{3}{c}{\textbf{Expected Number of Events}}\\
@@ -1336,69 +1238,20 @@
       \allbold{Total Background} & 8414 +- 90   & 98430 +- 390 & 6357 +- 79 \\
       \midrule\\[-1.5em]
       \midrule
-      $S / B$ & {$6 \times 10^{-4}$} & {$6 \times 10^{-5}$} & {$2 \times 10^{-4}$} \\
+      %$S / B$ & {$6 \times 10^{-4}$} & {$6 \times 10^{-5}$} & {$2 \times 10^{-4}$} \\
       $S / \sqrt{B}$ & {$0.06$} & {$0.02$} & {$0.02$} \\
       \bottomrule
     \end{tabular}
   \end{center}
 
-  \vspace*{2em}
+  \vspace*{1em}
   \pause
 
   No signal sensitivity in naive count analysis\\
   \allbold{$\rightarrow$ Exploit properties of events to improve sensitivity}
 \end{frame}
 
-% ------------------------------------------------------------------------------
 
-\begin{frame}{Discriminating Variables:\ \allbold{\hadhad} Channel}
-  \vspace*{0.5em}
-  \begin{columns}
-    % Col. 1
-    \column{0.333\textwidth}
-    \centering
-
-    \allbold{\mMMC}
-
-    \begin{overpic}[width=\textwidth, trim=0.5em 0 2.5em 0, clip]{mva/prefit/Region_BMin0_incJet1_distmMMC_J2_Y2015_DLLOS_T2_SpcTauHH_L0_Prefit}
-      %\put(60,40){\allbold{\mMMC}}
-    \end{overpic}
-
-    % Col. 2
-    \column{0.333\textwidth}
-    \centering
-
-    \allbold{\mBB}
-
-    \begin{overpic}[width=\textwidth, trim=0.5em 0 2.5em 0, clip]{mva/prefit/Region_BMin0_incJet1_distmBB_J2_Y2015_DLLOS_T2_SpcTauHH_L0_Prefit}
-      %\put(65,40){\allbold{\mBB}}
-    \end{overpic}
-
-    % Col. 3
-    \column{0.333\textwidth}
-    \centering
-
-    \allbold{$\dR(\tau, \tau)$}
-
-    \begin{overpic}[width=\textwidth, trim=0.5em 0 2.5em 0, clip]{mva/prefit/Region_BMin0_incJet1_distdRTauTau_J2_Y2015_DLLOS_T2_SpcTauHH_L0_Prefit_fontembed}
-      %\put(26,56){\allbold{$\dR(\tau, \tau)$}}
-    \end{overpic}
-  \end{columns}
-
-  \vspace*{1em}
-
-  {\footnotesize
-    Not shown:\ \mHH, \dRbb
-  }
-
-  % \begin{itemize}
-  %   \setlength{\itemsep}{0.6em}
-  % % \item \allbold{\mMMC, \mBB:} Narrow peak close to $m_{H} = \SI{125}{\GeV}$
-  % % \item \allbold{\mHH:} Peaks close to $m_{X}$
-  % % \item \allbold{$\dR(\tau, \tau)$, $\dR(b, b)$:} Low separation of $H$ decay
-  % %   products due to large $\pT(H)$
-  % \end{itemize}
-\end{frame}
 
 % What to mention:
 % - H masses most important for SM HH (resolution below 18 GeV)
@@ -1418,8 +1271,7 @@
 
     \vspace*{2em}
 
-    \textbf{Discretised classification scores are used for statistical
-      interpretation.}
+    \textbf{Classification scores are used for statistical interpretation.}
 
     % Most relevant backgrounds at high score:\\
     % Z+jets (36\,\%), Fake-\tauhadvis (21\,\%), Single Higgs boson (19\,\%),
@@ -1467,7 +1319,7 @@
 
     \onslide<2->{%
       \begin{overpic}[width=0.45\textwidth]{pnn_sketch}
-        \put(85,25){\footnotesize \parbox[t]{0.43\textwidth}{Solves
+        \put(85,25){\footnotesize \parbox[t]{0.47\textwidth}{Solves
             parameter-dependent classification problem}}
         \put(85,4){\tiny EPJC
           \textbf{77} (2016) 235}
@@ -1492,37 +1344,37 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Statistical Analysis}
-  \begin{center}
-    \begin{tabular}{l@{\hskip 1em}cccc}
-      \toprule
-      &\multicolumn{4}{c}{\textbf{Discriminant used in channel}} \\
-      \cmidrule{2-5}
-      \textbf{Search} & \hadhad & \lephad SLT & \lephad LTT & $Z+\text{HF}$ CR \\
-      \midrule
-      SM~\HH Production & {\color{red_cb}BDT} & {\color{purple_cb}NN} & {\color{purple_cb}NN} & {\color{green_cb}$m_{\ell\ell}$} \\
-      Resonant \HH Production & {\color{blue_cb}$\text{PNN}(m_{X})$} & {\color{blue_cb}$\text{PNN}(m_{X})$} & {\color{blue_cb}$\text{PNN}(m_{X})$} & {\color{green_cb}$m_{\ell\ell}$} \\
-      \bottomrule
-    \end{tabular}
-  \end{center}
+% \begin{frame}{Statistical Analysis}
+%   \begin{center}
+%     \begin{tabular}{l@{\hskip 1em}cccc}
+%       \toprule
+%       &\multicolumn{4}{c}{\textbf{Discriminant used in channel}} \\
+%       \cmidrule{2-5}
+%       \textbf{Search} & \hadhad & \lephad SLT & \lephad LTT & $Z+\text{HF}$ CR \\
+%       \midrule
+%       SM~\HH Production & {\color{red_cb}BDT} & {\color{purple_cb}NN} & {\color{purple_cb}NN} & {\color{green_cb}$m_{\ell\ell}$} \\
+%       Resonant \HH Production & {\color{blue_cb}$\text{PNN}(m_{X})$} & {\color{blue_cb}$\text{PNN}(m_{X})$} & {\color{blue_cb}$\text{PNN}(m_{X})$} & {\color{green_cb}$m_{\ell\ell}$} \\
+%       \bottomrule
+%     \end{tabular}
+%   \end{center}
 
-  % \vspace*{1em}
+%   % \vspace*{1em}
 
-  % {\footnotesize
-  %   \textbf{Statistical Model:}\\[0.5em]
-  %   \begin{itemize}
-  %     \setlength{\itemsep}{0.5em}
+%   % {\footnotesize
+%   %   \textbf{Statistical Model:}\\[0.5em]
+%   %   \begin{itemize}
+%   %     \setlength{\itemsep}{0.5em}
 
-  %   \item Models the binned distributions of discriminants in all channels
+%   %   \item Models the binned distributions of discriminants in all channels
 
-  %   \item Processes with free normalisation: signal, \ttbar, $Z+\text{HF}$
+%   %   \item Processes with free normalisation: signal, \ttbar, $Z+\text{HF}$
 
-  %     % \item Additional d.o.f.\ to account for experimental \& theory uncertainties
-  %   \item Additional d.o.f.\ to account for uncertainties
+%   %     % \item Additional d.o.f.\ to account for experimental \& theory uncertainties
+%   %   \item Additional d.o.f.\ to account for uncertainties
 
-  %   \end{itemize}
-  % }
-\end{frame}
+%   %   \end{itemize}
+%   % }
+% \end{frame}
 
 % ------------------------------------------------------------------------------
 
@@ -1706,31 +1558,47 @@
 
 % ------------------------------------------------------------------------------
 
+% \begin{frame}{Search for Resonant \allbold{\HH} Production: Upper Limits}
+%   \vspace*{0.25em}
+%   \begin{columns}
+%     \column{0.5\textwidth}
+%     \centering
+
+%     \allbold{\bbtautau (all channels)}
+
+%     \includegraphics[width=\textwidth]{results_res/resonant_upper_limits}
+
+%     \column{0.5\textwidth}
+%     \centering
+
+%     \allbold{\bbbb, \bbtautau and \bbyy (comparison)}
+
+%     \includegraphics[width=\textwidth]{discussion/atlas_comparison_resonant_marked}
+%   \end{columns}
+
+%   \vspace*{0.2em}
+
+%   \begin{itemize}
+%     \setlength{\itemsep}{1em}
+
+%     % \item Upper limits on $\sigma(pp \to X \to \HH)$ ranging from
+%     %   \SI{20}{\femto\barn} to \SI{1000}{\femto\barn}
+
+%   \item \bbtautau most sensitive channel in
+%     $\SI{375}{\GeV} \leq m_{X} \leq \SI{800}{\GeV}$
+
+%   \end{itemize}
+% \end{frame}
+
 \begin{frame}{Search for Resonant \allbold{\HH} Production: Upper Limits}
-  \vspace*{0.25em}
-  \begin{columns}
-    \column{0.5\textwidth}
-    \centering
+  \begin{center}
+    \includegraphics[width=0.55\textwidth]{discussion/atlas_comparison_resonant_marked}
+  \end{center}
 
-    \allbold{\bbtautau (all channels)}
-
-    \includegraphics[width=\textwidth]{results_res/resonant_upper_limits}
-
-    \column{0.5\textwidth}
-    \centering
-
-    \allbold{\bbbb, \bbtautau and \bbyy (comparison)}
-
-    \includegraphics[width=\textwidth]{discussion/atlas_comparison_resonant_marked}
-  \end{columns}
-
-  \vspace*{0.2em}
+  \vspace*{-0.5em}
 
   \begin{itemize}
     \setlength{\itemsep}{1em}
-
-    % \item Upper limits on $\sigma(pp \to X \to \HH)$ ranging from
-    %   \SI{20}{\femto\barn} to \SI{1000}{\femto\barn}
 
   \item \bbtautau most sensitive channel in
     $\SI{375}{\GeV} \leq m_{X} \leq \SI{800}{\GeV}$
@@ -1757,27 +1625,6 @@
 %
 % - Reinterpret the SM~\HH search \ra limits on xsec vs.\ $\kappa_{\lambda}$
 
-% ------------------------------------------------------------------------------
-
-\begin{frame}{Phenomenology of Anomalous \allbold{\klambda}}
-  \begin{columns}[t]
-    \column{0.5\textwidth}
-    \centering
-
-    \includegraphics[width=\textwidth]{self_coupling/hh_xsec}
-
-    \allbold{Dependence of $\sigma(pp \to \HH)$ on \klambda}
-
-    \column{0.5\textwidth}
-    \centering
-
-    \includegraphics[width=\textwidth]{self_coupling/hh_mhh_vs_klam}
-
-    \allbold{Dependence of \mHH on \klambda}\\
-    \ra affects signal acceptance
-
-  \end{columns}
-\end{frame}
 
 % ------------------------------------------------------------------------------p
 
@@ -1994,6 +1841,49 @@
 
     \end{itemize}
   \end{columns}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Higgs Boson Pair Production in the SM}
+  \vspace*{0.5em}
+
+  \fbox{%
+    \noindent\begin{minipage}{\dimexpr 0.25\textwidth - 2\fboxsep}
+      \centering
+      \textbf{Gluon--gluon fusion}\\[0.5\baselineskip]
+      $\sigma_{\HH}^{gg\text{F}} = \SI{31}{\femto\barn}$
+  \end{minipage}%
+  \begin{minipage}{\dimexpr 0.75\textwidth - 2\fboxsep}
+    \hspace*{0.1\textwidth}
+    \includegraphics[scale=0.75]{feynman_graphs/di_higgs_box}%
+    \hfill%
+    \raisebox{0.35em}{\includegraphics[scale=0.75]{feynman_graphs/di_higgs_triangle}}%
+    \hspace*{0.1\textwidth}
+  \end{minipage}
+  }
+
+  \vspace*{2em}
+
+  \fbox{%
+    \noindent\begin{minipage}{\dimexpr 0.25\textwidth - 2\fboxsep}
+      \centering
+      \textbf{Vector boson fusion}\\[0.5\baselineskip]
+      $\sigma_{\HH}^{\text{VBF}} = \SI{1.7}{\femto\barn}$
+    \end{minipage}%
+    \begin{minipage}{\dimexpr 0.75\textwidth - 2\fboxsep}
+      \hspace*{0.04\textwidth}%
+      \includegraphics[width=0.3\textwidth]{feynman_graphs/di_higgs_vbf_kvklam}%
+      \hfill%
+      \includegraphics[width=0.3\textwidth]{feynman_graphs/di_higgs_vbf_kvkv}%
+      \hfill%
+      \includegraphics[width=0.3\textwidth]{feynman_graphs/di_higgs_vbf_ktwov}%
+      \hspace*{0.04\textwidth}
+    \end{minipage}
+  }
+
+  \vspace*{1.0em}
+  {\scriptsize In $pp$ collisions at $\sqrt{s} = \SI{13}{\TeV}$}
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -2330,6 +2220,62 @@
 
 % ------------------------------------------------------------------------------
 
+\begin{frame}{Object Selection}
+  \begin{columns}[onlytextwidth]
+    \column{0.5\textwidth}
+
+    \onslide<1->{
+      \allbold{Electrons/Muons:}
+      \begin{itemize}
+      \item $\pT > \SI{7}{\GeV}$
+      \item Loose identification \& isolation
+      \end{itemize}
+    }
+
+    \vspace*{1em}
+
+    \onslide<2->{
+      \allbold{\tauhadvis:}
+      \begin{itemize}
+      \item $\pT > \SI{20}{\GeV}$
+      \item Loose identification (RNN)
+      \item Electron veto
+      \end{itemize}
+    }
+
+    % \vspace*{1em}
+
+    % \allbold{Anti-\tauhadvis:}
+    % \begin{itemize}
+    % \item Fail loose identification
+    % \item $\text{RNN score} > 0.01$
+    % \end{itemize}
+
+    \column{0.5\textwidth}
+
+    \onslide<3->{
+      \allbold{Jets:}
+      \begin{itemize}
+      \item Anti-$k_{t}$ ($R = 0.4$) particle flow jets
+      \item $\pT > \SI{20}{\GeV}$ %($> \SI{30}{\GeV}$ fwd.\ jets)
+      \item Jet Vertex Tagger
+      \item $b$-tagging with \textsc{DL1r} (\SI{77}{\percent} WP)
+      \end{itemize}
+    }
+
+    \vspace*{1em}
+
+    \onslide<4->{
+      \allbold{\pTmissAbs:}
+      \begin{itemize}
+      \item Object-based with track soft term
+      \end{itemize}
+    }
+  \end{columns}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
 \begin{frame}{Overlap Removal}
   \centering
 
@@ -2350,6 +2296,41 @@
   \centering
 
   \includegraphics[width=0.59\textwidth]{backup/event_selection}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Signal Acceptance}
+  \begin{columns}[onlytextwidth, t]
+    \column{0.5\textwidth}
+    \centering
+
+    \allbold{SM $HH$ production}
+
+    \vspace{1.5em}
+
+    \resizebox{1.0\textwidth}{!}{\footnotesize%
+      \begin{tabular}{lcc}
+        \toprule
+        & \allbold{This Analysis} & Previously \\
+        \cmidrule{2-3}
+        Channel & $(\mathcal{A} \times \varepsilon)^{gg\text{F+VBF}}_{\text{SM } HH}$ & $(\mathcal{A} \times \varepsilon)^{gg\text{F}}_{\text{SM } HH}$ \\
+        \midrule
+        \hadhad & 4.0\,\%\phantom{7} & 1.9\,\% \\
+        \lephad (SLT) & 4.0\,\%\phantom{7} & \multirow{2}{*}{\hspace*{-1.05em}\bigg\} 3.2\,\%}\\
+        \lephad (LTT) & 0.97\,\% & \\
+        \bottomrule
+      \end{tabular}
+    }
+
+    \column{0.5\textwidth}
+    \centering
+
+    \allbold{Resonant $HH$ production}
+
+    \includegraphics[width=0.88\textwidth, trim=0 0.5em 0 1em,
+    clip]{selection/acceptance_resonant}
+  \end{columns}
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -2509,6 +2490,43 @@
 
   \includegraphics[width=0.4\textwidth]{mva/prefit/Region_BMin0_incJet1_distmHH_J2_Y2015_DLLOS_T2_SpcTauHH_L0_Prefit_logy}%
   \includegraphics[width=0.4\textwidth]{mva/prefit/Region_BMin0_incJet1_distdRBB_J2_Y2015_DLLOS_T2_SpcTauHH_L0_Prefit_fontembed}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{MVA Input Variables (3)}
+  \vspace*{0.5em}
+  \begin{columns}
+    % Col. 1
+    \column{0.333\textwidth}
+    \centering
+
+    \allbold{\mMMC}
+
+    \begin{overpic}[width=\textwidth, trim=0.5em 0 2.5em 0, clip]{mva/prefit/Region_BMin0_incJet1_distmMMC_J2_Y2015_DLLOS_T2_SpcTauHH_L0_Prefit}
+      %\put(60,40){\allbold{\mMMC}}
+    \end{overpic}
+
+    % Col. 2
+    \column{0.333\textwidth}
+    \centering
+
+    \allbold{\mBB}
+
+    \begin{overpic}[width=\textwidth, trim=0.5em 0 2.5em 0, clip]{mva/prefit/Region_BMin0_incJet1_distmBB_J2_Y2015_DLLOS_T2_SpcTauHH_L0_Prefit}
+      %\put(65,40){\allbold{\mBB}}
+    \end{overpic}
+
+    % Col. 3
+    \column{0.333\textwidth}
+    \centering
+
+    \allbold{$\dR(\tau, \tau)$}
+
+    \begin{overpic}[width=\textwidth, trim=0.5em 0 2.5em 0, clip]{mva/prefit/Region_BMin0_incJet1_distdRTauTau_J2_Y2015_DLLOS_T2_SpcTauHH_L0_Prefit_fontembed}
+      %\put(26,56){\allbold{$\dR(\tau, \tau)$}}
+    \end{overpic}
+  \end{columns}
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -2843,6 +2861,28 @@
 
 \begin{frame}[standout]
   Constraining the Higgs Boson Self-Coupling
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Phenomenology of Anomalous \allbold{\klambda}}
+  \begin{columns}[t]
+    \column{0.5\textwidth}
+    \centering
+
+    \includegraphics[width=\textwidth]{self_coupling/hh_xsec}
+
+    \allbold{Dependence of $\sigma(pp \to \HH)$ on \klambda}
+
+    \column{0.5\textwidth}
+    \centering
+
+    \includegraphics[width=\textwidth]{self_coupling/hh_mhh_vs_klam}
+
+    \allbold{Dependence of \mHH on \klambda}\\
+    \ra affects signal acceptance
+
+  \end{columns}
 \end{frame}
 
 % ------------------------------------------------------------------------------
