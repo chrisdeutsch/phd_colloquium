@@ -411,7 +411,7 @@
   \end{columns}
   \pause
   \vspace*{1.2em}
-  \hrule
+  %\hrule
   \vspace*{1.2em}
   \begin{columns}
     \column{0.4\textwidth} \centering
@@ -485,23 +485,23 @@
   \begin{columns}[onlytextwidth]
     \column{0.4\textwidth}
 
-    \textbf{Advantages:}
-    \begin{itemize}
-      \setlength{\itemsep}{0.5em}
-    \item Large $H \to b\bar{b}$ branching ratio
-    \item Distinct signature of $H \to \tau^+\tau^-$
-    \end{itemize}
+    % \textbf{Advantages:}
+    % \begin{itemize}
+    %   \setlength{\itemsep}{0.5em}
+    % \item Large $H \to b\bar{b}$ branching ratio
+    % \item Distinct signature of $H \to \tau^+\tau^-$
+    % \end{itemize}
 
-    \vspace{1em}
-    \pause
+    % \vspace{1em}
+    % \pause
 
     \textbf{Channels:}
     \begin{itemize}
       \setlength{\itemsep}{0.5em}
-    \item<2-> \lephad channel\\
+    \item<1-> \lephad channel\\
       $\mathcal{B}(\tau^+\tau^- \to \lephad) \approx \SI{45.6}{\percent}$
 
-    \item<3-> \hadhad channel\\
+    \item<2-> \hadhad channel\\
       $\mathcal{B}(\tau^+\tau^- \to \hadhad) \approx \SI{42.0}{\percent}$
     \end{itemize}
 
@@ -513,8 +513,8 @@
     % \end{overlayarea}
 
     \hspace*{0.03\textwidth}%
-    \only<2>{\vspace*{-1pt}\includegraphics[width=0.97\textwidth]{final_state/final_state_lephad}}%
-    \only<3>{\includegraphics[width=0.97\textwidth]{final_state/final_state_hadhad}}
+    \only<1>{\vspace*{-1pt}\includegraphics[width=0.97\textwidth]{final_state/final_state_lephad}}%
+    \only<2>{\includegraphics[width=0.97\textwidth]{final_state/final_state_hadhad}}
   \end{columns}
 \end{frame}
 
@@ -564,7 +564,7 @@
 
   \vspace*{1.25em}
 
-  \textbf{\ra Classification problem:\ solve using machine learning techniques}
+  \textbf{\ra Classification problem:\ use machine learning techniques}
 
   % \onslide<2->{%
   %   \tikz[overlay, remember picture, shift=(current page.south west), x=(current
@@ -957,26 +957,26 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Signal Acceptance Improvement}
-  \begin{center}
-    \begin{tabular}{l@{\hskip 2em}c@{\hskip 2em}c}
-      \toprule
-      & \allbold{This Analysis} & Previously \\
-      \cmidrule{2-3}
-      Channel & $(\mathcal{A} \times \varepsilon)^{gg\text{F+VBF}}_{\text{SM } HH}$ & $(\mathcal{A} \times \varepsilon)^{gg\text{F}}_{\text{SM } HH}$ \\
-      \midrule
-      \hadhad & 4.0\,\%\phantom{7} & 1.9\,\% \\
-      \lephad (SLT) & 4.0\,\%\phantom{7} & \multirow{2}{*}{\hspace*{-1.05em}\bigg\} 3.2\,\%}\\
-      \lephad (LTT) & 0.97\,\% & \\
-      \bottomrule
-    \end{tabular}
-  \end{center}
+% \begin{frame}{Signal Acceptance Improvement}
+%   \begin{center}
+%     \begin{tabular}{l@{\hskip 2em}c@{\hskip 2em}c}
+%       \toprule
+%       & \allbold{This Analysis} & Previously \\
+%       \cmidrule{2-3}
+%       Channel & $(\mathcal{A} \times \varepsilon)^{gg\text{F+VBF}}_{\text{SM } HH}$ & $(\mathcal{A} \times \varepsilon)^{gg\text{F}}_{\text{SM } HH}$ \\
+%       \midrule
+%       \hadhad & 4.0\,\%\phantom{7} & 1.9\,\% \\
+%       \lephad (SLT) & 4.0\,\%\phantom{7} & \multirow{2}{*}{\hspace*{-1.05em}\bigg\} 3.2\,\%}\\
+%       \lephad (LTT) & 0.97\,\% & \\
+%       \bottomrule
+%     \end{tabular}
+%   \end{center}
 
-  \vspace*{1em}
+%   \vspace*{1em}
 
-  \alert{Signal acceptance improvement of \SIrange{50}{100}{\percent}} compared
-  to previous publication {\scriptsize (Phys.~Rev.~Lett.~\textbf{121},~191801)}
-\end{frame}
+%   \alert{Signal acceptance improvement of \SIrange{50}{100}{\percent}} compared
+%   to previous publication {\scriptsize (Phys.~Rev.~Lett.~\textbf{121},~191801)}
+% \end{frame}
 
 % ------------------------------------------------------------------------------
 
@@ -1367,7 +1367,7 @@
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Discriminants After the Background-Only Fit}
+\begin{frame}{Post-Fit Discriminants}
   \vspace*{0.5em}
   \begin{columns}
     \column{0.333\textwidth}
@@ -1397,7 +1397,7 @@
   \begin{itemize}
     \setlength{\itemsep}{0.75em}
 
-  \item Agreement between background-only model and observed data
+  \item Agreement between background-only model and data
     ($p_0 = \SI{27}{\percent}$)
 
   %\item Fit of signal+background model: $\hat{\mu} = 0.9^{+1.8}_{-1.5}$
@@ -1516,7 +1516,7 @@
   Excess observed at $m_{X} = \SI{1000}{\GeV}$\\[0.4em]
   \begin{itemize}
     \setlength{\itemsep}{0.4em}
-  \item Best-fit cross section:~$\hat{\sigma}(pp \to X \to HH) = \left( 17.4^{+7.5}_{-6.5}
+  \item $\hat{\sigma}(pp \to X \to HH) = \left( 17.4^{+7.5}_{-6.5}
     \right)\si{\femto\barn}$
   \item Statistical significance: $3.1\sigma$ (local), $2.0\sigma$ (global)
   \end{itemize}
