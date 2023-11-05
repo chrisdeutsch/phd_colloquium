@@ -1032,6 +1032,84 @@
 
 % ------------------------------------------------------------------------------
 
+\begin{frame}{Anatomy of High-Energy Physics Plots}
+  \begin{tikzpicture}[remember picture,overlay,shift=(current page.south
+      west),x=(current page.south east),y=(current page.north west)]
+
+      \node (plot) at (0.5, 0.45) {%
+        \includegraphics[width=0.5\textwidth]{results_nonres/postfit_mvainputs/Region_BMin0_incJet1_distmHH_J2_Y2015_DLLOS_T2_SpcTauHH_L0_GlobalFit_conditionnal_mu0log}%
+      };
+
+      \node at (0.515, 0.85) {\allbold{SR of the \hadhad Channel}};
+
+      \draw[stealth-, line width=2pt, color=Black] (0.555, 0.38) -- (0.75, 0.5)%
+      node[right]{\allbold{Observed Data}};
+
+      \draw[stealth-, line width=2pt, color=Black] (0.4, 0.445) -- (0.29,
+      0.445)%
+      node[left, align=center]{\allbold{Estimated Backgrounds}};
+
+      \draw[stealth-, line width=2pt, color=Red] (0.53, 0.32) -- (0.75, 0.32)%
+      node[right, align=center]{\allbold{SM \HH Signal}\\[-0.25ex](overlaid \& scaled)};
+
+      \draw[stealth-, line width=2pt, color=Black] (0.265, 0.185) -- (0.21,
+      0.185)%
+      node[left, align=center]{
+        \allbold{Ratio of Data \&}\\[-0.25ex]
+        \allbold{$B$-only Prediction}};
+  \end{tikzpicture}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Background Estimation}
+  \begin{tikzpicture}[remember picture,overlay,shift=(current page.south
+    west),x=(current page.south east),y=(current page.north west)]
+
+    \node (plot) at (0.5, 0.45) {%
+      \includegraphics[width=0.5\textwidth]{results_nonres/postfit_mvainputs/Region_BMin0_incJet1_distmHH_J2_Y2015_DLLOS_T2_SpcTauHH_L0_GlobalFit_conditionnal_mu0log}%
+    };
+
+    \node at (0.515, 0.85) {\allbold{SR of the \hadhad Channel}};
+
+    \onslide<1>{%
+      \draw[stealth-, line width=2pt, color=Black] (0.4, 0.445) -- (0.29,
+      0.445)%
+      node[left, align=center]{\allbold{Estimated Backgrounds}};
+    }
+
+    % ------------------------------------------------------------------
+    % REAL TAU BACKGROUNDS
+    % ------------------------------------------------------------------
+    \onslide<2->{%
+      \node[align=left] at (0.865, 0.65) {\allbold{Bkgs.\ with real \tauhadvis:}};
+
+      \draw[stealth-, line width=2pt, color=toporange] (0.53, 0.38) -- (0.75, 0.5)%
+      node[right, align=center]{\allbold{\ttbar with true \tauhadvis}\\[-0.25ex](\SI{39}{\percent})};
+
+      \draw[stealth-, line width=2pt, color=zjetsgreen] (0.53, 0.32) -- (0.805, 0.32)%
+      node[right, align=center]{\allbold{$Z$ + jets}\\[-0.25ex](\SI{18}{\percent})};
+    }
+
+    % ------------------------------------------------------------------
+    % FAKE TAU BACKGROUNDS
+    % ------------------------------------------------------------------
+    \onslide<3->{%
+      \node[align=left] at (0.14, 0.55) {\allbold{Bkgs.\ with mis-id.\ \tauhadvis:}};
+
+      \draw[stealth-, line width=2pt, color=topfakered] (0.35, 0.41) -- (0.25,
+      0.41)%
+      node[left, align=center]{\allbold{\ttbar with fake \tauhadvis}\\[-0.25ex](\SI{25}{\percent})};
+
+      \draw[stealth-, line width=2pt, color=fakeblue] (0.335, 0.31) -- (0.195,
+      0.24)%
+      node[left, align=center]{\allbold{Multi-jet}\\[-0.25ex](\SI{15}{\percent})};
+    }
+  \end{tikzpicture}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
 \begin{frame}{Motivate Signal Extraction}
 \end{frame}
 
