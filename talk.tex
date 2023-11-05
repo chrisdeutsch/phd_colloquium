@@ -978,57 +978,7 @@
 %   % Z+jets: 2\,\%
 % \end{frame}
 
-\begin{frame}{Background Estimation: Overview}
-  \begin{columns}
-    \column{0.6\textwidth}
 
-    \vspace*{1em}
-
-    \resizebox{\textwidth}{!}{%
-      \begin{tabular}{lcc}
-        \toprule
-        \allbold{Background} & \allbold{\hadhad channel} & \allbold{\lephad channel} \\
-        \midrule
-        $Z + \text{jets}$ & \multicolumn{2}{c}{\allbold{\textcolor{zjetsgreen}{Simulation (normalised in fit + dedicated CR)}}} \\[0.1em]
-        \ttbar (true \tauhadvis) & \multicolumn{2}{c}{\textcolor{toporange}{Simulation (normalised in fit)}} \\[0.1em]
-        \ttbar (fake \tauhadvis) & \allbold{\textcolor{topfakered}{Simulation + scale factors}} & \multirow{2}{*}{Fake factor method} \\[0.1em]
-        Multi-jet & \allbold{\textcolor{fakeblue}{Fake factor method}} & \\[0.1em]
-        Other & \multicolumn{2}{c}{Simulation} \\[0.1em]
-        \bottomrule
-      \end{tabular}
-    }
-
-    % \vspace*{1.5em}
-
-    % {\footnotesize \textbf{Largest backgrounds in \hadhad channel:}
-    %   \begin{itemize}
-    %     \setlength{\itemindent}{0.75em}
-    %   \item[1.] {\color{toporange}\ttbar with true-\tauhadvis} (\SI{39}{\percent} of bkg.)
-    %   \item[2.] {\color{topfakered}\ttbar with fake-\tauhadvis} (\SI{25}{\percent} of bkg.)
-    %   \item[3.] {\color{zjetsgreen}$Z + \text{jets}$} (\SI{18}{\percent} of bkg.)
-    %   \item[4.] {\color{fakeblue}Multi-jet} (\SI{15}{\percent} of bkg.)
-    %   \end{itemize}
-    % }
-
-    \column{0.4\textwidth}
-
-    \vspace*{1.5em}
-
-    \begin{overpic}[width=\textwidth]{results_nonres/postfit_mvainputs/Region_BMin0_incJet1_distmHH_J2_Y2015_DLLOS_T2_SpcTauHH_L0_GlobalFit_conditionnal_mu0log}
-      %\put(56,94){\tiny arXiv:2209.10910}
-    \end{overpic}
-  \end{columns}
-
-  % Dominant backgrounds:
-  % Z+jets: 18\,\%
-  % Top quark: 39\,\%
-  % fakes (ttbar + multijet): 40\,\%
-
-  % Dominant backgrounds:
-  % ttbar: 62\,\%
-  % Fakes: 34\,\%
-  % Z+jets: 2\,\%
-\end{frame}
 
 % ------------------------------------------------------------------------------
 
@@ -1042,27 +992,29 @@
 
       \node at (0.515, 0.85) {\allbold{SR of the \hadhad Channel}};
 
-      \draw[stealth-, line width=2pt, color=Black] (0.555, 0.38) -- (0.75, 0.5)%
-      node[right]{\allbold{Observed Data}};
+      \onslide<2->{%
+        \draw[stealth-, line width=2pt, color=Black] (0.555, 0.38) -- (0.75, 0.5)%
+        node[right]{\allbold{Observed Data}};
 
-      \draw[stealth-, line width=2pt, color=Black] (0.4, 0.445) -- (0.29,
-      0.445)%
-      node[left, align=center]{\allbold{Estimated Backgrounds}};
+        \draw[stealth-, line width=2pt, color=Black] (0.4, 0.445) -- (0.29,
+        0.445)%
+        node[left, align=center]{\allbold{Estimated Backgrounds}};
 
-      \draw[stealth-, line width=2pt, color=Red] (0.53, 0.32) -- (0.75, 0.32)%
-      node[right, align=center]{\allbold{SM \HH Signal}\\[-0.25ex](overlaid \& scaled)};
+        \draw[stealth-, line width=2pt, color=Red] (0.53, 0.32) -- (0.75, 0.32)%
+        node[right, align=center]{\allbold{SM \HH Signal}\\[-0.25ex](overlaid \& scaled)};
 
-      \draw[stealth-, line width=2pt, color=Black] (0.265, 0.185) -- (0.21,
-      0.185)%
-      node[left, align=center]{
-        \allbold{Ratio of Data \&}\\[-0.25ex]
-        \allbold{$B$-only Prediction}};
+        \draw[stealth-, line width=2pt, color=Black] (0.265, 0.185) -- (0.21,
+        0.185)%
+        node[left, align=center]{
+          \allbold{Ratio of Data \&}\\[-0.25ex]
+          \allbold{$B$-only Prediction}};
+      }
   \end{tikzpicture}
 \end{frame}
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Background Estimation}
+\begin{frame}{Backgrounds in the \hadhad Channel}
   \begin{tikzpicture}[remember picture,overlay,shift=(current page.south
     west),x=(current page.south east),y=(current page.north west)]
 
@@ -1082,12 +1034,12 @@
     % REAL TAU BACKGROUNDS
     % ------------------------------------------------------------------
     \onslide<2->{%
-      \node[align=left] at (0.865, 0.65) {\allbold{Bkgs.\ with real \tauhadvis:}};
+      \node[align=left] at (0.855, 0.65) {\allbold{Bkg.\ with real \tauhadvis}};
 
-      \draw[stealth-, line width=2pt, color=toporange] (0.53, 0.38) -- (0.75, 0.5)%
+      \draw[stealth-, line width=2pt, color=toporange] (0.53, 0.38) -- (0.745, 0.5)%
       node[right, align=center]{\allbold{\ttbar with true \tauhadvis}\\[-0.25ex](\SI{39}{\percent})};
 
-      \draw[stealth-, line width=2pt, color=zjetsgreen] (0.53, 0.32) -- (0.805, 0.32)%
+      \draw[stealth-, line width=2pt, color=zjetsgreen] (0.54, 0.32) -- (0.805, 0.32)%
       node[right, align=center]{\allbold{$Z$ + jets}\\[-0.25ex](\SI{18}{\percent})};
     }
 
@@ -1095,27 +1047,40 @@
     % FAKE TAU BACKGROUNDS
     % ------------------------------------------------------------------
     \onslide<3->{%
-      \node[align=left] at (0.14, 0.55) {\allbold{Bkgs.\ with mis-id.\ \tauhadvis:}};
+      \node[align=left] at (0.15, 0.55) {\allbold{Bkg.\ with mis-id.\ \tauhadvis}};
 
-      \draw[stealth-, line width=2pt, color=topfakered] (0.35, 0.41) -- (0.25,
+      \draw[stealth-, line width=2pt, color=topfakered] (0.35, 0.41) -- (0.26,
       0.41)%
       node[left, align=center]{\allbold{\ttbar with fake \tauhadvis}\\[-0.25ex](\SI{25}{\percent})};
 
-      \draw[stealth-, line width=2pt, color=fakeblue] (0.335, 0.31) -- (0.195,
+      \draw[stealth-, line width=2pt, color=fakeblue] (0.335, 0.31) -- (0.205,
       0.24)%
       node[left, align=center]{\allbold{Multi-jet}\\[-0.25ex](\SI{15}{\percent})};
+    }
+
+    \onslide<4->{%
+      \filldraw[white,opacity=0.7](0.0,0.063) rectangle (1.0,0.88);
+
+      \node[align=center] at (0.512,0.7){%
+        \setlength{\fboxrule}{1pt}
+        \fcolorbox{headergray}{white}{%
+          \begin{minipage}[c]{0.45\textwidth}
+            \begin{tabular}{lS[table-format=4.2(3)]}
+              \textbf{Exp.\ Signal:} & 5.16 +- 0.84 \\
+              \textbf{Exp.\ Background:} & 8414 +- 90
+            \end{tabular}
+
+            \vspace*{1em}
+
+            \hspace*{0.5em}$S / \sqrt{B} = 0.06$ \ra \alert{little signal sensitivity}
+          \end{minipage}
+        }
+      };
     }
   \end{tikzpicture}
 \end{frame}
 
 % ------------------------------------------------------------------------------
-
-\begin{frame}{Motivate Signal Extraction}
-\end{frame}
-
-
-% ------------------------------------------------------------------------------
-
 
 % What to mention:
 % - H masses most important for SM HH (resolution below 18 GeV)
@@ -1148,9 +1113,9 @@
   \end{columns}
   \tikz[overlay, remember picture, shift=(current page.south west), x=(current
   page.south east), y=(current page.north west), ]{%
-    \draw[stealth-, line width=1pt, color=Blue] (0.58,0.13) -- (0.735,0.13);
+    \draw[stealth-, line width=1.5pt, color=Blue] (0.58,0.13) -- (0.735,0.13);
     \node at (0.6575, 0.13 - 0.03) {\footnotesize \color{Blue} background-like};
-    \draw[-stealth, line width=1pt, color=Red] (0.755,0.13) -- (0.91,0.13);
+    \draw[-stealth, line width=1.5pt, color=Red] (0.755,0.13) -- (0.91,0.13);
     \node at (0.8325, 0.13 - 0.03) {\footnotesize \color{Red} signal-like};
   }
 \end{frame}
@@ -1245,7 +1210,7 @@
   \item Agreement between background-only model and data
     ($p_0 = \SI{27}{\percent}$)
 
-  %\item Fit of signal+background model: $\hat{\mu} = 0.9^{+1.8}_{-1.5}$
+  \item Fit of signal+background model: $\hat{\mu} = 0.9^{+1.8}_{-1.5}$
 
   \end{itemize}
 \end{frame}
@@ -1420,10 +1385,6 @@
 \end{frame}
 
 % ------------------------------------------------------------------------------
-
-
-
-
 
 % \begin{frame}{Resonant \allbold{\HH} Production}
 %   \vspace*{0.1em}
@@ -1808,6 +1769,60 @@
 
   \vspace*{1.0em}
   {\scriptsize In $pp$ collisions at $\sqrt{s} = \SI{13}{\TeV}$}
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Background Estimation: Overview}
+  \begin{columns}
+    \column{0.6\textwidth}
+
+    \vspace*{1em}
+
+    \resizebox{\textwidth}{!}{%
+      \begin{tabular}{lcc}
+        \toprule
+        \allbold{Background} & \allbold{\hadhad channel} & \allbold{\lephad channel} \\
+        \midrule
+        $Z + \text{jets}$ & \multicolumn{2}{c}{\allbold{\textcolor{zjetsgreen}{Simulation (normalised in fit + dedicated CR)}}} \\[0.1em]
+        \ttbar (true \tauhadvis) & \multicolumn{2}{c}{\textcolor{toporange}{Simulation (normalised in fit)}} \\[0.1em]
+        \ttbar (fake \tauhadvis) & \allbold{\textcolor{topfakered}{Simulation + scale factors}} & \multirow{2}{*}{Fake factor method} \\[0.1em]
+        Multi-jet & \allbold{\textcolor{fakeblue}{Fake factor method}} & \\[0.1em]
+        Other & \multicolumn{2}{c}{Simulation} \\[0.1em]
+        \bottomrule
+      \end{tabular}
+    }
+
+    % \vspace*{1.5em}
+
+    % {\footnotesize \textbf{Largest backgrounds in \hadhad channel:}
+    %   \begin{itemize}
+    %     \setlength{\itemindent}{0.75em}
+    %   \item[1.] {\color{toporange}\ttbar with true-\tauhadvis} (\SI{39}{\percent} of bkg.)
+    %   \item[2.] {\color{topfakered}\ttbar with fake-\tauhadvis} (\SI{25}{\percent} of bkg.)
+    %   \item[3.] {\color{zjetsgreen}$Z + \text{jets}$} (\SI{18}{\percent} of bkg.)
+    %   \item[4.] {\color{fakeblue}Multi-jet} (\SI{15}{\percent} of bkg.)
+    %   \end{itemize}
+    % }
+
+    \column{0.4\textwidth}
+
+    \vspace*{1.5em}
+
+    \begin{overpic}[width=\textwidth]{results_nonres/postfit_mvainputs/Region_BMin0_incJet1_distmHH_J2_Y2015_DLLOS_T2_SpcTauHH_L0_GlobalFit_conditionnal_mu0log}
+      %\put(56,94){\tiny arXiv:2209.10910}
+    \end{overpic}
+  \end{columns}
+
+  % Dominant backgrounds:
+  % Z+jets: 18\,\%
+  % Top quark: 39\,\%
+  % fakes (ttbar + multijet): 40\,\%
+
+  % Dominant backgrounds:
+  % ttbar: 62\,\%
+  % Fakes: 34\,\%
+  % Z+jets: 2\,\%
 \end{frame}
 
 % ------------------------------------------------------------------------------
