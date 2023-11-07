@@ -349,11 +349,15 @@
       $\sigma_{\HH}^{gg\text{F}} = \SI{31}{\femto\barn}$
   \end{minipage}%
   \begin{minipage}{\dimexpr 0.75\textwidth - 2\fboxsep}
-    \hspace*{0.1\textwidth}
-    \includegraphics[scale=0.75]{feynman_graphs/di_higgs_box}%
+    \vspace*{0.5em}
+
+    \hspace*{0.05\textwidth}
+    \includegraphics[scale=0.85]{feynman_graphs/di_higgs_box}%
     \hfill%
-    \raisebox{0.35em}{\includegraphics[scale=0.75]{feynman_graphs/di_higgs_triangle}}%
-    \hspace*{0.1\textwidth}
+    \raisebox{0.35em}{\includegraphics[scale=0.85]{feynman_graphs/di_higgs_triangle}}%
+    \hspace*{0.05\textwidth}
+
+    \vspace*{0.5em}
   \end{minipage}
   }
 
@@ -816,19 +820,15 @@
 
 % ------------------------------------------------------------------------------
 
-
-
-% ------------------------------------------------------------------------------
-
 \begin{frame}{Event Selection}
   \begin{center}
     \begin{tabular}{c@{\hskip 2em}c@{\hskip 3em}c}
       \toprule
-      \textcolor{hhblue}{\hadhad} & \textcolor{lhred}{\lephad (SLT)} & \textcolor{lhred}{\lephad (LTT)} \\
+      \textcolor{Blue}{\hadhad} & \textcolor{lhred}{\lephad (SLT)} & \textcolor{lhred}{\lephad (LTT)} \\
       \midrule
-      \textcolor{hhblue}{single- \& di-\tauhadvis triggers} & \textcolor{lhred}{single-$\ell$ triggers} & \textcolor{lhred}{$\ell+\tauhadvis$ triggers} \\
-      \textcolor{hhblue}{exactly two $\tauhadvis$} & \multicolumn{2}{c}{\textcolor{lhred}{exactly one $\tauhadvis$}} \\
-      \textcolor{hhblue}{no $e$ or $\mu$} & \multicolumn{2}{c}{\textcolor{lhred}{exactly one $e$ or $\mu$}} \\
+      \textcolor{Blue}{single- \& di-\tauhadvis triggers} & \textcolor{lhred}{single-$\ell$ triggers} & \textcolor{lhred}{$\ell+\tauhadvis$ triggers} \\
+      \textcolor{Blue}{exactly two $\tauhadvis$} & \multicolumn{2}{c}{\textcolor{lhred}{exactly one $\tauhadvis$}} \\
+      \textcolor{Blue}{no $e$ or $\mu$} & \multicolumn{2}{c}{\textcolor{lhred}{exactly one $e$ or $\mu$}} \\
                                   %& \multicolumn{2}{c}{\textcolor{lhred}{$m_{bb} < \SI{150}{\GeV}$}} \\
       \midrule
       %\multicolumn{3}{c}{trigger-dependent \pT cuts on $e$/$\mu$/$\tauhadvis$ and jets} \\
@@ -1222,12 +1222,12 @@
   \begin{center}
     \only<1>{%
       \begin{overpic}[width=0.5\textwidth]{discussion/results_139ifb_onlybbtautau}
-        \put(66,85){\footnotesize arXiv:2211.01216}
+        \put(68,85){\footnotesize arXiv:2211.01216}
       \end{overpic}
     }%
     \only<2->{%
       \begin{overpic}[width=0.5\textwidth]{discussion/results_139ifb}
-        \put(66,85){\footnotesize arXiv:2211.01216}
+        \put(68,85){\footnotesize arXiv:2211.01216}
       \end{overpic}
     }
   \end{center}
@@ -1235,6 +1235,18 @@
   \vspace*{-0.25em}
 
   \onslide<2>{\allbold{Most sensitive channel to SM~$HH$ production to date!}}
+
+  \begin{tikzpicture}[remember picture,overlay,shift=(current page.south
+    west),x=(current page.south east),y=(current page.north west)]
+    \onslide<2>{%
+      \draw[stealth-, line width=1pt, color=Black] (0.72, 0.5) -- (0.78, 0.5)%
+      node[align=center, right]{%
+        \scriptsize \bbyy re-analysis:\\[-0.4ex]
+        \scriptsize 4.0 (obs.), 5.0 (exp.)\\[-0.4ex]
+        \scriptsize arXiv:2310.12301
+      };
+    }
+  \end{tikzpicture}
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -1304,6 +1316,15 @@
   \begin{overpic}[scale=1.0]{feynman_graphs/di_higgs_effective_inverted}
     \put(112,20){$\klambda = \lambda_{HHH} / \lambda_{HHH}^{\normalfont\text{SM}}$}
   \end{overpic}
+
+  \begin{tikzpicture}[remember picture,overlay,shift=(current page.south
+    west),x=(current page.south east),y=(current page.north west)]
+
+    \draw[stealth-, line width=1pt, color=white] (0.432, 0.47) -- (0.432, 0.3)%
+    node[align=center, below]{%
+      \footnotesize New Physics?
+    };
+  \end{tikzpicture}
 \end{frame}
 
 % Notes: What if new physics changes the Higgs Boson self-coupling?
@@ -1311,6 +1332,11 @@
 % - Heavy new particles might contribute (reduce to effective coupling)
 %
 % - Reinterpret the SM~\HH search \ra limits on xsec vs.\ $\kappa_{\lambda}$
+
+% ------------------------------------------------------------------------------
+
+% \begin{frame}{Constraining the Higgs Boson Self-Coupling}
+% \end{frame}
 
 % ------------------------------------------------------------------------------
 
@@ -1327,11 +1353,13 @@
 
     \vspace*{1.5em}
 
-    \allbold{\klambda constraints:}\\[-1.5\baselineskip]
-    \begin{align*}
-      \klambda &\in [-2.4, 9.2] \quad (\text{observed})\\
-      \klambda &\in [-2.0, 9.0] \quad (b\text{-only expectation})
-    \end{align*}
+    \onslide<3->{
+      \allbold{\klambda constraints:}\\[-1.5\baselineskip]
+      \begin{align*}
+        \klambda &\in [-2.4, 9.2] \quad (\text{observed})\\
+        \klambda &\in [-2.0, 9.0] \quad (b\text{-only expectation})
+      \end{align*}
+    }
 
     % \vspace*{1em}
 
@@ -1347,15 +1375,17 @@
 
     \vspace*{0.1em}
 
-    \allbold{Upper limits on $\sigma(pp \to HH)$ at~95\,\%~CL}
+    \onslide<2->{
+      \allbold{Upper limits on $\sigma(pp \to HH)$ at~95\,\%~CL}
 
-    \vspace*{0.7em}
+      \vspace*{0.7em}
 
-    \begin{overpic}[width=0.95\textwidth]{self_coupling/klam_scan_result}
-      \put(64,74){\tiny ATLAS-CONF-2021-052}
-    \end{overpic}
-    % Observed:~$\klambda \in [-2.4, 9.2]$
-    % Expected:~$\klambda \in [-2.0, 9.0]$
+      \begin{overpic}[width=0.95\textwidth]{self_coupling/klam_scan_result}
+        \put(64,74){\tiny ATLAS-CONF-2021-052}
+      \end{overpic}
+      % Observed:~$\klambda \in [-2.4, 9.2]$
+      % Expected:~$\klambda \in [-2.0, 9.0]$
+    }
   \end{columns}
 
   % Limitations
@@ -1377,7 +1407,8 @@
 
   \vspace*{1.5em}
 
-  \includegraphics[scale=1.0]{feynman_graphs/di_higgs_resonant_inverted}
+  \begin{overpic}[scale=1.0]{feynman_graphs/di_higgs_resonant_inverted}
+  \end{overpic}
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -1463,17 +1494,17 @@
     \column{0.4\textwidth}
     \centering
 
-    \hspace*{3em}\includegraphics[width=0.75\textwidth]{feynman_graphs/di_higgs_resonant}
+    \hspace*{1em}\includegraphics[width=0.75\textwidth]{feynman_graphs/di_higgs_resonant}
 
-    \vspace{1em}
+    \vspace*{2em}
 
-    \includegraphics[width=0.95\textwidth]{resonant_signal_extraction_illustration}
+    \hspace*{1em}\includegraphics[width=0.95\textwidth]{resonant_signal_extraction_illustration}
   \end{columns}
 \end{frame}
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Search for Resonant \allbold{\HH} Production: Discovery Tests}
+\begin{frame}{Discovery Tests (Resonant \allbold{\HH} Production)}
   \vspace*{0.5em}
   \begin{columns}[onlytextwidth, b]
     \column{0.5\textwidth}
@@ -1544,7 +1575,7 @@
 %   \end{itemize}
 % \end{frame}
 
-\begin{frame}{Search for Resonant \allbold{\HH} Production: Upper Limits}
+\begin{frame}{Upper Limits (Resonant \allbold{\HH} Production)}
   \begin{center}
     \includegraphics[width=0.55\textwidth]{discussion/atlas_comparison_resonant_marked_without_obs}
   \end{center}
