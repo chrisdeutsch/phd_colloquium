@@ -127,7 +127,7 @@
         \footnotesize Breaking
       };
 
-      \pause
+      %\pause
 
       \draw[Red,thick] (-2.7,-1.4) rectangle (3.8,0);
 
@@ -443,9 +443,10 @@
     \textbf{Most promising
       channels (SM):}\\
     $b\bar{b}b\bar{b}$, \bbtautau, $b\bar{b}\gamma\gamma$
-    \begin{itemize}
-    \item Trade-off between branching ratio \& ``cleanliness'' of final state
-    \end{itemize}
+
+    \vspace*{1.5em}
+
+    Trade-off between branching ratio \& ``cleanliness'' of final state
 
     \column{0.5\textwidth}
     \centering
@@ -1144,9 +1145,9 @@
   \tikz[overlay, remember picture, shift=(current page.south west), x=(current
   page.south east), y=(current page.north west), ]{%
     \draw[stealth-, line width=1.5pt, color=Blue] (0.58,0.13) -- (0.735,0.13);
-    \node at (0.6575, 0.13 - 0.03) {\footnotesize \color{Blue} background-like};
+    \node at (0.6575, 0.13 - 0.03) {\footnotesize \color{Blue} \textbf{background-like}};
     \draw[-stealth, line width=1.5pt, color=Red] (0.755,0.13) -- (0.91,0.13);
-    \node at (0.8325, 0.13 - 0.03) {\footnotesize \color{Red} signal-like};
+    \node at (0.8325, 0.13 - 0.03) {\footnotesize \color{Red} \textbf{signal-like}};
   }
 \end{frame}
 
@@ -1432,7 +1433,7 @@
 % ------------------------------------------------------------------------------
 
 \begin{frame}[standout]
-  Resonant \allbold{\HH} Production
+  Search for Resonant \allbold{\HH} Production
 
   \vspace*{1.5em}
 
@@ -1485,55 +1486,86 @@
 
 % ------------------------------------------------------------------------------
 
-% ------------------------------------------------------------------------------
+\begin{frame}{Search for Resonant \allbold{\HH} Production}
+  \vspace*{2em}
 
-\begin{frame}{Signal Extraction Revisited}
-  \begin{columns}[onlytextwidth]
-    \column{0.6\textwidth}
-
-    \vspace*{0.2em}
-
-    \textbf{Multiple signal hypotheses considered:}
-    \begin{itemize}
-    \item 20 mass points ($\SI{251}{\GeV} \leq m_{X} \leq \SI{1.6}{\TeV}$)
-    \item Kinematic properties of signal changes with $m_{X}$
-    \end{itemize}
-
-    %\vspace*{0.75em}
-
-    %\onslide<2->{\textbf{Previously:} 1 BDT per mass point}
-
-    \vspace*{1.5em}
-
-    %\onslide<2->{\textbf{Now:} Parameterised Neural Network (PNN)}
-    \onslide<2->{\textbf{Parameterised Neural Network (PNN)}}
-
-
-    \vspace*{1em}
-
-    \onslide<2->{%
-      \begin{overpic}[width=0.45\textwidth]{pnn_sketch}
-        \put(85,25){\footnotesize \parbox[t]{0.47\textwidth}{Solves
-            parameter-dependent classification problem}}
-        \put(85,4){\tiny EPJC
-          \textbf{77} (2016) 235}
-      \end{overpic}
-    }
-
-    \column{0.4\textwidth}
+  \begin{columns}[onlytextwidth,c]
+    \column{0.5\textwidth}
     \centering
 
-    \hspace*{1em}\includegraphics[width=0.75\textwidth]{feynman_graphs/di_higgs_resonant}
+    \begin{overpic}[scale=1.0]{feynman_graphs/di_higgs_resonant}
+    \end{overpic}
 
-    \vspace*{2em}
+    \column{0.5\textwidth}
 
-    \hspace*{1em}\includegraphics[width=0.95\textwidth]{resonant_signal_extraction_illustration}
+    \allbold{Search for scalars $X$ decaying to \HH:}
+    \begin{itemize}
+      \setlength{\itemsep}{0.3em}
+    \item E.g.\ in extended Higgs sector models
+
+    \item Mass range:\ $\SI{251}{\GeV} \leq m_{X} \leq \SI{1.6}{\TeV}$
+
+    \item Negligible decay width
+    \end{itemize}
   \end{columns}
+
+  \vspace*{3em}
+
+  \allbold{Main difference compared to SM \HH search:}
+  \begin{itemize}
+  \item Signal extraction based on \textit{parameterised neural networks} (PNN)
+  \end{itemize}
 \end{frame}
 
 % ------------------------------------------------------------------------------
 
-\begin{frame}{Discovery Tests (Resonant \allbold{\HH} Production)}
+% \begin{frame}{Signal Extraction Revisited}
+%   \begin{columns}[onlytextwidth]
+%     \column{0.6\textwidth}
+
+%     \vspace*{0.2em}
+
+%     \textbf{Multiple signal hypotheses considered:}
+%     \begin{itemize}
+%     \item 20 mass points ($\SI{251}{\GeV} \leq m_{X} \leq \SI{1.6}{\TeV}$)
+%     \item Kinematic properties of signal changes with $m_{X}$
+%     \end{itemize}
+
+%     %\vspace*{0.75em}
+
+%     %\onslide<2->{\textbf{Previously:} 1 BDT per mass point}
+
+%     \vspace*{1.5em}
+
+%     %\onslide<2->{\textbf{Now:} Parameterised Neural Network (PNN)}
+%     \onslide<2->{\textbf{Parameterised Neural Network (PNN)}}
+
+
+%     \vspace*{1em}
+
+%     \onslide<2->{%
+%       \begin{overpic}[width=0.45\textwidth]{pnn_sketch}
+%         \put(85,25){\footnotesize \parbox[t]{0.47\textwidth}{Solves
+%             parameter-dependent classification problem}}
+%         \put(85,4){\tiny EPJC
+%           \textbf{77} (2016) 235}
+%       \end{overpic}
+%     }
+
+%     \column{0.4\textwidth}
+%     \centering
+
+%     \hspace*{1em}\includegraphics[width=0.75\textwidth]{feynman_graphs/di_higgs_resonant}
+
+%     \vspace*{2em}
+
+%     \hspace*{1em}\includegraphics[width=0.95\textwidth]{resonant_signal_extraction_illustration}
+%   \end{columns}
+% \end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Discovery Tests}
   \vspace*{0.5em}
   \begin{columns}[onlytextwidth, b]
     \column{0.5\textwidth}
@@ -1604,7 +1636,7 @@
 %   \end{itemize}
 % \end{frame}
 
-\begin{frame}{Upper Limits (Resonant \allbold{\HH} Production)}
+\begin{frame}{Upper Limits}
   \begin{center}
     \includegraphics[width=0.55\textwidth]{discussion/atlas_comparison_resonant_marked_without_obs}
   \end{center}
@@ -1991,6 +2023,50 @@
       \draw[stealth-, line width=1.5pt, red] (0.6,0.6) -- (0.81,0.6);
     \end{tikzpicture}
   }
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Signal Extraction Revisited}
+  \begin{columns}[onlytextwidth]
+    \column{0.6\textwidth}
+
+    \vspace*{0.2em}
+
+    \textbf{Multiple signal hypotheses considered:}
+    \begin{itemize}
+    \item 20 mass points ($\SI{251}{\GeV} \leq m_{X} \leq \SI{1.6}{\TeV}$)
+    \item Kinematic properties of signal changes with $m_{X}$
+    \end{itemize}
+
+    %\vspace*{0.75em}
+
+    %\onslide<2->{\textbf{Previously:} 1 BDT per mass point}
+
+    \vspace*{1.5em}
+
+    \onslide<2->{\textbf{Parameterised Neural Network (PNN)}}
+
+    \vspace*{1em}
+
+    \onslide<2->{%
+      \begin{overpic}[width=0.45\textwidth]{pnn_sketch}
+        \put(85,25){\footnotesize \parbox[t]{0.47\textwidth}{Solves
+            parameter-dependent classification problem}}
+        \put(85,4){\tiny EPJC
+          \textbf{77} (2016) 235}
+      \end{overpic}
+    }
+
+    \column{0.4\textwidth}
+    \centering
+
+    \hspace*{1em}\includegraphics[width=0.75\textwidth]{feynman_graphs/di_higgs_resonant}
+
+    \vspace*{2em}
+
+    \hspace*{1em}\includegraphics[width=0.95\textwidth]{resonant_signal_extraction_illustration}
+  \end{columns}
 \end{frame}
 
 % ------------------------------------------------------------------------------
