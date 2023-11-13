@@ -1563,46 +1563,7 @@
 %   \end{columns}
 % \end{frame}
 
-% ------------------------------------------------------------------------------
 
-\begin{frame}{Discovery Tests}
-  \vspace*{0.5em}
-  \begin{columns}[onlytextwidth, b]
-    \column{0.5\textwidth}
-    \centering
-
-    \includegraphics[width=1.0\textwidth, trim=0 0.3em 0 1em]{results_res/resonant_comb_pvalues}
-
-    \column{0.5\textwidth}
-    \centering
-
-    \onslide<2->{%
-      \hspace*{0.14\textwidth}\includegraphics[width=0.75\textwidth, trim=0 0.3em 0 1em,
-      clip]{results_res/postfit/Region_BMin0_incJet1_distPNN1000_J2_Y2015_DLLOS_T2_SpcTauHH_L0_GlobalFit_conditionnal_mu0log}
-    }
-  \end{columns}
-
-  \vspace*{-0.1em}
-
-  Excess observed at $m_{X} = \SI{1000}{\GeV}$\\[0.4em]
-  \begin{itemize}
-    \setlength{\itemsep}{0.4em}
-  % \item
-  %   $\hat{\sigma}(pp \to X \to HH) = \left( 17.4^{+7.5}_{-6.5}
-  %   \right)\si{\femto\barn}$
-  \item Local significance $= 3.1\sigma$
-  \item Global significance $= 2.0\sigma$ (accounting for ``multiple testing'')
-  \end{itemize}
-
-  \onslide<2->{%
-    \tikz[overlay, remember picture, shift=(current page.south west), x=(current
-    page.south east), y=(current page.north west), ]{
-      \draw[-stealth, line width=1.5pt, color=Red] (0.33,0.55) -- (0.85,0.53);
-      \node[anchor=west] at (0.91,0.54){\scriptsize\color{Red}Exp.:~6.3};
-      \node[anchor=west] at (0.91,0.505){\scriptsize\color{Red}Obs.:~14};
-    }
-  }
-\end{frame}
 
 % ------------------------------------------------------------------------------
 
@@ -1638,26 +1599,24 @@
 %   \end{itemize}
 % \end{frame}
 
-\begin{frame}{Upper Limits}
+\begin{frame}{Upper Limits on \allbold{$\sigma(pp \to X \to HH)$}}
   \begin{center}
     \includegraphics[width=0.55\textwidth]{discussion/atlas_comparison_resonant_marked_without_obs}
   \end{center}
 
-  \vspace*{-0.5em}
+  \vspace*{-1em}
 
   \begin{itemize}
-    \setlength{\itemsep}{1em}
+    \setlength{\itemsep}{0.5em}
 
-  \item \bbtautau most sensitive channel in
+  \item Most sensitive channel in
     $\SI{375}{\GeV} \leq m_{X} \leq \SI{800}{\GeV}$
+
+  \item Excess at $\mX = \SI{1000}{\GeV}$ with global significance of
+    $2.0\sigma$
 
   \end{itemize}
 \end{frame}
-
-% ------------------------------------------------------------------------------
-
-
-
 
 % ------------------------------------------------------------------------------
 
@@ -1736,6 +1695,47 @@
 
 \begin{frame}[standout]
   Backup
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Discovery Tests}
+  \vspace*{0.5em}
+  \begin{columns}[onlytextwidth, b]
+    \column{0.5\textwidth}
+    \centering
+
+    \includegraphics[width=1.0\textwidth, trim=0 0.3em 0 1em]{results_res/resonant_comb_pvalues}
+
+    \column{0.5\textwidth}
+    \centering
+
+    \onslide<2->{%
+      \hspace*{0.14\textwidth}\includegraphics[width=0.75\textwidth, trim=0 0.3em 0 1em,
+      clip]{results_res/postfit/Region_BMin0_incJet1_distPNN1000_J2_Y2015_DLLOS_T2_SpcTauHH_L0_GlobalFit_conditionnal_mu0log}
+    }
+  \end{columns}
+
+  \vspace*{-0.1em}
+
+  Excess observed at $m_{X} = \SI{1000}{\GeV}$\\[0.4em]
+  \begin{itemize}
+    \setlength{\itemsep}{0.4em}
+  % \item
+  %   $\hat{\sigma}(pp \to X \to HH) = \left( 17.4^{+7.5}_{-6.5}
+  %   \right)\si{\femto\barn}$
+  \item Local significance $= 3.1\sigma$
+  \item Global significance $= 2.0\sigma$ (accounting for ``multiple testing'')
+  \end{itemize}
+
+  \onslide<2->{%
+    \tikz[overlay, remember picture, shift=(current page.south west), x=(current
+    page.south east), y=(current page.north west), ]{
+      \draw[-stealth, line width=1.5pt, color=Red] (0.33,0.55) -- (0.85,0.53);
+      \node[anchor=west] at (0.91,0.54){\scriptsize\color{Red}Exp.:~6.3};
+      \node[anchor=west] at (0.91,0.505){\scriptsize\color{Red}Obs.:~14};
+    }
+  }
 \end{frame}
 
 % ------------------------------------------------------------------------------
@@ -2068,61 +2068,6 @@
     \vspace*{2em}
 
     \hspace*{1em}\includegraphics[width=0.95\textwidth]{resonant_signal_extraction_illustration}
-  \end{columns}
-\end{frame}
-
-% ------------------------------------------------------------------------------
-
-\begin{frame}{Results:\ Early Run~2 Analyses (SM~\allbold{\HH})}
-  \begin{columns}
-    \column{0.5\textwidth}\centering\footnotesize
-
-    \includegraphics[width=\textwidth]{status/atlas_36ifb}
-
-    Phys.\ Lett.\ B \textbf{800} (2020) 135103
-
-    \column{0.5\textwidth}\centering\footnotesize
-
-    \includegraphics[width=\textwidth]{status/cms_36ifb}
-
-    Phys.\ Rev.\ Lett.\ \textbf{122} (2019) 121803
-  \end{columns}
-\end{frame}
-
-% ------------------------------------------------------------------------------
-
-\begin{frame}{Results:\ Early Run~2 Analyses (Resonant \allbold{\HH}
-    Production)}
-  \begin{columns}
-    \column{0.45\textwidth}\centering\footnotesize
-
-    \includegraphics[width=\textwidth]{status/atlas_36ifb_resonant}
-
-    Phys.\ Lett.\ B \textbf{800} (2020) 135103
-
-    \column{0.55\textwidth}\centering\footnotesize
-
-    \includegraphics[width=\textwidth]{status/cms_36ifb_resonant}
-
-    Phys.\ Rev.\ Lett.\ \textbf{122} (2019) 121803
-  \end{columns}
-\end{frame}
-
-% ------------------------------------------------------------------------------
-
-\begin{frame}{Results:\ Early Run~2 Analyses (Anomalous \allbold{\klambda})}
-  \begin{columns}
-    \column{0.5\textwidth}\centering\footnotesize
-
-    \includegraphics[width=\textwidth]{status/atlas_36ifb_klambda}
-
-    Phys.\ Lett.\ B \textbf{800} (2020) 135103
-
-    \column{0.5\textwidth}\centering\footnotesize
-
-    \includegraphics[width=\textwidth]{status/cms_36ifb_klambda}
-
-    Phys.\ Rev.\ Lett.\ \textbf{122} (2019) 121803
   \end{columns}
 \end{frame}
 
